@@ -6,6 +6,7 @@ int main(void)
     // TODO: Prompt for start size
     int start_size;
     int end_size;
+    int n;
     do
     {
         start_size = get_int("Start Size\n");
@@ -20,8 +21,9 @@ int main(void)
     while (end_size < 9);
 
     // TODO: Calculate number of years until we reach threshold
-    for (i = 0; i < end_size; i++){
-        
+    for (n = 0; n < end_size; n++){
+
+
     }
 
 
