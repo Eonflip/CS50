@@ -8,7 +8,7 @@ int main(void)
 
     do
     {
-        start_size = get_int("Start Size\n");
+        start_size = get_int("Start Size: ");
     }
     while (start_size < 9);
 
@@ -16,7 +16,7 @@ int main(void)
     int end_size;
     do
     {
-        end_size = get_int("End Size\n");
+        end_size = get_int("End Size: ");
     }
     while (end_size < 9);
 
