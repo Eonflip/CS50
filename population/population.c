@@ -23,7 +23,6 @@ int main(void)
     // TODO: Calculate number of years until we reach threshold
     for (int i = 0; n < e; i++){
         n = n + n/3 - n/4;
-        printf(i);
     }
 
 
