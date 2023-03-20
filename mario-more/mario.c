@@ -13,7 +13,12 @@ int main(void)
 
     for (int i = 0; i < height; i++)
     {
-        printf(" " * (height - i) + ("#" * i) + "  " + ("#" * i) + " " * (height - i));
+        printf(" ") * (height - i);
+        printf("#") * i;
+        printf("  ");
+        printf("#") * i;
+        printf(" ") * (height - i);
+        printf("\n");
     }
 
 }
