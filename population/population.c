@@ -6,6 +6,7 @@ int main(void)
     // TODO: Prompt for start size
     int n;
     int e;
+
     do
     {
         n = get_int("Start Size\n");
@@ -22,10 +23,10 @@ int main(void)
     // TODO: Calculate number of years until we reach threshold
     for (int i = 0; n < e; i++){
         n = n + n/3 - n/4;
+        printf(i);
     }
 
 
 
     // TODO: Print number of years
-    printf(i);
 }
