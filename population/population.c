@@ -22,8 +22,9 @@ int main(void)
 
     // TODO: Calculate number of years until we reach threshold
     int years;
-    for (years = 0; start_size < end_size; years++){
-        start_size = start_size + start_size/3 - start_size/4;
+    for (years = 0; start_size < end_size; years++)
+    {
+        start_size = start_size + start_size / 3 - start_size / 4;
     }
 
 
