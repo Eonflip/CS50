@@ -21,18 +21,18 @@ int main(void)
         first_digit = first_digit / 10;
     }
 
-    //print function to test if the first digit is being logged 
+    //print function to test if the first digit is being logged
     //printf("%ld\n", first_digit);
 
     if (first_digit == 4)
     {
-        if (floor(log10(labs(card_number))) == 13)
+        if (floor(log10(labs(card_number))) + 1 == 13)
         {
-            printf("VISA");
+            printf("VISA\n");
         }
-        else if (floor(log10(labs(card_number))) == 16)
+        else if (floor(log10(labs(card_number))) + 1 == 16)
         {
-            printf("VISA");
+            printf("VISA\n");
         }
     }
 
