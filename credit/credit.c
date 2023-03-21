@@ -44,7 +44,7 @@ int main(void)
     }
 
     //Test if Amex
-    if (two_digits == 34 || two_digits == 37)
+    else if (two_digits == 34 || two_digits == 37)
     {
         if (floor(log10(labs(card_number))) + 1 == 15)
         {
@@ -54,13 +54,18 @@ int main(void)
 
 
     //Test if MasterCard
-    if (two_digits == 51 || two_digits == 52 || two_digits == 53 || two_digits == 54 || two_digits == 55)
+    else if (two_digits == 51 || two_digits == 52 || two_digits == 53 || two_digits == 54 || two_digits == 55)
     {
         if (floor(log10(labs(card_number))) + 1 == 16)
         {
             printf("MASTERCARD\n");
         }
 
+    }
+
+    else
+    {
+        printf("INVALID");
     }
 
 
