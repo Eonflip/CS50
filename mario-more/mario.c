@@ -12,9 +12,9 @@ int main(void)
     }
     while (height < 1 || height > 8);
 
-    for (int i = 1; i <= height; height++)
+    for (int i = 1; i <= height; i++)
     {
-        for (column = 0; column < height; column++)
+        for (column = 1; column <= height; column++)
         {
             printf("#");
         }
