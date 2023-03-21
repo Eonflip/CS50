@@ -41,6 +41,10 @@ int main(void)
         {
             printf("VISA\n");
         }
+        else
+        {
+            printf("INVALID\n");
+        }
     }
 
     //Test if Amex
@@ -49,6 +53,10 @@ int main(void)
         if (floor(log10(labs(card_number))) + 1 == 15)
         {
             printf("AMEX\n");
+        }
+        else
+        {
+            printf("INVALID\n");
         }
     }
 
@@ -60,12 +68,16 @@ int main(void)
         {
             printf("MASTERCARD\n");
         }
+        else
+        {
+            printf("INVALID\n");
+        }
 
     }
 
     else
     {
-        printf("INVALID");
+        printf("INVALID\n");
     }
 
 
