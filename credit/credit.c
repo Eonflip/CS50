@@ -28,7 +28,7 @@ int main(void)
     }
 
     //print function to test if the first digit is being logged
-    printf("%ld\n", two_digits);
+    //printf("%ld\n", two_digits);
 
     //Test if Visa
     if (first_digit == 4)
@@ -44,7 +44,7 @@ int main(void)
     }
 
     //Test if Amex
-    if (first_digit == 34 || first_digit == 37)
+    if (two_digits == 34 || two_digits == 37)
     {
         if (floor(log10(labs(card_number))) + 1 == 15)
         {
@@ -54,16 +54,13 @@ int main(void)
 
 
     //Test if MasterCard
-    if (first_digit == 51 || first_digit == 52 || first_digit == 53 || first_digit == 54 || first_digit == 55)
+    if (two_digits == 51 || two_digits == 52 || two_digits == 53 || two_digits == 54 || two_digits == 55)
     {
-        if (floor(log10(labs(card_number))) + 1 == 13)
+        if (floor(log10(labs(card_number))) + 1 == 16)
         {
-            printf("VISA\n");
+            printf("MASTERCARD\n");
         }
-        else if (floor(log10(labs(card_number))) + 1 == 16)
-        {
-            printf("VISA\n");
-        }
+        
     }
 
 
