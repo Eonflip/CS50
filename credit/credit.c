@@ -12,5 +12,7 @@ int main(void)
 
     while (card_number < 0 || card_number > 5000000000000000)
 
-    if (card_number[0] == 4 && card_number.length ==)
+    if (card_number[0] == 4 && Math.floor(Math.log10(Math.abs(card_number))) == 13 || 16){
+        printf("V)
+    }
 }
