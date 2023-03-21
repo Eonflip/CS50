@@ -20,15 +20,17 @@ int main(void)
         {
             printf(" ");
         }
-        //for loop to print 
+        //for loop to print mario blocks
         for (int j = 0; j < i + 1; j++)
         {
             printf("#");
         }
+        //for loop to print 2 spaces inbetween the blocks
         for (int j = 1; j < 3; j++)
         {
             printf(" ");
         }
+        //for loop to print the mario blocks on the right hand side
         for (int j = 0; j < i + 1; j++)
         {
             printf("#");
