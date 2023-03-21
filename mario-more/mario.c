@@ -17,8 +17,14 @@ int main(void)
 
         for (int j = 0; j < height - i - 1; j++)
             printf(" ");
-        for (int j = 0; j < i + 2; j++)
+        for (int j = 0; j < i + 1; j++)
             printf("#");
+        for (int j = 0; j < 3; j++)
+            printf(" ");
+        for (int j = 0; j < i + 1; j++)
+            printf("#");
+        for (int j = 0; j < height - i - 1; j++)
+            printf(" ");
 
         printf("\n");
     }
