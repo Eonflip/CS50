@@ -9,22 +9,29 @@ int main(void)
 
     do
     {
-       height = get_int("Height: ");
+        height = get_int("Height: ");
     }
     while (height < 1 || height > 8);
 
-    for (int i = 0; i < height; i++) {
+    for (int i = 0; i < height; i++)
+    {
 
         for (int j = 0; j < height - i - 1; j++)
+        {
             printf(" ");
+        }
         for (int j = 0; j < i + 1; j++)
+        {
             printf("#");
+        }
         for (int j = 1; j < 3; j++)
+        {
             printf(" ");
+        }
         for (int j = 0; j < i + 1; j++)
+        {
             printf("#");
-        //for (int j = 0; j < height - i - 1; j++)
-            //printf(" ");
+        }
 
         printf("\n");
     }
