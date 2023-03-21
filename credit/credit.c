@@ -60,7 +60,7 @@ int main(void)
         {
             printf("MASTERCARD\n");
         }
-        
+
     }
 
 
