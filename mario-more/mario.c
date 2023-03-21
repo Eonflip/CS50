@@ -13,25 +13,16 @@ int main(void)
     }
     while (height < 1 || height > 8);
 
+    for (int i = 0; i < height; i++) {
 
-    for (linenum = height; linenum >= 0; linenum--)
-    {
-        for (column = height; column < linenum; column++)
-        {
+        for (int j = 0; j < height - i - 1; j++)
+            printf(" ");
+        for (int j = 0; j < i + 2; j++)
             printf("#");
-        }
-     printf("\n");
+
+        printf("\n");
     }
 
 
 
-
-    for (linenum = 1; linenum <= height; linenum++)
-    {
-      for (column = 0; column < linenum; column++)
-      {
-           printf("#");
-      }
-     printf("\n");
-    }
 }
