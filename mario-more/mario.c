@@ -12,14 +12,15 @@ int main(void)
     }
     while (height < 1 || height > 8);
 
-    //for loop to loop through each column for height entered
+    //for loop to create new rows
     for (int i = 0; i < height; i++)
     {
-
+        //for loop to print spaces at the beginning relative height
         for (int j = 0; j < height - i - 1; j++)
         {
             printf(" ");
         }
+        //for loop to print 
         for (int j = 0; j < i + 1; j++)
         {
             printf("#");
