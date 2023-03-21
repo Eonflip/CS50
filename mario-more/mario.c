@@ -4,8 +4,8 @@
 int main(void)
 {
     int height;
-    int spaces;
     int column;
+    int linenum;
 
     do
     {
@@ -13,15 +13,25 @@ int main(void)
     }
     while (height < 1 || height > 8);
 
-    for (int i = height; i > 0; i--)
-    {
-        printf(" ");
-        for (int j = 0; height - j < height; j++)
-        {
 
+    for (linenum = height; linenum >= 0; linenum--)
+    {
+        for (column = height; column < linenum; column++)
+        {
+            printf("#");
         }
+     printf("\n");
     }
 
-    for (int j = height )
 
+
+
+    for (linenum = 1; linenum <= height; linenum++)
+    {
+      for (column = 0; column < linenum; column++)
+      {
+           printf("#");
+      }
+     printf("\n");
+    }
 }
