@@ -11,7 +11,7 @@ int main(void)
     }
     while (height < 1 || height > 8);
 
-    for (height = 0; height < height - 1; height++)
+    for (int i = 1; i <= height; height++)
     {
         int column;
         for (column = 0; column < height; column++)
