@@ -27,6 +27,9 @@ int main(void)
         two_digits = two_digits / 10;
     }
 
+
+    
+
     //print function to test if the first digit is being logged
     //printf("%ld\n", two_digits);
 
