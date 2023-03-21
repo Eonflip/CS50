@@ -21,8 +21,8 @@ int main(void)
 
     printf("%ld\n", first_digit);
 
-    //if (card_number[0] == 4 && Math.floor(Math.log10(Math.abs(card_number))) == 13 || 16)
-    //{
-    //    printf("VISA");
-    //}
+    if (card_number[0] == 4 && Math.floor(Math.log10(Math.abs(card_number))) == 13 || 16)
+    {
+        printf("VISA");
+    }
 }
