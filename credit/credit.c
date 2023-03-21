@@ -1,5 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
 
 int main(void)
 {
@@ -19,11 +21,16 @@ int main(void)
         first_digit = first_digit / 10;
     }
 
-    printf("%ld\n", first_digit);
+    //print function to test if the first digit is being logged 
+    //printf("%ld\n", first_digit);
 
     if (first_digit == 4)
     {
-        if (Math.floor(Math.log10(Math.abs(card_number))) == 13 || 16)
+        if (floor(log10(labs(card_number))) == 13)
+        {
+            printf("VISA");
+        }
+        else if (floor(log10(labs(card_number))) == 16)
         {
             printf("VISA");
         }
