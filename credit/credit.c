@@ -14,9 +14,15 @@ int main(void)
 
     int first_digit = card_number;
 
-    
-
-    if (card_number[0] == 4 && Math.floor(Math.log10(Math.abs(card_number))) == 13 || 16){
-        printf("VISA");
+    while (first_digit > 10)
+    {
+        first_digit /= 10;
     }
+
+    printf(int first_digit);
+
+    //if (card_number[0] == 4 && Math.floor(Math.log10(Math.abs(card_number))) == 13 || 16)
+    //{
+    //    printf("VISA");
+    //}
 }
