@@ -19,7 +19,7 @@ int main(void)
         first_digit /= 10;
     }
 
-    printf(int first_digit);
+    printf("%i\n", first_digit);
 
     //if (card_number[0] == 4 && Math.floor(Math.log10(Math.abs(card_number))) == 13 || 16)
     //{
