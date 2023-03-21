@@ -4,6 +4,7 @@
 int main(void)
 {
     int height;
+    int spaces;
     int column;
 
     do
@@ -17,7 +18,7 @@ int main(void)
         printf(" ");
         for (int j = 0; height - j < height; j++)
         {
-            
+
         }
     }
 
