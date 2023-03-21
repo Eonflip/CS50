@@ -7,18 +7,19 @@ int main(void)
 
     do
     {
-       height = get_int("Height: \n");
+       height = get_int("Height: ");
     }
     while (height < 1 || height > 8);
 
-    for (int i = 0; i < height; i++)
+    for (height = 0; height < height - 1; height++)
     {
-        
         int column;
-        for (j = 0; column < height; j++)
+        for (column = 0; column < height; column++)
         {
-            printf("#")
+            printf("#");
         }
+        printf("\n");
+        printf("#");
     }
 
 }
