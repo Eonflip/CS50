@@ -12,5 +12,5 @@ int main(void)
 
     while (card_number < 0 || card_number > 5000000000000000)
 
-    if (card_number)
+    if (card_number[0] == 4 && card_number.length ==)
 }
