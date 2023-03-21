@@ -10,9 +10,9 @@ int main(void)
         card_number = get_long("Please enter your credit card number: \n");
     }
 
-    while (card_number < 0 || card_number > 5000000000000000)
+    while (card_number < 0 || card_number > 5000000000000000);
 
     if (card_number[0] == 4 && Math.floor(Math.log10(Math.abs(card_number))) == 13 || 16){
-        printf("V)
+        printf("VISA");
     }
 }
