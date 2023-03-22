@@ -96,6 +96,15 @@ int main(void)
      printf("%ld\n", eleventh);
 
 
+     while(card_number != 0)
+    {
+        int digit = card_number % 10;
+        card_number = card_number / 10;
+        printf("%d\n", card_number);
+    }
+
+
+
 }
 
 
