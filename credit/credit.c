@@ -83,22 +83,11 @@ int main(void)
         printf("INVALID\n");
     }
 
-    long first = card_number % 10000000000000000;
-
-    long third = card_number % 100000000000000;
-    long fifth = card_number % 1000000000000;
-
-    long seventh = card_number % 10000000000;
-    long ninth = card_number % 100000000;
-    long eleventh = (card_number % 1000000) / 1000000;
-    long thirteenth = card_number % 10000;
-    long fifteenth = card_number % 100;
-     printf("%ld\n", eleventh);
 
      //int card_number = get_long("Please enter your card number: \n");
      while(card_number != 0)
     {
-        long digit = card_number % 10;
+        long digit = card_number % 100;
         card_number = card_number / 100;
         printf("%ld\n", card_number);
         printf("%ld\n", digit);
