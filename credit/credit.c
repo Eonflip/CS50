@@ -92,7 +92,7 @@ int main(void)
     long ninth = card_number % 100000000;
     long eleventh = (card_number % 1000000) / 1000000;
     long thirteenth = card_number % 10000;
-    long fifteenth = card_number % 100 % 100;
+    long fifteenth = card_number % 100;
      printf("%ld\n", eleventh);
 
      //int card_number = get_long("Please enter your card number: \n");
