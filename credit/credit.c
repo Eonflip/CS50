@@ -83,17 +83,17 @@ int main(void)
         printf("INVALID\n");
     }
 
-    int first = card_number % 10000000000000000;
+    long first = card_number % 10000000000000000;
 
-    int third = card_number % 100000000000000;
-    int fifth = card_number % 1000000000000;
-    printf("%d\n", fifth);
-    int seventh = card_number % 10000000000;
-    int ninth = card_number % 100000000;
-    int eleventh = card_number % 1000000;
-    int thirteenth = card_number % 10000;
-    int fifteenth = card_number % 100;
+    long third = card_number % 100000000000000;
+    long fifth = card_number % 1000000000000;
 
+    long seventh = card_number % 10000000000;
+    long ninth = card_number % 100000000;
+    long eleventh = card_number % 1000000;
+    long thirteenth = card_number % 10000;
+    long fifteenth = card_number % 100;
+     printf("%ld\n", fifth);
 
 
 }
