@@ -90,5 +90,13 @@ int main(void)
 
 int checksum(void)
 {
-    
+    int first = card_number % 10000000000000000
+    int third = card_number % 100
+    int fifth = card_number % 1000000000000
+    int seventh = card_number % 10000000000
+    int ninth = card_number % 100000000
+    int eleventh = card_number % 1000000
+    int thirteenth = card_number % 10000
+    int fifteenth = card_number % 100
+
 }
