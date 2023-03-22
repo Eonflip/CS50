@@ -87,9 +87,9 @@ int main(void)
      //int card_number = get_long("Please enter your card number: \n");
      while(card_number != 0)
     {
-        long digit = card_number % 100;
+        long digit = card_number % 10;
         card_number = card_number / 100;
-        printf("%ld\n", card_number);
+        //printf("%ld\n", card_number);
         printf("%ld\n", digit);
     }
 
