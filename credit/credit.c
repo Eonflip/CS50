@@ -98,9 +98,9 @@ int main(void)
 
      while(card_number != 0)
     {
-        int digit = card_number % 10;
+        long digit = card_number % 10;
         card_number = card_number / 10;
-        printf("%d\n", card_number);
+        printf("%ld\n", card_number);
     }
 
 
