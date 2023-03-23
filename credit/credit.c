@@ -43,9 +43,6 @@ int main(void)
         case 49:
             printf("VISA\n");
             break;
-        case 40:
-            printf("VISA\n");
-            break;
         case 51:
             printf("MASTERCARD\n");
             break;
