@@ -30,6 +30,6 @@ int validate(long n)
         }
         sum = sum + temp;
         number = number / 10;
-        temp 
+        temp = number % 10;
     }
 }
