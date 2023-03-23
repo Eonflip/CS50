@@ -56,11 +56,11 @@ int validate(long n)
         {
             temp = temp - 9;
         }
-        sum = sum + temp;
-        number = number / 10;
+        sum += temp;
+        number /= 10;
         temp = number % 10;
-        sum = sum + temp;
-        number = number / 10;
+        sum += temp;
+        number /= 10;
     }
 
     while (n > 10)
