@@ -16,9 +16,9 @@ int main(void)
          case 37:
             printf("AMEX\n");
             break;
-        //case 40:
-        //    printf("VISA\n");
-        //    break;
+         case 40:
+            printf("VISA\n");
+            break;
         case 41:
             printf("VISA\n");
             break;
