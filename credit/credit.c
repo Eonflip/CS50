@@ -33,7 +33,7 @@ long get_cc()
     long n;
     do
     {
-        n = get_int("Enter a credit card number: ");
+        n = get_long("Enter a credit card number: ");
     }
     while (n < 0 || n > 50000000000000000);
     return n;
