@@ -113,8 +113,11 @@ int main(void)
 
     while (n > 10)
     {
-        n = n / 10; 
+        n = n / 10;
     }
+
+
+    printf("Sum: %d\nLeftmost: %ld\n", sum n);
 
 
 
