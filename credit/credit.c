@@ -101,7 +101,11 @@ int main(void)
     {
         long number = n;
 
-        printf("Number:)
+        printf("Number: %ld\n", number);
+
+        int sum = 0;
+
+        
     }
 
 
