@@ -3,14 +3,18 @@
 #include <math.h>
 #include <stdlib.h>
 
+int validate(long n);
+
 int main(void)
 {
-    long number = n;
 
-    int sum = 0;
-    sum = number % 10;
-    number = number / 10;
 }
 
 
+int validate(long n)
+{
+    long number = n;
 
+    printf("Number: %ld\n", number);
+    
+}
