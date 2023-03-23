@@ -16,6 +16,9 @@ int main(void)
          case 37:
             printf("AMEX\n");
             break;
+        case 40:
+            printf("VISA\n");
+            break;
         case 41:
             printf("VISA\n");
             break;
@@ -81,7 +84,7 @@ int validate(long n)
     long number = n;
     int sum = 0;
 
-    printf("Number: %ld\n", number);
+    //printf("Number: %ld\n", number);
 
 
     sum = number % 10;
@@ -106,7 +109,7 @@ int validate(long n)
     }
 
 
-    printf("Sum: %d\nLeftmost: %ld\n", sum, n);
+    //printf("Sum: %d\nLeftmost: %ld\n", sum, n);
 
     if (sum % 10)
     {
