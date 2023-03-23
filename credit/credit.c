@@ -30,9 +30,11 @@ int main(void)
 
 long get_cc()
 {
-    printf("Enter a credit card number: ");
-    long n;
-    scanf("%ld", &n);\
+    do
+    {
+        long n = get_int("Enter a credit card number: ");
+    }
+    while (n < 0 || n > 50000000000000000)
     return n;
 }
 
