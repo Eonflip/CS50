@@ -87,7 +87,7 @@ int main(void)
      //int card_number = get_long("Please enter your card number: \n");
     int sum = 0;
 
-    long number = n;
+    long number = card_number;
 
     sum = number % 10;
 
@@ -102,7 +102,7 @@ int main(void)
         {
             digit = digit - 9;
         }
-        sum = sum + temp;
+        sum = sum + digit;
         number = number / 10;
         digit = number % 10;
         sum = sum + digit;
@@ -111,19 +111,19 @@ int main(void)
         printf("%ld\n", digit);
     }
 
-    while (n > 10)
+    while (card_number > 10)
     {
-        n = n / 10;
+        card_number = card_number / 10;
     }
 
 
-    printf("Sum: %d\nLeftmost: %ld\n", sum n);
+    printf("Sum: %d\nLeftmost: %ld\n", sum, card_number);
 
     if (sum % 10)
     {
         return -1;
     }
-    return n;
+    return card_number;
 
 
 
