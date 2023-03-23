@@ -4,9 +4,26 @@
 #include <stdlib.h>
 
 int validate(long n);
+long get_cc();
 
 int main(void)
 {
+    if ((validate(get_cc())) == 3)
+    {
+        printf("AMEX\n");
+    }
+    else if ((validate(get_cc())) == 4)
+    {
+        printf("VISA\n");
+    }
+    else if ((validate(get_cc())) == 5)
+    {
+        printf("MASTERCARD\n");
+    }
+    else
+    {
+        printf("INVALID\n");
+    }
 
 }
 
@@ -34,7 +51,7 @@ int validate(long n)
         int temp = (number % 10) * 2;
         if (temp > 9)
         {
-            temp = temp - 9
+            temp = temp - 9;
         }
         sum = sum + temp;
         number = number / 10;
