@@ -28,6 +28,8 @@ int validate(long n)
         {
             temp = temp - 9
         }
-        sum = sum + temp 
+        sum = sum + temp;
+        number = number / 10;
+        
     }
 }
