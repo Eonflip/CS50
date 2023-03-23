@@ -91,7 +91,7 @@ int main(void)
         card_number = card_number / 100;
         if (digit > 9)
         {
-            
+            digit = digit - 9
         }
         //printf("%ld\n", card_number);
         printf("%ld\n", digit);
