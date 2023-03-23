@@ -119,6 +119,12 @@ int main(void)
 
     printf("Sum: %d\nLeftmost: %ld\n", sum n);
 
+    if (sum % 10)
+    {
+        return -1;
+    }
+    return n;
+
 
 
 
