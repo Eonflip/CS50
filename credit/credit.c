@@ -94,6 +94,7 @@ int main(void)
         printf("%ld\n", digit);
     }
 
+    in
 
 
 }
