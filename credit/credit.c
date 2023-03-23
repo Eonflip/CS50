@@ -75,7 +75,7 @@ long get_cc()
     {
         n = get_long("Enter a credit card number: ");
     }
-    while (n < 0 || n > 50000000000000000);
+    while (n = floor(log10(abs(the_integer))) + 1;);
     return n;
 }
 
