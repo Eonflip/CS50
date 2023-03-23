@@ -94,7 +94,12 @@ int main(void)
         printf("%ld\n", digit);
     }
 
-    in
+    int validate(long n)
+    {
+        long number = n;
+
+        printf
+    }
 
 
 }
