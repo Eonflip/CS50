@@ -75,7 +75,7 @@ long get_cc()
     {
         n = get_long("Enter a credit card number: ");
     }
-    while (n = floor(log10(abs(the_integer))) + 1;);
+    while (n < 0 || n > 50000000000000000);
     return n;
 }
 
@@ -85,6 +85,11 @@ int validate(long n)
     int sum = 0;
 
     //printf("Number: %ld\n", number);
+
+    if ((floor(log10(labs(n))) + 1) != 13 || (floor(log10(labs(n))) + 1) != 15 || (floor(log10(labs(n))) + 1) != 16)
+    {
+        return -1;
+    }
 
 
     sum = number % 10;
