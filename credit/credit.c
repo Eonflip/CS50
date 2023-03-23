@@ -78,11 +78,11 @@ long get_cc()
     while (n < 0 || n > 50000000000000000);
      if ((floor(log10(labs(n))) + 1) != 13 || (floor(log10(labs(n))) + 1) != 15 || (floor(log10(labs(n))) + 1) != 16)
     {
-        return -1;
+        return printf("INVALID\n");
     }
     else
     {
-    return n;
+        return n;
     }
 
 
