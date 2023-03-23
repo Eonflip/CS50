@@ -10,17 +10,56 @@ int main(void)
 {
    switch (validate(get_cc()))
     {
-        case 3:
+        case 34:
             printf("AMEX\n");
             break;
-        case 4:
+         case 37:
+            printf("AMEX\n");
+            break;
+        case 41:
             printf("VISA\n");
             break;
-        case 5:
+        case 42:
+            printf("VISA\n");
+            break;
+        case 43:
+            printf("VISA\n");
+            break;
+        case 44:
+            printf("VISA\n");
+            break;
+        case 45:
+            printf("VISA\n");
+            break;
+        case 46:
+            printf("VISA\n");
+            break;
+        case 47:
+            printf("VISA\n");
+            break;
+        case 48:
+            printf("VISA\n");
+            break;
+        case 49:
+            printf("VISA\n");
+            break;
+        case 40:
+            printf("VISA\n");
+            break;
+        case 51:
             printf("MASTERCARD\n");
             break;
-        case 6:
-            printf("DISCOVER\n");
+        case 52:
+            printf("MASTERCARD\n");
+            break;
+        case 53:
+            printf("MASTERCARD\n");
+            break;
+        case 54:
+            printf("MASTERCARD\n");
+            break;
+        case 55:
+            printf("MASTERCARD\n");
             break;
         default:
             printf("INVALID\n");
