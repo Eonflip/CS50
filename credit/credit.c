@@ -85,8 +85,9 @@ long get_cc()
 int validate(long n)
 {
     long number = n;
+    int test = n;
     int sum = 0;
-    if (floor(log10(labs(number))) + 1 == 13 || floor(log10(labs(number))) + 1 == 15 || floor(log10(labs(number))) + 1 == 16)
+    if (floor(log10(abs(test))) + 1 == 13 || floor(log10(abs(test))) + 1 == 15 || floor(log10(abs(test))) + 1 == 16)
     {
 
     //printf("Number: %ld\n", number);
@@ -118,10 +119,12 @@ int validate(long n)
 
 
     }
-    else if {
-
+    else
+    {
+        return - 1;
     }
-    else if (sum % 10)
+
+    if (sum % 10)
     {
         return -1;
     }
