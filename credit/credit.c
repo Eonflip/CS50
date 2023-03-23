@@ -31,5 +31,7 @@ int validate(long n)
         sum = sum + temp;
         number = number / 10;
         temp = number % 10;
+        sum = sum + temp;
+        number = number / 10; 
     }
 }
