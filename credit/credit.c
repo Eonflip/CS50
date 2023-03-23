@@ -64,7 +64,7 @@ int validate(long n)
         number /= 10;
     }
 
-    while (n > 10)
+    while (n > 100)
     {
         n = n / 10;
     }
