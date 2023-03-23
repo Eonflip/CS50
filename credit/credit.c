@@ -80,8 +80,11 @@ long get_cc()
     {
         return -1;
     }
-
+    else
+    {
     return n;
+    }
+
 
 }
 
