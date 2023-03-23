@@ -8,23 +8,22 @@ long get_cc();
 
 int main(void)
 {
-    validate(get_cc());
-    
-    if ((validate(get_cc())) == 3)
+   switch (validate(get_cc()))
     {
-        printf("AMEX\n");
-    }
-    else if ((validate(get_cc())) == 4)
-    {
-        printf("VISA\n");
-    }
-    else if ((validate(get_cc())) == 5)
-    {
-        printf("MASTERCARD\n");
-    }
-    else
-    {
-        printf("INVALID\n");
+        case 3:
+            printf("AMEX\n");
+            break;
+        case 4:
+            printf("VISA\n");
+            break;
+        case 5:
+            printf("MASTERCARD\n");
+            break;
+        case 6:
+            printf("DISCOVER\n");
+            break;
+        default:
+            printf("INVALID\n");
     }
 
 }
