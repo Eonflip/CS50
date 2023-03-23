@@ -8,6 +8,8 @@ long get_cc();
 
 int main(void)
 {
+    validate(get_cc());
+    
     if ((validate(get_cc())) == 3)
     {
         printf("AMEX\n");
