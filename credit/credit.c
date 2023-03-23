@@ -85,28 +85,38 @@ int main(void)
 
 
      //int card_number = get_long("Please enter your card number: \n");
-     while(card_number != 0)
+    int sum = 0;
+
+    long number = n;
+
+    sum = number % 10;
+
+    number = number / 10;
+
+    while(card_number != 0)
     {
+
         long digit = ((card_number/10) % 10) * 2;
         card_number = card_number / 100;
         if (digit > 9)
         {
-            digit = digit - 9
+            digit = digit - 9;
         }
+        sum = sum + temp;
+        number = number / 10;
+        digit = number % 10;
+        sum = sum + digit;
+        number = number / 10;
         //printf("%ld\n", card_number);
         printf("%ld\n", digit);
     }
 
-    int validate(long n)
+    while (n > 10)
     {
-        long number = n;
-
-        printf("Number: %ld\n", number);
-
-        int sum = 0;
-
-        
+        n = n / 10; 
     }
+
+
 
 
 }
