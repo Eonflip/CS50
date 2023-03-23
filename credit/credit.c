@@ -30,11 +30,12 @@ int main(void)
 
 long get_cc()
 {
+    long n;
     do
     {
-        long n = get_int("Enter a credit card number: ");
+        n = get_int("Enter a credit card number: ");
     }
-    while (n < 0 || n > 50000000000000000)
+    while (n < 0 || n > 50000000000000000);
     return n;
 }
 
