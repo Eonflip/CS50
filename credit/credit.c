@@ -8,15 +8,16 @@ long get_cc();
 
 int main(void)
 {
-   switch (validate(get_cc()))
+//switch case statement to check what 2 numbers begin the card
+    switch (validate(get_cc()))
     {
         case 34:
             printf("AMEX\n");
             break;
-         case 37:
+        case 37:
             printf("AMEX\n");
             break;
-         case 40:
+        case 40:
             printf("VISA\n");
             break;
         case 41:
@@ -68,6 +69,7 @@ int main(void)
 }
 
 
+//function to get the credit card number from user input and verify that it is the correct number of digits
 long get_cc()
 {
     long n = 0;
@@ -79,9 +81,11 @@ long get_cc()
 
     int num_digits = floor(log10(labs(n))) + 1;
 
+    //check to ensure that the card number is the correct number of digits
     if (num_digits == 13 || num_digits == 15 || num_digits == 16)
     {
-        printf("%d", num_digits);
+        //test statement to print out the result of the num_digits int
+        //printf("%d", num_digits);
         return n;
     }
 
@@ -94,6 +98,8 @@ long get_cc()
 
 }
 
+
+//checksum function 
 int validate(long n)
 {
 
@@ -105,7 +111,7 @@ int validate(long n)
 
     sum = number % 10;
     number = number / 10;
-    while(number)
+    while (number)
     {
         int temp = (number % 10) * 2;
         if (temp > 9)
