@@ -70,9 +70,9 @@ int main(void)
 
 long get_cc()
 {
-    long n;
+    long n = 0;
     int test = floor(log10(labs(n)));
-    printf("%d", test);
+    printf("%i", test);
     do
     {
         n = get_long("Enter a credit card number: ");
