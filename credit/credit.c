@@ -79,7 +79,7 @@ long get_cc()
     }
     while (n < 0 || n > 50000000000000000);
 
-    int nDigits = floor(log10(abs(the_integer))) + 1;
+
 
     return n;
 
@@ -120,7 +120,7 @@ int validate(long n)
 
     //printf("Sum: %d\nLeftmost: %ld\n", sum, n);
 
-    if (sum % 10)
+    if (floor(log10(labs(n))) + 1 != 13 || floor(log10(labs(n))) + 1 != 15 || floor(log10(labs(n))) + 1 != 16 || sum % 10 )
     {
         return -1;
     }
