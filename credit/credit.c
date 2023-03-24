@@ -79,6 +79,8 @@ long get_cc()
     }
     while (n < 0 || n > 50000000000000000);
 
+    int nDigits = floor(log10(abs(the_integer))) + 1;
+
     return n;
 
 
