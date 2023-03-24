@@ -79,9 +79,7 @@ long get_cc()
     }
     while (n < 0 || n > 50000000000000000);
 
-    if (floor(log10(abs(test))) + 1 == 13 || floor(log10(abs(test))) + 1 == 15 || floor(log10(abs(test))) + 1 == 16)
-    {
-        return n;
+    return n;
 
 
 
