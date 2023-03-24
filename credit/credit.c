@@ -79,8 +79,8 @@ long get_cc()
 
     if (floor(log10(labs(n))) + 1 == 13 || floor(log10(labs(n))) + 1 == 15 || floor(log10(labs(n))) + 1 == 16)
     {
-        printf("%ld", floor(log10(labs(n))));
-        return null;
+        printf("%f", floor(log10(labs(n))) + 1);
+        return nan;
     }
 
 
