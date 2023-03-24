@@ -99,7 +99,7 @@ long get_cc()
 }
 
 
-//checksum function 
+//checksum function
 int validate(long n)
 {
 
@@ -108,12 +108,15 @@ int validate(long n)
 
     //printf("Number: %ld\n", number);
 
-
+    //take the end digit from the long n and add it to sum, divide by 10 to cut off the final digit
     sum = number % 10;
     number = number / 10;
+
+    //while loop to mulitply every other number by 2 and add to sum all numbers
     while (number)
     {
         int temp = (number % 10) * 2;
+        //if loop to combine any numbers that are 2 digits (ex. 8*2 = 16, 16-9 = 7 = 1 + 6)
         if (temp > 9)
         {
             temp = temp - 9;
