@@ -77,11 +77,11 @@ long get_cc()
     }
     while (n < 0 || n > 50000000000000000);
 
-    
+    int num_digits = floor(log10(labs(n))) + 1;
 
-    if (floor(log10(labs(n))) + 1 == 13 || floor(log10(labs(n))) + 1 == 15 || floor(log10(labs(n))) + 1 == 16)
+    if (num_digits != 13 || num_digits != 15 || num_digits != 16)
     {
-        printf("%f", floor(log10(labs(n))) + 1);
+        printf("%d", num_digits);
         return -1;
     }
 
