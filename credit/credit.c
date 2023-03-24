@@ -71,7 +71,8 @@ int main(void)
 long get_cc()
 {
     long n;
-    int test = n;
+    int test = floor(log10(labs(n)));
+    printf("%d", test);
     do
     {
         n = get_long("Enter a credit card number: ");
@@ -88,8 +89,8 @@ long get_cc()
 
 int validate(long n)
 {
+
     long number = n;
-    int test = n;
     int sum = 0;
 
     //printf("Number: %ld\n", number);
