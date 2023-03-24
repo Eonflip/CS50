@@ -80,12 +80,13 @@ long get_cc()
     if (floor(log10(labs(n))) + 1 == 13 || floor(log10(labs(n))) + 1 == 15 || floor(log10(labs(n))) + 1 == 16)
     {
         printf("%f", floor(log10(labs(n))) + 1);
-        return nan;
+        return -1;
     }
 
-
-
-    return n;
+    else
+    {
+        return n;
+    }
 
 
 
@@ -124,10 +125,10 @@ int validate(long n)
 
     //printf("Sum: %d\nLeftmost: %ld\n", sum, n);
 
-    if (floor(log10(labs(n))) + 1 != 13 || floor(log10(labs(n))) + 1 != 15 || floor(log10(labs(n))) + 1 != 16 || sum % 10 )
+    if (sum % 10)
     {
-        printf("%ld\n", floor(log10(labs(n))) + 1);
         return -1;
     }
+
     return n;
 }
