@@ -71,8 +71,8 @@ int main(void)
 long get_cc()
 {
     long n = 0;
-    int test = floor(log10(labs(n)));
-    printf("%i", test);
+    long test = floor(log10(labs(n)));
+    printf("%ld", test);
     do
     {
         n = get_long("Enter a credit card number: ");
