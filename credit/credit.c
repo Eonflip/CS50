@@ -79,15 +79,15 @@ long get_cc()
 
     int num_digits = floor(log10(labs(n))) + 1;
 
-    if (num_digits != 13 || num_digits != 15 || num_digits != 16)
+    if (num_digits == 13 || num_digits == 15 || num_digits == 16)
     {
         printf("%d", num_digits);
-        return -1;
+        return n;
     }
 
     else
     {
-        return n;
+        return -1;
     }
 
 
