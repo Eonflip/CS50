@@ -112,7 +112,7 @@ int validate(long n)
     sum = number % 10;
     number = number / 10;
 
-    //while loop to mulitply every other number by 2 and add to sum all numbers
+    //while loop to mulitply every other number by 2 and add to sum all numbers and continue to cut the last digit off after adding
     while (number)
     {
         int temp = (number % 10) * 2;
