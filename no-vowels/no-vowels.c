@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <string.h>
 
-string replace(argv[]);
+string replace(string input);
 
 int main(int argc, string argv[])
 {
@@ -45,4 +45,5 @@ string replace (string input)
             input[i] = '0';
         }
     }
+    return input;
 }
