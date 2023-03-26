@@ -7,13 +7,13 @@
 #include <stdio.h>
 #include <string.h>
 
-string replace();
+string replace(argv[]);
 
 int main(int argc, string argv[])
 {
     if (argc == 2)
     {
-        printf("%s\n", replace());
+        printf("%s\n", replace(argv[]));
     }
     else
     {
@@ -25,24 +25,24 @@ int main(int argc, string argv[])
 string replace (string argv[])
 {
     string input = argv[1];
-    for (int i = 0; i < strlen(argv[1]); i++)
+    for (int i = 0; i < strlen(input); i++)
     {
-        if (argv[1][i] == 'a' || argv[1][i] == 'A')
+        if (input[i] == 'a' || input[i] == 'A')
         {
-            argv[1][i] = '6';
+            input[i] = '6';
         }
-        else if (argv[1][i] == 'e' || argv[1][i] == 'E')
+        else if (input[i] == 'e' || input[i] == 'E')
         {
-            argv[1][i] = '3';
+            input[i] = '3';
         }
-        else if (argv[1][i] == 'i' || argv[1][i] == 'I')
+        else if (input[i] == 'i' || input[i] == 'I')
         {
-            argv[1][i] = '1';
+            input[i] = '1';
         }
-        else if (argv[1][i] == 'o' || argv[1][i] == 'O')
+        else if (input[i] == 'o' || input[i] == 'O')
         {
-            argv[1][i] = '0';
+            input[i] = '0';
         }
     }
-    return argv[1];
+    return input;
 }
