@@ -7,11 +7,11 @@
 #include <stdio.h>
 #include <string.h>
 
-string replace(string argv[1]);
+string replace(argv[1]);
 
 int main(int argc, string argv[])
 {
-    string output = replace(string argv[1]);
+    string output = replace(argv[1]);
     if (argc == 2)
     {
         printf("%s\n", output);
@@ -24,7 +24,7 @@ int main(int argc, string argv[])
     }
 }
 
-string replace ()
+string replace (string argv[])
 {
     string input = string argv[1];
     for (int i = 0; i < strlen(input); i++)
