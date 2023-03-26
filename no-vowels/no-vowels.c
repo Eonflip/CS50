@@ -7,13 +7,13 @@
 #include <stdio.h>
 #include <string.h>
 
-string replace(string argv[]);
+string replace();
 
 int main(int argc, string argv[])
 {
     if (argc == 2)
     {
-        printf("%s\n", replace();
+        printf("%s\n", replace());
     }
     else
     {
