@@ -26,7 +26,7 @@ int main(int argc, string argv[])
 
 string replace (string argv[])
 {
-    string input = argv[];
+    string input = argv[1];
     for (int i = 0; i < strlen(input); i++)
     {
         if (input[i] == 'a' || input[i] == 'A')
