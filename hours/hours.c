@@ -29,6 +29,10 @@ float calc_hours(int hours[], int weeks, char output)
 {
     if (output == 'T')
     {
-        weeks * hours[i]
+        return weeks * hours;
+    }
+    else
+    {
+        return hours / weeks;
     }
 }
