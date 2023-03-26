@@ -5,6 +5,7 @@
 
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 int main(int argc, string argv[])
 {
@@ -28,9 +29,18 @@ int replace ()
         {
             argv[1][i] == '6';
         }
-        else if (argv[1][i] == '' || argv[1][i] == 'A')
+        else if (argv[1][i] == 'e' || argv[1][i] == 'E')
         {
-
+            argv[1][i] == '3';
         }
+        else if (argv[1][i] == 'i' || argv[1][i] == 'I')
+        {
+            argv[1][i] == '1';
+        }
+        else if (argv[1][i] == 'o' || argv[1][i] == 'O')
+        {
+            argv[1][i] == '0'
+        }
+        return argv[1];
     }
 }
