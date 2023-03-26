@@ -10,11 +10,16 @@ int main(int argc, string argv[])
 {
     if (argc == 2)
     {
-        for 
+        replace();
     }
     else
     {
         printf("This is an error\n");
         return 1;
     }
+}
+
+int replace ()
+{
+    string input = get_string()
 }
