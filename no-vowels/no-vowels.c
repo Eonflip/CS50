@@ -11,10 +11,11 @@ string replace(string argv[]);
 
 int main(int argc, string argv[])
 {
-    string output = replace(string argv[]);
+    string output = replace(argv[1]);
     if (argc == 2)
     {
         printf("%s\n", output);
+        return 0;
     }
     else
     {
