@@ -10,6 +10,11 @@ int main(int argc, string argv[])
 {
     if (argc == 2)
     {
-
+        for 
+    }
+    else
+    {
+        printf("This is an error\n");
+        return 1;
     }
 }
