@@ -11,7 +11,7 @@ string replace(string argv[]);
 
 int main(int argc, string argv[])
 {
-    string output = replace(argv[1]);
+    string output = replace (argv[1]);
     if (argc == 2)
     {
         printf("%s\n", output);
@@ -26,7 +26,7 @@ int main(int argc, string argv[])
 
 string replace (string argv[])
 {
-    string input = argv[1];
+    string input = argv[0];
     for (int i = 0; i < strlen(input); i++)
     {
         if (input[i] == 'a' || input[i] == 'A')
