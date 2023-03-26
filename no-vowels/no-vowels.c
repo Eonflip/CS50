@@ -7,13 +7,14 @@
 #include <stdio.h>
 #include <string.h>
 
-string replace(argv[]);
+string replace(string argv[]);
 
 int main(int argc, string argv[])
 {
+    string output = replace(string argv[]);
     if (argc == 2)
     {
-        printf("%s\n", replace(argv[]));
+        printf("%s\n", output);
     }
     else
     {
