@@ -28,6 +28,21 @@ string replace (string input)
 {
     for (int i = 0; i < strlen(input); i++)
     {
-        if ()
+        if (input[i] == 'a' || input[i] == 'A')
+        {
+            input[i] = '6';
+        }
+        else if (input[i] == 'e' || input[i] == 'E')
+        {
+            input[i] = '3';
+        }
+        else if (input[i] == 'i' || input[i] == 'I')
+        {
+            input[i] = '1';
+        }
+        else if (input[i] == 'o' || input[i] == 'O')
+        {
+            input[i] = '0';
+        }
     }
 }
