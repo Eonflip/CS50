@@ -21,5 +21,10 @@ int main(int argc, string argv[])
 
 int replace ()
 {
-    string input = get_string()
+    string input = argv[1];
+    input = input
+    for (int i = 0; i < strlen(argv[1]); i++)
+    {
+        if (argv[1] == ')
+    }
 }
