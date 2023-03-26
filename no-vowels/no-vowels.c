@@ -13,7 +13,7 @@ int main(int argc, string argv[])
 {
     if (argc == 2)
     {
-        printf("%s\n", replace(argv[1]));
+        printf("%s\n", replace(argv[]));
     }
     else
     {
@@ -43,6 +43,7 @@ string replace (string argv[])
         {
             input[i] = '0';
         }
+
     }
-    return input;
+return input;
 }
