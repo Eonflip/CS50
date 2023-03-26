@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <ctype.h>
 #include <stdio.h>
+#include <string.h>
 
 float calc_hours(int hours[], int weeks, char output);
 
@@ -29,11 +30,6 @@ float calc_hours(int hours[], int weeks, char output)
 {
     if (output == 'T')
     {
-        for (int i = 0; i < hours.length; i++)
-        return weeks * hours;
-    }
-    else
-    {
-        return hours / weeks;
+        
     }
 }
