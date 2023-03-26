@@ -24,7 +24,7 @@ int main(int argc, string argv[])
     }
 }
 
-//function for replacing strings
+//function for replacing characters in a string
 
 string replace(string input)
 {
