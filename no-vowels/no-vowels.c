@@ -24,6 +24,8 @@ int main(int argc, string argv[])
     }
 }
 
+//function for replacing strings
+
 string replace(string input)
 {
     for (int i = 0; i < strlen(input); i++)
