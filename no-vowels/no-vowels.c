@@ -22,7 +22,7 @@ int main(int argc, string argv[])
     }
 }
 
-string replace (string argv[])
+int replace (string argv[])
 {
     string input = argv[1];
     for (int i = 0; i < strlen(input); i++)
