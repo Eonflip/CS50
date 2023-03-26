@@ -11,9 +11,10 @@ string replace(argv[]);
 
 int main(int argc, string argv[])
 {
+    string input = argv[1];
     if (argc == 2)
     {
-        printf("%s\n", output);
+        printf("%s\n", replace (argv[1]));
         return 0;
     }
     else
@@ -23,7 +24,7 @@ int main(int argc, string argv[])
     }
 }
 
-string replace (argv[])
+string replace (string input)
 {
-
+    switch 
 }
