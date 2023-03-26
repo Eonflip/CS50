@@ -28,6 +28,7 @@ string replace (string input)
 {
     switch(input)
     {
-        case 'a': 
+        case 'a':
+            input
     }
 }
