@@ -14,7 +14,7 @@ int main(int argc, string argv[])
     string input = argv[1];
     if (argc == 2)
     {
-        printf("%s\n", replace (input));
+        printf("%s\n", replace(input));
         return 0;
     }
     else
@@ -24,7 +24,7 @@ int main(int argc, string argv[])
     }
 }
 
-string replace (string input)
+string replace(string input)
 {
     for (int i = 0; i < strlen(input); i++)
     {
