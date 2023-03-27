@@ -23,7 +23,10 @@ int main(void)
 // TODO: Complete the Boolean function below
 bool valid(string password)
 {
-    bool
+    bool upper = false;
+    bool lower = false;
+    bool number = false;
+    bool symbol = false;
 
     for (int i = 0; i < strlen(password); i++)
     {
