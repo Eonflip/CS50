@@ -25,11 +25,14 @@ int main(void)
 // TODO: Complete the Boolean function below
 bool valid(string password)
 {
+    //initialize all variables to boolean values of false until for loop changes that
     bool upper = false;
     bool lower = false;
     bool number = false;
     bool symbol = false;
 
+
+    //for loop to iterate through the length of the string (password) and evaluate each char using the ctype library
     for (int i = 0; i < strlen(password); i++)
     {
         if (isupper(password[i]))
@@ -50,6 +53,7 @@ bool valid(string password)
         }
     }
 
+    //if else loop to double check whether or not all bools evalute to true.
     if (upper && lower && number && symbol)
     {
         return true;
