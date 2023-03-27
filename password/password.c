@@ -4,6 +4,8 @@
 
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
+#include <ctype.h>
 
 bool valid(string password);
 
@@ -50,7 +52,7 @@ bool valid(string password)
 
     if (upper && lower && number && symbol)
     {
-        return true
+        return true;
     }
     else
     {
