@@ -30,7 +30,30 @@ bool valid(string password)
 
     for (int i = 0; i < strlen(password); i++)
     {
-        if (password[i] == )
+        if (isupper(password[i]))
+        {
+            upper = true;
+        }
+        else if (islower(password[i]))
+        {
+            lower = true;
+        }
+        else if (isdigit(password[i]))
+        {
+            number = true;
+        }
+        else if (ispunct(password[i]))
+        {
+            symbol = true;
+        }
     }
-    return false;
+
+    if (upper && lower && number && symbol)
+    {
+        return true
+    }
+    else
+    {
+        return false;
+    }
 }
