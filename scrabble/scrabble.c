@@ -24,15 +24,15 @@ int main(void)
 
 }
 
-//int compute_score(string word)
-//{
+int compute_score(string word)
+{
     // TODO: Compute and return score for string
-//    string new_word = tolower(word);
-//    int test = sizeof(POINTS)/sizeof(POINTS[0]);
+    string new_word = tolower(word);
+    int test = sizeof(POINTS)/sizeof(POINTS[0]);
 
-//    for (int i = 0; i < test; i++)
-//    {
+    for (int i = 0; i < test; i++)
+    {
+        
+    }
 
-//    }
-
-//}
+}
