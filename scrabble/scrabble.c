@@ -15,22 +15,24 @@ int main(void)
     string word2 = get_string("Player 2: ");
 
     // Score both words
-    int score1 = compute_score(word1);
-    int score2 = compute_score(word2);
+    //int score1 = compute_score(word1);
+    //int score2 = compute_score(word2);
 
     // TODO: Print the winner
+    char c = 71;
+    printf("%c\n", c);
 
 }
 
-int compute_score(string word)
-{
+//int compute_score(string word)
+//{
     // TODO: Compute and return score for string
-    string new_word = tolower(word);
-    int test = sizeof(POINTS)/sizeof(POINTS[0]);
+//    string new_word = tolower(word);
+//    int test = sizeof(POINTS)/sizeof(POINTS[0]);
 
-    for (int i = 0; i < test; i++)
-    {
-        
-    }
+//    for (int i = 0; i < test; i++)
+//    {
 
-}
+//    }
+
+//}
