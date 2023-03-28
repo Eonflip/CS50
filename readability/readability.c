@@ -29,4 +29,7 @@ int count_letters(string sentence)
 }
 
 
-int count_words
+int count_words(string sentence)
+{
+    
+}
