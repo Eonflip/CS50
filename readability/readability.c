@@ -22,9 +22,8 @@ int count_letters(string sentence)
     {
         if (isalnum(sentence[i]))
         {
-            printf("%c\n", sentence[i]);
             num_char += 1;
         }
     }
-    return printf("%i\n", num_char);
+    return printf("%i letters\n", num_char);
 }
