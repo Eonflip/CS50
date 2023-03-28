@@ -35,3 +35,6 @@ int compute_score(string word)
     }
 
 }
+b -> 98
+98-97 = 1
+POINTS[1]
