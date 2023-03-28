@@ -21,20 +21,30 @@ int main(void)
     // TODO: Print the winner
     //char c = 71;
     //printf("%c\n", c);
-    printf("%i\n", score1);
+    if (score1 > score2)
+    {
+        printf("%i\n", score1);
+    }
+    else if (score2 > score1)
+    {
+        printf("%i\n", score2);
+    }
 
 }
 
 int compute_score(string word)
 {
     //int test = sizeof(POINTS)/sizeof(POINTS[0]);
-
+    int scrabble_sum = 0;
     for(int i = 0; word[i]; i++)
     {
         word[i] = tolower(word[i]);
+        scrabble_sum += POINTS[i - 97];
     }
+    return scrabble_sum;
 
 }
-b -> 98
-98-97 = 1
-POINTS[1]
+
+//b -> 98
+//98-97 = 1
+//POINTS[1]
