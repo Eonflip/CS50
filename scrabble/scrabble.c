@@ -33,7 +33,7 @@ int compute_score(string word)
     for (int i = 0; i < strlen(word); i++)
     {
         char c = word[i];
-        printf("%i\n", c)
+        printf("%c\n", c)
     }
 
 }
