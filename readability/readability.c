@@ -4,6 +4,7 @@
 #include <string.h>
 
 int count_letters(string sentence);
+int count_words(string sentence);
 
 int main(void)
 {
@@ -11,6 +12,7 @@ int main(void)
     printf("%s\n", test_sentence);
 
     count_letters(test_sentence);
+    count_words(test_sentence);
 }
 
 
@@ -35,7 +37,7 @@ int count_words(string sentence)
 
     for(int i = 0; i < strlen(sentence); i++)
     {
-        if (sentence[i] == " " || sentence[i] == "\t" || sentence[i] == "\n" || sentence[i] == "\r")
+        if (sentence[i] == ' ' || sentence[i] == '\t' || sentence[i] == '\n' || sentence[i] == '\r')
         {
             words++;
         }
