@@ -8,7 +8,6 @@ int count_letters(string sentence);
 int main(void)
 {
     string test_sentence = get_string("Text: ");
-    printf("\n");
     printf("%s\n", test_sentence);
 
     count_letters(test_sentence);
