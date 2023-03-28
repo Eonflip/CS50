@@ -37,7 +37,7 @@ int count_words(string sentence)
 
     for(int i = 0; i <= strlen(sentence); i++)
     {
-        if (sentence[i] == ' ' || sentence[i] == '\t' || sentence[i] == '\n' || sentence[i] == '\r')
+        if (sentence[i] == ' ' || sentence[i] == '\t' || sentence[i] == '\n' || sentence[i] == '\r' || sentence[i] == '\0')
         {
             words++;
         }
