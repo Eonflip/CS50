@@ -3,8 +3,10 @@
 #include <ctype.h>
 #include <string.h>
 
+
 int count_letters(string sentence);
 int count_words(string sentence);
+int count_sentences(string sentence);
 
 int main(void)
 {
@@ -13,6 +15,7 @@ int main(void)
 
     count_letters(test_sentence);
     count_words(test_sentence);
+    count_sentences(test_sentence);
 }
 
 
@@ -27,7 +30,7 @@ int count_letters(string sentence)
             num_char += 1;
         }
     }
-    return printf("%i letters\n", num_char);
+    return num_char;
 }
 
 
@@ -42,8 +45,20 @@ int count_words(string sentence)
             words++;
         }
     }
-    return printf("%i words\n", words);
+    return words;
 }
 
 
 int count_sentences(string sentence)
+{
+    int sentences = 0;
+
+    for (int i = 0; i < strlen(sentence); i++)
+    {
+        if (sentence[i] == '.' || sentence[i] == '!' || sentence[i] == '?')
+        {
+            sentences++;
+        }
+    }
+    return sentences;
+}
