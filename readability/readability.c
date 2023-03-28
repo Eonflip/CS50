@@ -27,3 +27,6 @@ int count_letters(string sentence)
     }
     return printf("%i letters\n", num_char);
 }
+
+
+int count_words
