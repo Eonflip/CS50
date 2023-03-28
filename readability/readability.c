@@ -13,6 +13,8 @@ int main(void)
     string test_sentence = get_string("Text: ");
     printf("%s\n", test_sentence);
 
+    int grade_level = 0.0588 * float()
+
     count_letters(test_sentence);
     count_words(test_sentence);
     count_sentences(test_sentence);
