@@ -19,8 +19,6 @@ int main(void)
     int score2 = compute_score(word2);
 
     // TODO: Print the winner
-    //char c = 71;
-    //printf("%c\n", c);
     if (score1 > score2)
     {
         printf("Player 1 wins!\n");
@@ -38,21 +36,23 @@ int main(void)
 
 int compute_score(string word)
 {
-    //int test = sizeof(POINTS)/sizeof(POINTS[0]);
+    //initialize int to hold sum of character scores
     int scrabble_sum = 0;
+    //for loop to convert all characters to lower case (upper case works fine too)
     for(int i = 0; word[i]; i++)
     {
         word[i] = tolower(word[i]);
 
+        //test is the char at index word[i] is alphanumric and if it is add the score of index of points [index of char]
         if (isalnum(word[i]))
         {
             scrabble_sum += POINTS[word[i] - 97];
         }
     }
     return scrabble_sum;
-
 }
 
+//formula to help identify the arthmetic to get the right char to the right array index
 //b -> 98
 //98-97 = 1
 //POINTS[1]
