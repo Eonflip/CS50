@@ -27,11 +27,12 @@ int main(void)
 int compute_score(string word)
 {
     // TODO: Compute and return score for string
-    string new_word = tolower(word);
+    string new_word = word;
+    new_word = tolower(new_word);
     int test = sizeof(POINTS)/sizeof(POINTS[0]);
     char c;
 
-    for (int i = 0; i < strlen(word); i++)
+    for (int i = 0; i < strlen(new_word); i++)
     {
         c = word[i];
         printf("%c\n", c);
