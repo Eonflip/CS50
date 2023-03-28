@@ -44,3 +44,6 @@ int count_words(string sentence)
     }
     return printf("%i words\n", words);
 }
+
+
+int count_sentences(string sentence)
