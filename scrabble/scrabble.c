@@ -21,17 +21,17 @@ int main(void)
     // TODO: Print the winner
     //char c = 71;
     //printf("%c\n", c);
-    printf("%i", score1);
+    printf("%i\n", score1);
 
 }
 
 int compute_score(string word)
 {
+    char c;
     // TODO: Compute and return score for string
     for (int i = 0; i < strlen(word); i++)
     {
-        tolower(word[i]);
-        printf("%i", word[i]);
+        c = tolower(word[i]);
     }
     //string new_word = tolower(word);
     //int test = sizeof(POINTS)/sizeof(POINTS[0]);
@@ -42,5 +42,5 @@ int compute_score(string word)
     //    c = word[i];
     //    printf("%c\n", c);
     //}
-
+    return c;
 }
