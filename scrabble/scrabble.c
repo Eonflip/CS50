@@ -39,7 +39,7 @@ int compute_score(string word)
     //initialize int to hold sum of character scores
     int scrabble_sum = 0;
     //for loop to convert all characters to lower case (upper case works fine too)
-    for(int i = 0; word[i]; i++)
+    for (int i = 0; word[i]; i++)
     {
         word[i] = tolower(word[i]);
 
