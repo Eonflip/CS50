@@ -31,5 +31,7 @@ int count_letters(string sentence)
 
 int count_words(string sentence)
 {
-    
+    int words = 0;
+
+    for(int i = 0; i < strlen(sentence); i++)
 }
