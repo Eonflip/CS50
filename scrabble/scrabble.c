@@ -44,8 +44,10 @@ int compute_score(string word)
     {
         word[i] = tolower(word[i]);
 
-        if ()
-        scrabble_sum += POINTS[word[i] - 97];
+        if (isalnum(word[i]))
+        {
+            scrabble_sum += POINTS[word[i] - 97];
+        }
     }
     return scrabble_sum;
 
