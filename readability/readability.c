@@ -26,5 +26,5 @@ int count_letters(string sentence)
             num_char += 1;
         }
     }
-    return num_char;
+    return printf("%i\n", num_char);
 }
