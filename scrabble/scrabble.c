@@ -29,10 +29,10 @@ int compute_score(string word)
 {
     //int test = sizeof(POINTS)/sizeof(POINTS[0]);
 
-    //for (int i = 0; i < strlen(new_word); i++)
-    //{
-    //    c = word[i];
-    //    printf("%c\n", c);
-    //}
-    return c;
+    for(int i = 0; word[i]; i++)
+    {
+        word[i] = tolower(word[i]);
+        word[i]
+    }
+
 }
