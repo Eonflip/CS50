@@ -21,10 +21,11 @@ int count_letters(string sentence)
 
     for (int i = 0; i < strlen(sentence); i++)
     {
-        if (isalphanum(sentence[i]))
+        if (isalnum(sentence[i]))
         {
-            printf(sentence[i]);
+            printf("%c\n", sentence[i]);
             num_char += 1;
         }
     }
+    return num_char;
 }
