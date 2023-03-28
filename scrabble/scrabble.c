@@ -19,8 +19,8 @@ int main(void)
     //int score2 = compute_score(word2);
 
     // TODO: Print the winner
-    char c = 71;
-    printf("%c\n", c);
+    //char c = 71;
+    //printf("%c\n", c);
 
 }
 
@@ -30,9 +30,10 @@ int compute_score(string word)
     string new_word = tolower(word);
     int test = sizeof(POINTS)/sizeof(POINTS[0]);
 
-    for (int i = 0; i < test; i++)
+    for (int i = 0; i < strlen(word); i++)
     {
-        
+        char c = word[i];
+        printf("%i\n", c)
     }
 
 }
