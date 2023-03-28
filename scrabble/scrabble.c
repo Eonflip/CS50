@@ -39,7 +39,7 @@ int compute_score(string word)
     for(int i = 0; word[i]; i++)
     {
         word[i] = tolower(word[i]);
-        scrabble_sum += POINTS[i - 97];
+        scrabble_sum += POINTS[word[i] - 97];
     }
     return scrabble_sum;
 
