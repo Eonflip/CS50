@@ -17,7 +17,7 @@ int main(void)
     float s = count_sentences(test_sentence) / count_words(test_sentence) * 100;
 
     int grade_level = 0.0588 * l - 0.296 * s - 15.8;
-    grade_level = grade_level
+    grade_level = round(grade_level);
 
 
     printf("%i\n", grade_level);
