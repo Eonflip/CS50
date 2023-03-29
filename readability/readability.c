@@ -18,6 +18,22 @@ int main(void)
 
     int grade_level = round(0.0588 * l - 0.296 * s - 15.8);
 
+    switch(grade_level)
+    {
+        case 1:
+            printf("Grade 1\n");
+            break;
+        case 1:
+            printf("Grade 1\n");
+            break;
+        case 1:
+            printf("Grade 1\n");
+            break;
+        case 1:
+            printf("Grade 1\n");
+            break;
+    }
+
 
 
     printf("%i\n", grade_level);
