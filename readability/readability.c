@@ -23,6 +23,42 @@ int main(void)
         case 1:
             printf("Grade 1\n");
             break;
+        case 2:
+            printf("Grade 2\n");
+            break;
+        case 3:
+            printf("Grade 3\n");
+            break;
+        case 4:
+            printf("Grade 4\n");
+            break;
+        case 5:
+            printf("Grade 5\n");
+            break;
+        case 6:
+            printf("Grade 6\n");
+            break;
+        case 7:
+            printf("Grade 7\n");
+            break;
+        case 8:
+            printf("Grade 8\n");
+            break;
+        case 1:
+            printf("Grade 1\n");
+            break;
+        case 1:
+            printf("Grade 1\n");
+            break;
+        case 1:
+            printf("Grade 1\n");
+            break;
+        case 1:
+            printf("Grade 1\n");
+            break;
+        case 1:
+            printf("Grade 1\n");
+            break;
         case 1:
             printf("Grade 1\n");
             break;
