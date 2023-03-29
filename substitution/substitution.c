@@ -5,8 +5,9 @@ int main(int argc, string argv[])
 {
     do
     {
-        printf
+        printf("Key must only contain 26 unique alphanumeric characters");
     }
+    while (!isalnum(argv[1])
 
     string cipher_key[26] = {}
 
