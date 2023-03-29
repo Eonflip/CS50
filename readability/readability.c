@@ -18,61 +18,19 @@ int main(void)
 
     int grade_level = round(0.0588 * l - 0.296 * s - 15.8);
 
-    switch(grade_level)
+    if (grade_level >= 1 && grade_level < 16)
     {
-        case 1:
-            printf("Grade 1\n");
-            break;
-        case 2:
-            printf("Grade 2\n");
-            break;
-        case 3:
-            printf("Grade 3\n");
-            break;
-        case 4:
-            printf("Grade 4\n");
-            break;
-        case 5:
-            printf("Grade 5\n");
-            break;
-        case 6:
-            printf("Grade 6\n");
-            break;
-        case 7:
-            printf("Grade 7\n");
-            break;
-        case 8:
-            printf("Grade 8\n");
-            break;
-        case 1:
-            printf("Grade 1\n");
-            break;
-        case 1:
-            printf("Grade 1\n");
-            break;
-        case 1:
-            printf("Grade 1\n");
-            break;
-        case 1:
-            printf("Grade 1\n");
-            break;
-        case 1:
-            printf("Grade 1\n");
-            break;
-        case 1:
-            printf("Grade 1\n");
-            break;
-        case 1:
-            printf("Grade 1\n");
-            break;
-        case 1:
-            printf("Grade 1\n");
-            break;
+        printf("Grade %i\n", grade_level);
+    }
+    else if (grade_level >= 16)
+    {
+        printf("Grade 16+\n");
+    }
+    else
+    {
+        printf("Before Grade 1\n");
     }
 
-
-
-    printf("%i\n", grade_level);
 }
 
 
