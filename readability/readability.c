@@ -13,8 +13,8 @@ int main(void)
     string test_sentence = get_string("Text: ");
     printf("%s\n", test_sentence);
 
-    float l = count_letters(test_sentence) / count_words(test_sentence) * 100;
-    float s = count_sentences(test_sentence) / count_words(test_sentence) * 100;
+    float l = (float) count_letters(test_sentence) / (float) count_words(test_sentence) * 100;
+    float s = (float) count_sentences(test_sentence) / (float) count_words(test_sentence) * 100;
 
     int grade_level = round(0.0588 * l - 0.296 * s - 15.8);
 
