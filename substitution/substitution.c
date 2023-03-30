@@ -16,7 +16,7 @@ int main(int argc, string argv[])
         {
             printf("Key must only contain 26 unique alphanumeric characters");
         }
-        while (!isalnum(argv[1])
+        while (isalnum(argv[1] != true)
 
         for (int i = 0; i < 26; i++)
         {
