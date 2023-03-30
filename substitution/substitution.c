@@ -4,11 +4,12 @@
 #include <string.h>
 #include <math.h>
 
+
+
 int main(int argc, string argv[])
 {
 
     string cipher_key[26] = {};
-
 
     if (argc == 2)
     {
