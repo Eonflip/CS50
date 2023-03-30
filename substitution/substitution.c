@@ -12,15 +12,15 @@ int main(int argc, string argv[])
 
     if (argc == 2)
     {
-        do
-        {
-            printf("Key must only contain 26 unique alphanumeric characters");
-        }
-        while (isalnum(argv[1] != true)
-
         for (int i = 0; i < 26; i++)
         {
-            ccipher_key[i] = argv[1][i]
+            do
+            {
+                printf("Key must only contain 26 unique alphanumeric characters");
+            }
+            while (isalnum(argv[1][i]) != true);
+
+            cipher_key[i] = argv[1][i];
         }
     }
 }
