@@ -25,6 +25,6 @@ int main(int argc, string argv[])
     }
     else
     {
-        printf(")
+        printf("Please enter 1 argument that is 26 unique alphanumeric characters")
     }
 }
