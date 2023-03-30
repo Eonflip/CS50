@@ -23,4 +23,8 @@ int main(int argc, string argv[])
             cipher_key[i] = argv[1][i];
         }
     }
+    else
+    {
+        printf(")
+    }
 }
