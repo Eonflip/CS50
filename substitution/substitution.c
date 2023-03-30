@@ -13,7 +13,7 @@ int main(int argc, string argv[])
     {
         if (strlen(argv) == 26)
         {
-            if ()
+            
         }
     }
     else
