@@ -41,7 +41,7 @@ int main(int argc, string argv[])
     }
 
     // do something with the cipher
-    
+    string alphabet = "abcdefghijklmnopqrstuvwxyz";
     string plain_text = get_string("plaintext: ");
     for (int i = 0; i < strlen(plain_text); i++)
     {
