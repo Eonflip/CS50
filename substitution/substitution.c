@@ -42,7 +42,10 @@ int main(int argc, string argv[])
 
     // do something with the cipher
     string plain_text = get_string("plaintext: \n");
-    for 
+    for (int i = 0; i < 26; i++)
+    {
+        plain_text[i] = cipher[i];
+    }
     return 0;
 }
 
