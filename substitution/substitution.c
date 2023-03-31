@@ -41,11 +41,14 @@ int main(int argc, string argv[])
     }
 
     // do something with the cipher
-
+    string plain_text = get_string("plaintext: \n");
+    for 
     return 0;
 }
 
 int plain_to_cipher(string plaintext)
 {
-    
+    string plain_text = get_string("plaintext: \n");
+
+    for
 }
