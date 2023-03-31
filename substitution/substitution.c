@@ -45,6 +45,7 @@ int main(int argc, string argv[])
     for (int i = 0; i < 26; i++)
     {
         plain_text[i] = cipher[i];
+        printf("ciphertext: %s\n", plain_text);
     }
     return 0;
 }
