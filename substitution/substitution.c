@@ -41,6 +41,7 @@ int main(int argc, string argv[])
     }
 
     // do something with the cipher
+    string plaintext = get_string("plaintext: ");
     for (int i = 0, n = strlen(plaintext); i < n; i++)
 {
     char c = plaintext[i];
