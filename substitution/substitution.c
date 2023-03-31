@@ -49,10 +49,3 @@ int main(int argc, string argv[])
     }
     return 0;
 }
-
-int plain_to_cipher(string plaintext)
-{
-    string plain_text = get_string("plaintext: \n");
-
-    for
-}
