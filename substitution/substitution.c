@@ -47,7 +47,7 @@ int main(int argc, string argv[])
     char ciphertext[strlen(plaintext)];
     for (int i = 0, n = strlen(plaintext); i < n; i++)
     {
-        if (isupper(plaintext[i]))a
+        if (isupper(plaintext[i]))
         {
             ciphertext[i] = toupper(key[plaintext[i] - 'A']);
         }
