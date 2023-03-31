@@ -58,6 +58,7 @@ int main(int argc, string argv[])
 
     // do something with the cipher
     string plaintext = get_string("plaintext: ");
+    string cipher_text[strlen(plaintext)] = {};
     for (int i = 0, n = strlen(plaintext); i < n; i++)
     {
         char c = plaintext[i];
@@ -68,7 +69,7 @@ int main(int argc, string argv[])
             // use index to look up corresponding character in cipher array
             char encrypted_char = cipher[index];
             // print the encrypted character
-            printf("%c", encrypted_char);
+            cipher_text[i] = encrypted_char;
         }
         else
         {
@@ -77,6 +78,7 @@ int main(int argc, string argv[])
         }
 
     }
+    printf("%s", cipher_text);
     printf("\n");
     return 0;
 }
