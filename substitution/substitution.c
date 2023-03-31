@@ -41,8 +41,9 @@ int main(int argc, string argv[])
     }
 
     // do something with the cipher
-    string plain_text = get_string("plaintext: \n");
-    for (int i = 0; i < 26; i++)
+    
+    string plain_text = get_string("plaintext: ");
+    for (int i = 0; i < strlen(plain_text); i++)
     {
         plain_text[i] = cipher[i];
         printf("ciphertext: %s\n", plain_text);
