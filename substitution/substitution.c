@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <string.h>
 #include <math.h>
+#include <limits.h>
 
 int main(int argc, string argv[])
 {
@@ -13,6 +14,21 @@ int main(int argc, string argv[])
     }
 
     int key_length = strlen(argv[1]);
+
+    if (key_length == 26)
+    {
+        char Seen[UCHAR_MAX + 1] = {0};
+        for (int i = 0; i < 26; i++)
+        {
+            unsigned char c = argv[1][i];
+            c = toupper(c);
+            if (Seen[c])
+            {
+                printf("Key must contain 26 unique non-repeating alphanumeric characters\n");
+            }
+        }
+    }
+
     if (key_length != 26 && !isalnum(key_length))
     {
         printf("Key must contain 26 alphanumeric characters.\n");
