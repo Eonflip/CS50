@@ -8,9 +8,11 @@
 
 int main(int argc, string argv[])
 {
+    string cipher[] = {};
 
     if (argc == 2)
     {
+
        if (isblank(argv[1]))
        {
         printf("Usage: ./substitution key(26 unique letters)\n");
@@ -21,8 +23,13 @@ int main(int argc, string argv[])
        }
        else if (isalnum(argv[1]))
        {
-
+        for (int i = 0; i < 26; i++)
+        {
+            cipher[i] = argv[1][i];
+            printf("%c", cipher[i]);
+        }
        }
+
     }
     else
     {
