@@ -41,12 +41,23 @@ int main(int argc, string argv[])
     }
 
     // do something with the cipher
-    string alphabet = "abcdefghijklmnopqrstuvwxyz";
-    string plain_text = get_string("plaintext: ");
-    for (int i = 0; i < strlen(plain_text); i++)
+    for (int i = 0, n = strlen(plaintext); i < n; i++)
+{
+    char c = plaintext[i];
+    if (isalpha(c))
     {
-        plain_text[i] = cipher[i];
-        printf("ciphertext: %s\n", plain_text);
+        // convert character to uppercase and subtract ASCII value of 'A' to get index
+        int index = toupper(c) - 'A';
+        // use index to look up corresponding character in cipher array
+        char encrypted_char = cipher[index];
+        // print the encrypted character
+        printf("%c", encrypted_char);
     }
+    else
+    {
+        // print non-alphabetic character unchanged
+        printf("%c", c);
+    }
+}
     return 0;
 }
