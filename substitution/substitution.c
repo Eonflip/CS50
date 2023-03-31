@@ -68,9 +68,12 @@ int main(int argc, string argv[])
     return 0;
 }
 
+//function to check whether or not a string has all unique alphanumeric characters
 bool checkUnique(char str[])
 {
+    //initialize an array with all 26 values as false
     bool char_set[26] = { false };
+    //write a for loop to iterate through the input string to check it for any repeated characters 
     for (int i = 0, n = strlen(str); i < n; i++)
     {
         if (!isalpha(str[i]))
