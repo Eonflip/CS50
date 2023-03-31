@@ -4,36 +4,43 @@
 #include <string.h>
 #include <math.h>
 
-
-
 int main(int argc, string argv[])
 {
-    string cipher[] = {};
-
-    if (argc == 2)
+    if (argc != 2)
     {
-
-       if (isblank(argv[1]))
-       {
         printf("Usage: ./substitution key(26 unique letters)\n");
-       }
-       else if (isalnum(argv[1] != true))
-       {
-        printf("Key must only contain alphanumeric characters\n");
-       }
-       else if (isalnum(argv[1]))
-       {
-        for (int i = 0; i < 26; i++)
-        {
-            cipher[i] = argv[1][i];
-            printf("%c", cipher[i]);
-        }
-       }
-
+        return 1;
     }
-    else
+
+    int key_length = strlen(argv[1]);
+    if (key_length != 26)
     {
-        printf("Please enter a single argument that is 26 unique alphanumeric characters");
+        printf("Key must contain 26 characters.\n");
+        return 1;
     }
 
+    char cipher[26];
+    for (int i = 0; i < 26; i++)
+    {
+        if (!isalnum(argv[1][i]))
+        {
+            printf("Key must only contain alphanumeric characters.\n");
+            return 1;
+        }
+
+        for (int j = 0; j < i; j++)
+        {
+            if (toupper(argv[1][i]) == toupper(cipher[j]))
+            {
+                printf("Key must not contain repeated characters.\n");
+                return 1;
+            }
+        }
+
+        cipher[i] = toupper(argv[1][i]);
+    }
+
+    // do something with the cipher
+
+    return 0;
 }
