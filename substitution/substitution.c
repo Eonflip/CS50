@@ -13,9 +13,9 @@ int main(int argc, string argv[])
     }
 
     int key_length = strlen(argv[1]);
-    if (key_length != 26)
+    if (key_length != 26 && !isalnum(key_length))
     {
-        printf("Key must contain 26 characters.\n");
+        printf("Key must contain 26 alphanumeric characters.\n");
         return 1;
     }
 
