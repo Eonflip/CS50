@@ -11,10 +11,7 @@ int main(int argc, string argv[])
 
     if (argc == 2)
     {
-        do
-        {
-            
-        }
+       if (argv[1] == " ")
     }
     else
     {
