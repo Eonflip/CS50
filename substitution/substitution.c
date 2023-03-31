@@ -21,7 +21,7 @@ int main(int argc, string argv[])
        }
        else if (isalnum(argv[1]))
        {
-        
+
        }
     }
     else
