@@ -4,6 +4,7 @@
 #include <string.h>
 #include <math.h>
 #include <limits.h>
+#include <stdlib.h>
 
 int main(int argc, string argv[])
 {
@@ -60,7 +61,7 @@ int main(int argc, string argv[])
 
     // do something with the cipher
     string plaintext = get_string("plaintext: ");
-    string cipher_text[strlen(plaintext)] = {};
+    string cipher_text = malloc(strlen(plaintext) + 1);
     for (int i = 0, n = strlen(plaintext); i < n; i++)
     {
         char c = plaintext[i];
@@ -70,17 +71,18 @@ int main(int argc, string argv[])
             int index = toupper(c) - 'A';
             // use index to look up corresponding character in cipher array
             char encrypted_char = cipher[index];
-            // print the encrypted character
+            // copy the encrypted character to the cipher_text array
             cipher_text[i] = encrypted_char;
         }
         else
         {
             // print non-alphabetic character unchanged
-            printf("%c", c);
+            cipher_text[i] = c;
         }
 
     }
+    cipher_text[strlen(plaintext)] = '\0';
     printf("%s", cipher_text);
-    printf("\n");
+    free(cipher_text);
     return 0;
 }
