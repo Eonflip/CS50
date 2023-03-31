@@ -25,7 +25,9 @@ int main(int argc, string argv[])
             if (Seen[c])
             {
                 printf("Key must contain 26 unique non-repeating alphanumeric characters\n");
+                return 1;
             }
+            Seen[c] = 1;
         }
     }
 
