@@ -24,40 +24,47 @@ int main(int argc, string argv[])
     }
     else if (key_length == 26)
     {
-        if (checkUnique(argv[1]))
+        if (!checkUnique(argv[1]))
         {
-            for(int i = 0; i < 26; i++)
+            printf("Key must contain 26 unique characters.\n");
+            return 1;
+        }
+
+        for(int i = 0; i < 26; i++)
+        {
+            if (!isalnum(argv[1][i]))
             {
-                if (!isalnum(argv[1][i]))
+                printf("Key must only contain alphanumeric characters.\n");
+                return 1;
+            }
+            cipher[i] = argv[1][i];
+        }
+
+        string plaintext = get_string("plaintext: ");
+        char ciphertext[strlen(plaintext)];
+
+        for (int i = 0; i < strlen(plaintext); i++)
+        {
+            if (plaintext[i] == ' ')
+            {
+                ciphertext[i] = ' ';
+            }
+            else
+            {
+                int index = toupper(plaintext[i]) - 'A';
+
+                if (islower(plaintext[i]))
                 {
-                    printf("Key must only contain alphanumeric characters.\n");
-                    return 1;
+                    ciphertext[i] = tolower(cipher[index]);
                 }
                 else
                 {
-                    string plaintext = get_string("plaintext: ");
-                    char key[] = argv[1];
-                    string cipher_key = key;
-                    char ciphertext[strlen(plaintext)];
-
-                    for (int i = 0; i < strlen(plaintext); i++) {
-                        if (plaintext[i] == ' ')
-                        {
-                            ciphertext[i] = ' ';
-                        }
-                        else
-                        {
-                            int index = plaintext[i] - 'A';
-
-                            ciphertext[i] = key[index];
-                        }
-                    }
-                    printf("Plaintext: %s\n", plaintext);
-                    printf("Ciphertext: %s\n", ciphertext);
-                    return 0;
+                    ciphertext[i] = cipher[index];
                 }
             }
         }
+        printf("ciphertext: %s\n", ciphertext);
+        return 0;
     }
 }
 
@@ -69,7 +76,8 @@ bool checkUnique(char str[])
     for (int i = 0; str[i] != '\0'; i++)
     {
         int val = str[i];
-        if (char_set[val]) {
+        if (char_set[val])
+        {
             return false;
         }
         else
