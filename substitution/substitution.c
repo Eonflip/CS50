@@ -45,4 +45,4 @@ int main(int argc, string argv[])
     return 0;
 }
 
-int plain_to_cipher
+int plain_to_cipher()
