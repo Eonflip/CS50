@@ -75,6 +75,7 @@ int main(int argc, string argv[])
         // print non-alphabetic character unchanged
         printf("%c", c);
     }
+    printf("\n");
 }
     return 0;
 }
