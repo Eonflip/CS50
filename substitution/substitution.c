@@ -11,7 +11,18 @@ int main(int argc, string argv[])
 
     if (argc == 2)
     {
-       if (argv[1] == " ")
+       if (isblank(argv[1]))
+       {
+        printf("Usage: ./substitution key(26 unique letters)\n");
+       }
+       else if (isalnum(argv[1] != true))
+       {
+        printf("Key must only contain alphanumeric characters\n");
+       }
+       else if (isalnum(argv[1]))
+       {
+        
+       }
     }
     else
     {
