@@ -43,6 +43,8 @@ int main(int argc, string argv[])
 
     // Generate ciphertext using key
     char key[26];
+
+    //Here we copy the string argv[1] to key
     strcpy(key, argv[1]);
     char ciphertext[strlen(plaintext)];
     for (int i = 0, n = strlen(plaintext); i < n; i++)
@@ -73,7 +75,7 @@ bool checkUnique(char str[])
 {
     //initialize an array with all 26 values as false
     bool char_set[26] = { false };
-    //write a for loop to iterate through the input string to check it for any repeated characters 
+    //write a for loop to iterate through the input string to check it for any repeated characters
     for (int i = 0, n = strlen(str); i < n; i++)
     {
         if (!isalpha(str[i]))
