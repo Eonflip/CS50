@@ -78,15 +78,18 @@ bool checkUnique(char str[])
     //write a for loop to iterate through the input string to check it for any repeated characters
     for (int i = 0, n = strlen(str); i < n; i++)
     {
+        int index = tolower(str[i]) - 'a';
+
         if (!isalpha(str[i]))
         {
             return false;
         }
-        int index = tolower(str[i]) - 'a';
+
         if (char_set[index])
         {
             return false;
         }
+
         char_set[index] = true;
     }
     return true;
