@@ -26,6 +26,7 @@ int main(void)
 int convert(string input)
 {
     // TODO
+    
     for (int i = 0; i < strlen(input); i++)
     {
         int (input[i]);
