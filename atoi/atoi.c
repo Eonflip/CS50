@@ -26,10 +26,11 @@ int main(void)
 int convert(string input)
 {
     // TODO
-    int new_int;
     for (int i = 0; i < strlen(input); i++)
     {
-        
+        int (input[i]);
+        convert(input - 1)
+        return input[i]
     }
 
 }
