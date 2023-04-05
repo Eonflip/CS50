@@ -25,7 +25,9 @@ int main(void)
 
 int convert(string input)
 {
-    // TODO'
+    // TODO
+    int return_value;
+
     if (strlen(input) <= 0)
     {
         printf("You need to input something!\n")
@@ -35,8 +37,7 @@ int convert(string input)
     for (int i = 0, n = strlen(input); i < n; n--)
     {
         convert()
-        return (int) input[n - 1];
-        input[strlen(input) - 1] = '\0';
+        return_value[n - 1] = input[i];
     }
 
 
