@@ -36,6 +36,7 @@ int convert(string input)
     {
         convert()
         return (int) input[n - 1];
+        input[strlen(input) - 1] = '\0';
     }
 
 
