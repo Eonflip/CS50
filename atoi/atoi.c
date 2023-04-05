@@ -26,12 +26,12 @@ int main(void)
 int convert(string input)
 {
     // TODO
-    
-    for (int i = 0; i < strlen(input); i++)
+
+    for (int i = 0, n = strlen(input); i < n; i++)
     {
-        int (input[i]);
-        convert(input - 1)
-        return input[i]
+        (int) input[i];
     }
+
+    return input;
 
 }
