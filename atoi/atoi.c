@@ -25,13 +25,18 @@ int main(void)
 
 int convert(string input)
 {
-    // TODO
-
-    for (int i = 0, n = strlen(input); i < n; i++)
+    // TODO'
+    if (strlen(input) <= 0)
     {
-        (int) input[i];
+        printf("You need to input something!\n")
+        return 1;
     }
 
-    return input;
+    for (int i = 0, n = strlen(input); i < n; n--)
+    {
+        convert()
+        return (int) input[n - 1];
+    }
+
 
 }
