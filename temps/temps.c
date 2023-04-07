@@ -63,7 +63,7 @@ int main(void)
 void sort_cities(void)
 {
     int counter = 0;
-    int new_struct =
+    
     // Add your code here
     for (int i = 0; i < NUM_CITIES; i++)
     {
