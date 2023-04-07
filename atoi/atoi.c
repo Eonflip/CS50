@@ -26,19 +26,18 @@ int main(void)
 int convert(string input)
 {
     // TODO
-    int return_value = 0;
+    int temp_num = 0;
+    int counter = strlen(input);
 
-    if (strlen(input) <= 0)
+    if (strlen(input) == 0)
     {
         printf("You need to input something!\n");
         return 1;
     }
 
-    int input_length = strlen(input);
-    for (int i = 0; i < input_length; i++)
+    for (int i = 0; i < counter; i++)
     {
-        convert()How w
-        return_value[n - 1] = input[i];
+        temp_num = 
     }
 
 
