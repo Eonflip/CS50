@@ -6,6 +6,8 @@
 
 int convert(string input);
 
+long num = 0;
+
 int main(void)
 {
     string input = get_string("Enter a positive integer: ");
@@ -29,15 +31,16 @@ int convert(string input)
     int temp_num = 0;
     int counter = strlen(input);
 
-    if (strlen(input) == 0)
+    if (counter == 0)
     {
         printf("You need to input something!\n");
         return 1;
     }
 
-    for (int i = 0; i <= counter; i++)
+    for (int i = counter - 1; i >= 0; i--)
     {
         temp_num = temp_num * 10 + (input[i] - '0');
+        input[i] = '\0';
         convert(input);
     }
     return temp_num;
