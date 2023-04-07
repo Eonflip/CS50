@@ -35,10 +35,12 @@ int convert(string input)
         return 1;
     }
 
-    for (int i = 0; i < counter; i++)
+    for (int i = 0; i <= counter; i++)
     {
-        temp_num = 
+        temp_num = temp_num * 10 + (input[i] - '0');
+        convert(input);
     }
+    return temp_num;
 
 
 }
