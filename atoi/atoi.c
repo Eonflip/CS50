@@ -42,8 +42,9 @@ int convert(string input)
         input[i] = '\0';
         convert(input);
         num = num * 10 + temp_num;
+        return num;
     }
-    return temp_num;
+    return num;
 
 
 }
