@@ -33,8 +33,7 @@ int convert(string input)
 
     if (counter == 0)
     {
-        printf("You need to input something!\n");
-        return 1;
+        return num;
     }
 
     for (int i = counter - 1; i >= 0; i--)
