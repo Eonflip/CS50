@@ -6,6 +6,7 @@
 
 int convert(string input);
 
+
 int main(void)
 {
     string input = get_string("Enter a positive integer: ");
@@ -27,7 +28,6 @@ int convert(string input)
 {
     // TODO
     int temp_num = 0;
-    long num = 0;
     int counter = strlen(input);
 
     if (counter == 0)
@@ -37,6 +37,7 @@ int convert(string input)
 
     for (int i = counter - 1; i >= 0; i--)
     {
+        long num = 0;
         temp_num = input[i] - '0';
         input[i] = '\0';
         convert(input);
