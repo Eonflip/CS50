@@ -39,9 +39,10 @@ int convert(string input)
 
     for (int i = counter - 1; i >= 0; i--)
     {
-        temp_num = temp_num * 10 + (input[i] - '0');
+        temp_num = input[i] - 0;
         input[i] = '\0';
         convert(input);
+        num = num * 10 + temp_num;
     }
     return temp_num;
 
