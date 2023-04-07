@@ -6,8 +6,6 @@
 
 int convert(string input);
 
-long num = 0;
-
 int main(void)
 {
     string input = get_string("Enter a positive integer: ");
@@ -29,6 +27,7 @@ int convert(string input)
 {
     // TODO
     int temp_num = 0;
+    long num = 0;
     int counter = strlen(input);
 
     if (counter == 0)
