@@ -63,6 +63,9 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here
-    for (i < )
+    for (int i = 0; i < NUM_CITIES; i++)
+    {
+        
+    }
 
 }
