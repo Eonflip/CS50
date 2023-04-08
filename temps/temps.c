@@ -78,6 +78,7 @@ void sort_cities(void)
         {
             avg_temp temp = temps[i];
             temps[i] = temps[high_temp];
+            temps[high_temp] = temp;
         }
     }
 
