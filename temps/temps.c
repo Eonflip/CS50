@@ -49,8 +49,6 @@ int main(void)
     temps[9].city = "San Francisco";
     temps[9].temp = 66;
 
-    struct avg_temp new_temps = temps;
-
     sort_cities();
 
     printf("\nAverage July Temperatures by City\n\n");
@@ -66,16 +64,21 @@ void sort_cities(void)
 {
 
     // Add your code here
-    for (int i = 0; i < NUM_CITIES; i++)
+    for (int i = 0; i < NUM_CITIES - 1; i++)
     {
-        int high_temp = 0;
-        if (temps[i].temp > temps[high_temp].temp)
+        int high_temp = i;
+        for (int j = i + 1; j < NUM_CITIES; j++)
         {
-            temps[high_temp].temp = temps[i].temp;
-            temps[high_temp].city = temps[i].city;
+            if (temps[j].temp > temps[high_temp].temp)
+            {
+                high_temp = j;
+            }
         }
-        high_temp++;
-
+        if (high_temp != i)
+        {
+            avg_temp temp = temps[i];
+            temps[i] = temps[high_temp];
+        }
     }
 
 }
