@@ -69,7 +69,8 @@ void sort_cities(void)
         int lowest_temp = 0
         if (temps[i].temp < temps[lowest_temp].temp)
         {
-            temps[0].temp = temps[i].temp;
+            temps[lowest_temp].temp = temps[i].temp;
+            temps[lowest_temp].city = temps[i].city;
 
         }
         lowest_temp++;
