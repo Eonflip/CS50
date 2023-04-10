@@ -4,7 +4,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-#define NUM_CITIES 10
+#define NUM_CITIES 12
 
 typedef struct
 {
@@ -48,6 +48,12 @@ int main(void)
 
     temps[9].city = "San Francisco";
     temps[9].temp = 66;
+
+    temps[10].city = "Santa Fe";
+    temps[10].temp = 98;
+
+    temps [11].city = "Tampa";
+    temps[11].temp = 99;
 
     sort_cities();
 
