@@ -49,12 +49,7 @@ int main(void)
     temps[9].city = "San Francisco";
     temps[9].temp = 66;
 
-    temps[10].city = "Santa Fe";
-    temps[10].temp = 98;
-
-    temps [11].city = "Tampa";
-    temps[11].temp = 99;
-
+    
     sort_cities();
 
     printf("\nAverage July Temperatures by City\n\n");
