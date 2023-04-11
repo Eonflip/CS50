@@ -72,8 +72,10 @@ int main(void)
 }
 
 // Add at least the first for items to the menu array
+// the line above should read "four"
 void add_items(void)
 {
+    
     return;
 }
 
