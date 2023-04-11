@@ -75,7 +75,8 @@ int main(void)
 // the line above should read "four"
 void add_items(void)
 {
-    
+    menu[0].item = "Burger"
+    menu[0].price = 9.5
     return;
 }
 
@@ -84,3 +85,15 @@ float get_cost(string item)
 {
     return 0.0;
 }
+
+ * Beach Burger Shack has the following 10 items on their menu
+ * Burger: $9.5
+ * Vegan Burger: $11
+ * Hot Dog: $5
+ * Cheese Dog: $7
+ * Fries: $5
+ * Cheese Fries: $6
+ * Cold Pressed Juice: $7
+ * Cold Brew: $3
+ * Water: $2
+ * Soda: $2
