@@ -112,8 +112,10 @@ void add_items(void)
 // Search through the menu array to find an item's cost
 float get_cost(string item)
 {
-    if ()
-    int cost =
+    for (int i = 0; i < 10; i++)
+    {
+        if ()
+    }
     return 0.0;
 }
 
