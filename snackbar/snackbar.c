@@ -112,7 +112,7 @@ void add_items(void)
 // Search through the menu array to find an item's cost
 float get_cost(string item)
 {
-    
+    int cost = 
     return 0.0;
 }
 
