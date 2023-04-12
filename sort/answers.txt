@@ -1,14 +1,14 @@
-sort1 uses: TODO
+sort1 uses: Bubble Sort
 
-How do you know?: TODO
+How do you know?: This program runs at the shortest real time on the sorted list and since it's best case is O(n) I assume it's bubble sort
 
 sort2 uses: Merge Sort
 
-How do you know?: Consistently this sort takes the lowest real time to sort unsorted lists
+How do you know?: Consistently this program takes the lowest real time to sort unsorted lists
 
-sort3 uses: TODO
+sort3 uses: Selection Sort
 
-How do you know?: TODO
+How do you know?: Process of elimination, lol, but also 
 
 
 
