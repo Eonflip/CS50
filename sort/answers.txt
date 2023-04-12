@@ -4,7 +4,7 @@ How do you know?: TODO
 
 sort2 uses: Merge Sort
 
-How do you know?: Consistently the merge sort on 
+How do you know?: Consistently this sort takes the lowest real time to sort unsorted lists
 
 sort3 uses: TODO
 
