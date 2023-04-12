@@ -1,5 +1,17 @@
 sort1 uses: TODO
 
+sort1 random10000
+real    0m0.280s
+user    0m0.208s
+sys     0m0.044s
+
+sort2 random10000
+real    0m0.084s
+user    0m0.021s
+sys     0m0.023s
+
+
+
 How do you know?: TODO
 
 sort2 uses: TODO
