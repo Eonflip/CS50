@@ -10,6 +10,7 @@ real    0m0.084s
 user    0m0.021s
 sys     0m0.023s
 
+sort3 random10000
 real    0m0.211s
 user    0m0.133s
 sys     0m0.036s
