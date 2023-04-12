@@ -24,3 +24,23 @@ How do you know?: TODO
 sort3 uses: TODO
 
 How do you know?: TODO
+
+
+
+sort1 reversed10000
+
+real    0m0.278s
+user    0m0.224s
+sys     0m0.031s
+
+sort2 reversed10000
+
+real    0m0.082s
+user    0m0.005s
+sys     0m0.037s
+
+sort3 reversed10000
+
+real    0m0.199s
+user    0m0.112s
+sys     0m0.052s
