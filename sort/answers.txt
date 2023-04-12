@@ -8,7 +8,7 @@ How do you know?: Consistently this program takes the lowest real time to sort u
 
 sort3 uses: Selection Sort
 
-How do you know?: Process of elimination, lol, but also 
+How do you know?: Process of elimination, lol, but also the fact that it consistenly beats sort1 program in the unsorted lists
 
 
 
