@@ -83,19 +83,14 @@ void print_winner(void)
 {
     // TODO
     int max_votes = 0;
-    string winning_candidate[MAX] = {};
+    string winning_candidate;
 
     for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes > max_votes)
         {
             max_votes = candidates[i].votes;
-            winning_candidate[0] = candidates[i].name;
-        }
-        else if (candidates[i].votes == max_votes)
-        {
-            max_votes = candidates[i].votes;
-            winning_candidate[0 + 1] = candidates[i].name;
+            winning_candidate[i] = candidates[i].name;
         }
 
     }
