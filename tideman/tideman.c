@@ -105,10 +105,14 @@ bool vote(int rank, string name, int ranks[])
     {
         if (strncasecmp(name, candidates[i]) == 0)
         {
-            ranks[i] =
+            ranks[i] = rank;
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
-    return false;
 }
 
 // Update preferences given one voter's ranks
