@@ -103,16 +103,13 @@ bool vote(int rank, string name, int ranks[])
     // TODO
     for(int i = 0; i < candidate_count; i++)
     {
-        if (strncasecmp(name, candidates[i]) == 0)
+        if (strcasecmp(name, candidates[i]) == 0)
         {
             ranks[i] = rank;
             return true;
         }
-        else
-        {
-            return false;
-        }
     }
+    return false;
 }
 
 // Update preferences given one voter's ranks
