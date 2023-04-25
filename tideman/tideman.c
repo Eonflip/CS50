@@ -159,7 +159,7 @@ void sort_pairs(void)
         {
             int strength_j = preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].loser][pairs[j].winner];
             int strength_j1 = preferences[pairs[j+1].winner][pairs[j+1].loser] - preferences[pairs[j+1].loser][pairs[j+1].winner];
-            if (strength_j < strength_j1)
+            if (strength_j > strength_j1)
             {
                 pair temp = pairs[j];
                 pairs[j] = pairs[j+1];
