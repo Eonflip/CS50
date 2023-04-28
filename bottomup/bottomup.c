@@ -80,7 +80,7 @@ int main(int argc, char *argv[])
         }
 
         // Skip over padding, if any
-        //fseek(inptr, padding, SEEK_CUR);
+        fseek(inptr, padding, SEEK_CUR);
 
         // Then add it back (to demonstrate how)
         for (int k = 0; k < padding; k++)
