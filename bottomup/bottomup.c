@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
         printf("Unsupported file format.\n");
         return 4;
     }
-    
+
     // Write outfile's BITMAPFILEHEADER
     fwrite(&bf, sizeof(BITMAPFILEHEADER), 1, outptr);
 
@@ -65,6 +65,7 @@ int main(int argc, char *argv[])
     // Iterate over infile's scanlines
     for (int i = 0, biHeight = abs(bi.biHeight); i < biHeight; i++)
     {
+        fseek(inptr, bf.bfOffBits + i * (bi.biWidth * sizeof(RGBTRIPLE) + padding), SEEK_SET);
         // Iterate over pixels in scanline
         for (int j = 0; j < bi.biWidth; j++)
         {
@@ -79,7 +80,7 @@ int main(int argc, char *argv[])
         }
 
         // Skip over padding, if any
-        fseek(inptr, padding, SEEK_CUR);
+        //fseek(inptr, padding, SEEK_CUR);
 
         // Then add it back (to demonstrate how)
         for (int k = 0; k < padding; k++)
