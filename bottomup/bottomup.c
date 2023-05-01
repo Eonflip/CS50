@@ -1,4 +1,4 @@
-// Copies a BMP file
+// Flips an upside down BMP file
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     // Ensure proper usage
     if (argc != 3)
     {
-        printf("Usage: copy infile outfile\n");
+        printf("Usage: flip infile outfile\n");
         return 1;
     }
 
@@ -56,38 +56,39 @@ int main(int argc, char *argv[])
     // Write outfile's BITMAPFILEHEADER
     fwrite(&bf, sizeof(BITMAPFILEHEADER), 1, outptr);
 
+    // Flip the height
+    bi.biHeight = -bi.biHeight;
+
     // Write outfile's BITMAPINFOHEADER
     fwrite(&bi, sizeof(BITMAPINFOHEADER), 1, outptr);
 
     // Determine padding for scanlines
     int padding = (4 - (bi.biWidth * sizeof(RGBTRIPLE)) % 4) % 4;
 
-    // Iterate over infile's scanlines
-    for (int biHeight = abs(bi.biHeight), i = biHeight - 1; i >= 0; i--)
+    // Allocate memory for a scanline
+    RGBTRIPLE *scanline = malloc(sizeof(RGBTRIPLE) * bi.biWidth);
+
+    // Iterate over infile's scanlines (starting from the bottom)
+    for (int i = abs(bi.biHeight) - 1; i >= 0; i--)
     {
-        fseek(inptr, bf.bfOffBits + i * (bi.biWidth * sizeof(RGBTRIPLE) + padding), SEEK_SET);
-        // Iterate over pixels in scanline
+        // Read the scanline from the input file
+        fread(scanline, sizeof(RGBTRIPLE), bi.biWidth, inptr);
+
+        // Write the scanline to the output file (in reverse order)
         for (int j = 0; j < bi.biWidth; j++)
         {
-            // Temporary storage
-            RGBTRIPLE triple;
-
-            // Read RGB triple from infile
-            fread(&triple, sizeof(RGBTRIPLE), 1, inptr);
-
-            // Write RGB triple to outfile
-            fwrite(&triple, sizeof(RGBTRIPLE), 1, outptr);
+            fwrite(&scanline[bi.biWidth - 1 - j], sizeof(RGBTRIPLE), 1, outptr);
         }
 
-        // Skip over padding, if any
-        fseek(inptr, padding, SEEK_CUR);
-
-        // Then add it back (to demonstrate how)
+        // Add padding to the output file
         for (int k = 0; k < padding; k++)
         {
             fputc(0x00, outptr);
         }
     }
+
+    // Free memory for the scanline
+    free(scanline);
 
     // Close infile
     fclose(inptr);
@@ -98,3 +99,4 @@ int main(int argc, char *argv[])
     // Success
     return 0;
 }
+
