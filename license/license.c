@@ -21,11 +21,13 @@ int main(int argc, char *argv[])
 
     while (fread(buffer, 7, 7, infile) == 7)
     {
+        int i = 0;
         // Replace '\n' with '\0'
-        buffer[6] = '\0';
+        buffer[i][6] = '\0';
 
         // Save plate number in array
         plates[idx] = buffer;
+        i++;
         idx++;
     }
 
