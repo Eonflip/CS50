@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     }
 
     // Create buffer to read into
-    char buffer[7][7];
+    char buffer[8][7];
 
     // Create array to store plate numbers
     char *plates[8];
@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 
     int idx = 0;
 
-    while (fread(buffer, 7, 7, infile) == 7)
+    while (fread(buffer, 8, 7, infile) == 7)
     {
         int i = 0;
         // Replace '\n' with '\0'
