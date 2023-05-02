@@ -18,10 +18,10 @@ int main(int argc, char *argv[])
     FILE *infile = fopen(argv[1], "r");
 
     int idx = 0;
+    int i = 0;
 
     while (fread(buffer, 7, 8, infile) == 8)
     {
-        int i = 0;
         // Replace '\n' with '\0'
         buffer[i][6] = '\0';
 
