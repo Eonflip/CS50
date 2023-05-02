@@ -18,16 +18,16 @@ int main(int argc, char *argv[])
     FILE *infile = fopen(argv[1], "r");
 
     int idx = 0;
+    int inx = 0;
 
     while (fread(buffer, 7, 8, infile) == 8)
     {
-        int i = 0;
         // Replace '\n' with '\0'
-        buffer[i][6] = '\0';
+        buffer[inx][6] = '\0';
 
         // Save plate number in array
-        plates[idx] = buffer[i];
-        i++;
+        plates[idx] = buffer[inx];
+        inx++;
         idx++;
     }
 
