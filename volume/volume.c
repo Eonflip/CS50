@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
     // TODO: Copy header from input file to output file
     while(fread(&output, sizeof(wav_header), 1, input))
     {
-         fwrite(&output, )
+         fwrite(&output, sizeof(wav_header), 1, input);
     }
 
 
