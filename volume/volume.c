@@ -8,7 +8,7 @@
 const int HEADER_SIZE = 44;
 
 uint8_t wav_header[44];
-uint16_t wav
+uint16_t buffer;
 
 int main(int argc, char *argv[])
 {
