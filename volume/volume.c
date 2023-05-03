@@ -8,7 +8,7 @@
 const int HEADER_SIZE = 44;
 
 uint8_t wav_header[44];
-uint16_t buffer;
+int16_t buffer;
 
 int main(int argc, char *argv[])
 {
@@ -42,13 +42,10 @@ int main(int argc, char *argv[])
 
 
     // TODO: Read samples from input file and write updated data to output file
-    int16_t sample;
-    while (fread(&buffer, sizeof(uint16_t), 1, input))
+    while (fread(&buffer, sizeof(int16_t), 1, input))
     {
-        sample = (int16_t) buffer;
-        sample = (int16_t) (sample * factor);
-        buffer = (uint16_t) sample;
-        fwrite(&buffer, sizeof(uint16_t), 1, output);
+        buffer = buffer * factor;
+        fwrite(&buffer, sizeof(int16_t), 1, output);
     }
 
     // Close files
