@@ -35,18 +35,25 @@ int main(int argc, char *argv[])
     }
 
     float factor = atof(argv[3]);
-    float new_buff;
 
     // TODO: Copy header from input file to output file
     fread(wav_header, sizeof(uint8_t), HEADER_SIZE, input);
+
+    if (wav_header[0] != 'R' || wav_header[1] != 'I' || wav_header[2] != 'F' || wav_header[3] != 'F' ||
+        wav_header[8] != 'W' || wav_header[9] != 'A' || wav_header[10] != 'V' || wav_header[11] != 'E')
+    {
+        printf("Invalid .wav file.\n");
+        return 1;
+    }
+
     fwrite(wav_header, sizeof(uint8_t), HEADER_SIZE, output);
 
 
     // TODO: Read samples from input file and write updated data to output file
-    while (fread(&new_buff, sizeof(uint16_t), 1, input))
+    while (fread(&buffer, sizeof(uint16_t), 1, input))
     {
-        new_buff = buffer * factor;
-        fwrite(&new_buff, sizeof(uint16_t), 1, output);
+        buffer = buffer * factor;
+        fwrite(&buffer, sizeof(uint16_t), 1, output);
     }
 
     // Close files
