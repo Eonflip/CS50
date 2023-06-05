@@ -30,7 +30,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 
             if (pixel.rgbtRed > pixel.rgbtBlue && pixel.rgbtGreen)
             {
-                
+                image[i][j].r
             }
         }
     }
