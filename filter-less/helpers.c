@@ -32,7 +32,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             int originalBlue = pixel.rgbtBlue;
             int originalGreen = pixel.rgbtGreen;
 
-            image[i][j].rgbtRed = 
+            image[i][j].rgbtRed = uint8_
 
         }
     }
