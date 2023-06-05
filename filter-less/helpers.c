@@ -27,11 +27,6 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             RGBTRIPLE pixel = image[i][j];
-
-            if (pixel.rgbtRed > pixel.rgbtBlue && pixel.rgbtGreen)
-            {
-                image[i][j].r
-            }
         }
     }
     return;
