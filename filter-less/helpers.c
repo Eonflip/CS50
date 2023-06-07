@@ -4,10 +4,12 @@
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
+    //loop through image
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
+            
             RGBTRIPLE pixel = image[i][j];
 
             char average = round((pixel.rgbtRed + pixel.rgbtBlue + pixel.rgbtGreen) / 3.00);
