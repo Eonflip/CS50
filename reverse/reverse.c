@@ -11,9 +11,9 @@ int main(int argc, char *argv[])
 {
     // Ensure proper usage
     // TODO #1
-    if (argc != 2)
+    if (argc != 3)
     {
-        printf()
+        printf("Usage: ./reverse input.wav output.wav");
     }
 
     // Open input file for reading
