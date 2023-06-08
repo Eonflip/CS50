@@ -9,9 +9,10 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            //assign individual pixel from image to var pixel 
+            //assign individual pixel from image to var pixel
             RGBTRIPLE pixel = image[i][j];
 
+            //get average of pixel rgb values
             char average = round((pixel.rgbtRed + pixel.rgbtBlue + pixel.rgbtGreen) / 3.00);
 
             image[i][j].rgbtBlue = average;
