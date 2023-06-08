@@ -22,6 +22,7 @@ int main(int argc, char *argv[])
     FILE *inptr = fopen(argv[1]);
     // Read header
     // TODO #3
+    
 
     // Use check_format to ensure WAV format
     // TODO #4
