@@ -39,11 +39,19 @@ int main(int argc, char *argv[])
     {
         char expectedFormat[4] = "WAVE";
 
-        if()
+        for (int i = 0; i < 4; i++)
+        {
+            if (expectedFormat[i] != header.format[i])
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     // Open output file for writing
     // TODO #5
+    FILE *outptr = fopen(outfile, "w");
 
     // Write header to file
     // TODO #6
