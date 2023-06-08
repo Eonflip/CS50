@@ -17,12 +17,20 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+    char *infile = arg[1];
+    char *outfile = argv[2];
+
     // Open input file for reading
     // TODO #2
-    FILE *inptr = fopen(argv[1]);
+    FILE *inptr = fopen(infile, "r");
+    if (inptr == NULL)
+    {
+        printf("Could not open %s. \n", infile);
+        return 1;
+    }
     // Read header
     // TODO #3
-    
+
 
     // Use check_format to ensure WAV format
     // TODO #4
