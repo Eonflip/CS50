@@ -35,7 +35,12 @@ int main(int argc, char *argv[])
 
     // Use check_format to ensure WAV format
     // TODO #4
-    
+    bool check_header(WAVHEADER header)
+    {
+        char expectedFormat[4] = "WAVE";
+
+        if()
+    }
 
     // Open output file for writing
     // TODO #5
