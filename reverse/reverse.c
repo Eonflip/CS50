@@ -57,24 +57,16 @@ int main(int argc, char *argv[])
     int blockSize = get_block_size(wh);
     // Write reversed audio to file
     // TODO #8
-    int16_t *audio_data = (int16_t *)malloc(blockSize);
-    fseek(inptr, sizeof(WAVHEADER), SEEK_SET); // Move file pointer to the start of audio data
-
-    int num_samples = blockSize / sizeof(int16_t);
     int num_blocks = wh.subchunk2Size / blockSize;
+    int16_t *audio_block = (int16_t *)malloc(blockSize);
 
-    for (int block = 0; block < num_blocks; block++)
+    for (int block = num_blocks - 1; block >= 0; block--)
     {
-        fread(audio_data, blockSize, 1, inptr);
+        fseek(inptr, sizeof(WAVHEADER) + (block * blockSize), SEEK_SET);
 
-        for (int i = 0, j = num_samples - 1; i < j; i++, j--)
-        {
-            int16_t temp = audio_data[i];
-            audio_data[i] = audio_data[j];
-            audio_data[j] = temp;
-        }
+        fread(audio_block, sizeof(int16_t), blockSize / sizeof(int16_t), inptr);
 
-        fwrite(audio_data, blockSize, 1, outptr);
+        
     }
 
     free(audio_data);
