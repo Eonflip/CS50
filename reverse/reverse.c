@@ -69,7 +69,7 @@ int main(int argc, char *argv[])
         fwrite(audio_block, sizeof(int16_t), blockSize / sizeof(int16_t), outptr);
     }
 
-    free(audio_data);
+    free(audio_block);
     fclose(inptr);
     fclose(outptr);
     return 0;
