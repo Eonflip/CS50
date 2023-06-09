@@ -57,29 +57,31 @@ int main(int argc, char *argv[])
     int blockSize = get_block_size(wh);
     // Write reversed audio to file
     // TODO #8
-    int16_t audio_data;
+    int16_t *audio_data = (int16_t *)malloc(blockSize);
     fseek(inptr, sizeof(WAVHEADER), SEEK_SET); // Move file pointer to the start of audio data
 
-    int num_samples = wh.subchunk2Size / sizeof(int16_t);
+    int num_samples = blockSize / sizeof(int16_t);
+    int num_blocks = wh.subchunk2Size / blockSize;
 
-    int16_t *audio_samples = (int16_t*)malloc(num_samples * sizeof(int16_t));
-    if (audio_samples == NULL)
+    for (int block = 0; block < num_blocks; block++)
     {
-        printf("Failed to allocate memory for audio samples. \n");
-        fclose(inptr);
-        fclose(outptr);
-        return 1;
+        fread(audio_data, blockSize, 1, inptr);
+
+        for (int i = 0, j = num_samples - 1; i < j; i++, j--)
+        {
+            int16_t temp = audio_data[i];
+            audio_data[i] = audio_data[j];
+            audio_data[j] = temp;
+        }
+
+        fwrite(audio_data, blockSize, 1, outptr);
     }
 
-    fread(audio_samples, sizeof(int16_t), num_samples, inptr);
-
-    for (int i = num_samples - 1; i >= 0; i--)
-    {
-        fwrite(&audio_samples[i], sizeof(int16_t), 1, outptr);
-    }
-    free(audio_samples);
+    free(audio_data);
     fclose(inptr);
     fclose(outptr);
+    return 0;
+
 }
 
 bool check_format(WAVHEADER header)
