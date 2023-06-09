@@ -62,10 +62,22 @@ int main(int argc, char *argv[])
 
     int num_samples = wh.subchunk2Size / sizeof(int16_t);
 
-    while (fread(&audio_data, sizeof(int16_t), 1, inptr) == 1)
+    int16_t *audio_samples = (int16_t*)malloc(num_samples * sizeof(int16_t));
+    if (audio_samples == NULL)
     {
-        fwrite(&audio_data, sizeof(int16_t), 1, outptr);
+        printf("Failed to allocate memory for audio samples. \n");
+        fclose(inptr);
+        fclose(outptr);
+        return 1;
     }
+
+    fread(audio_samples, sizeof(int16_t), num_samples, inptr);
+
+    for (int i = num_samples - 1; i >= 0; i--)
+    {
+        fwrite(&audio_samples[i], sizeof(int16_t), 1, outptr);
+    }
+    free(audio_samples);
     fclose(inptr);
     fclose(outptr);
 }
