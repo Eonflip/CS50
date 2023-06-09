@@ -37,6 +37,12 @@ int main(int argc, char *argv[])
     // Use check_format to ensure WAV format
     // TODO #4
     check_format(wh);
+    if (!check_format(wh))
+    {
+        printf("Input file is not in WAV format. \n");
+        fclose(inptr);
+        return 1;
+    }
 
     // Open output file for writing
     // TODO #5
@@ -81,6 +87,7 @@ bool check_format(WAVHEADER header)
 int get_block_size(WAVHEADER header)
 {
     // TODO #7
-    int blockSize = header.numChannels * header.subchunk2Size;
+    int sampleSizeBytes = header.bitsPerSample / 8;
+    int blockSize = header.numChannels * sampleSizeBytes;
     return blockSize;
 }
