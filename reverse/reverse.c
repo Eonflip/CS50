@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    char *infile = arg[1];
+    char *infile = argv[1];
     char *outfile = argv[2];
 
     // Open input file for reading
@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 
     // Use check_format to ensure WAV format
     // TODO #4
-    check_format(infile);
+    check_format(inptr);
 
     // Open output file for writing
     // TODO #5
@@ -49,6 +49,9 @@ int main(int argc, char *argv[])
 
     // Write reversed audio to file
     // TODO #8
+
+    fclose(inptr);
+    fclose(outptr);
 }
 
 bool check_format(WAVHEADER header)
