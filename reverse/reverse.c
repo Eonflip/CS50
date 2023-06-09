@@ -66,7 +66,7 @@ int main(int argc, char *argv[])
 
         fread(audio_block, sizeof(int16_t), blockSize / sizeof(int16_t), inptr);
 
-        
+        fwrite(audio_block, sizeof(int16_t), blockSize / sizeof(int16_t), outptr);
     }
 
     free(audio_data);
