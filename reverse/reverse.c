@@ -60,6 +60,8 @@ int main(int argc, char *argv[])
     int16_t audio_data;
     fseek(inptr, sizeof(WAVHEADER), SEEK_SET); // Move file pointer to the start of audio data
 
+    int num_samples = wh.subchunk2Size / sizeof(int16_t);
+
     while (fread(&audio_data, sizeof(int16_t), 1, inptr) == 1)
     {
         fwrite(&audio_data, sizeof(int16_t), 1, outptr);
