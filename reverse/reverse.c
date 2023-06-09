@@ -35,19 +35,7 @@ int main(int argc, char *argv[])
 
     // Use check_format to ensure WAV format
     // TODO #4
-    bool check_header(WAVHEADER header)
-    {
-        char expectedFormat[4] = "WAVE";
-
-        for (int i = 0; i < 4; i++)
-        {
-            if (expectedFormat[i] != header.format[i])
-            {
-                return false;
-            }
-        }
-        return true;
-    }
+    check_format()
 
     // Open output file for writing
     // TODO #5
@@ -63,11 +51,20 @@ int main(int argc, char *argv[])
     // TODO #8
 }
 
-int check_format(WAVHEADER header)
+bool check_format(WAVHEADER header)
 {
     // TODO #4
-    
-    return 0;
+    char expectedFormat[4] = "WAVE";
+
+        for (int i = 0; i < 4; i++)
+        {
+            if (expectedFormat[i] != header.format[i])
+            {
+                return false;
+            }
+        }
+        return true;
+
 }
 
 int get_block_size(WAVHEADER header)
