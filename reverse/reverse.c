@@ -81,14 +81,14 @@ bool check_format(WAVHEADER header)
     // TODO #4
     char expectedFormat[4] = "WAVE";
 
-        for (int i = 0; i < 4; i++)
+    for (int i = 0; i < 4; i++)
+    {
+        if (expectedFormat[i] != header.format[i])
         {
-            if (expectedFormat[i] != header.format[i])
-            {
-                return false;
-            }
+            return false;
         }
-        return true;
+    }
+    return true;
 
 }
 
