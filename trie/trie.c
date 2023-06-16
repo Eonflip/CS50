@@ -113,10 +113,13 @@ int main(int argc, char *argv[])
 // TODO: Complete the check function, return true if found, false if not found
 bool check(char* word)
 {
-
-    for (i = strlen(word); i < n; i++)
+    for (int i = 0, n = strlen(word); i < n; i++)
     {
-        if (root -> children[i] )
+        int index = tolower(word[i]) - 'a';
+        if (node->children[index] == word[i])
+        {
+            
+        }
     }
     return false;
 }
