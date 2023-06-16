@@ -70,6 +70,7 @@ int main(int argc, char *argv[])
         for (int i = 0, n = strlen(name); i < n; i++)
         {
             int index = tolower(name[i]) - 'a';
+            //t - a
             if (cursor->children[index] == NULL)
             {
 
