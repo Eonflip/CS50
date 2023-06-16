@@ -65,6 +65,8 @@ int main(int argc, char *argv[])
     {
         node *cursor = root;
 
+        //Test name Tony
+
         for (int i = 0, n = strlen(name); i < n; i++)
         {
             int index = tolower(name[i]) - 'a';
