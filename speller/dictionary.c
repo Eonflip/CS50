@@ -37,7 +37,7 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
-    FILE *infile = fopen("dictionaries/large", "r")
+    FILE *infile = fopen("dictionary", "r")
     if (infile == NULL)
     {
         printf("Cannot Open File\n");
@@ -75,6 +75,8 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
+    int counter = 0;
+    while (fscanf(infile, "%s", name) == 1)
     return 0;
 }
 
