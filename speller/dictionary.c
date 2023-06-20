@@ -75,15 +75,17 @@ bool load(const char *dictionary)
 unsigned int size(const char *dictionary)
 {
     // TODO
-    char words[50];
+    char words[45];
     FILE *infile = fopen("dictionary", "r");
     int counter = 0;
     if(loaded)
     {
-        while (fscanf(infile, "%s", name) == 1)
+        while (fscanf(infile, "%s", words) == 1)
         {
-
+            count++;
         }
+
+        return count;
 
     }
     return 0;
