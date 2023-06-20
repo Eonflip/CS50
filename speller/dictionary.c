@@ -64,6 +64,8 @@ bool load(const char *dictionary)
         return 2;
         return false;
     }
+
+    buffer[bytesRead]
     return true;
 }
 
