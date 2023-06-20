@@ -75,6 +75,7 @@ bool load(const char *dictionary)
 unsigned int size(const char *dictionary)
 {
     // TODO
+    char words[50];
     FILE *infile = fopen("dictionary", "r");
     int counter = 0;
     if(loaded)
