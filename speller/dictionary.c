@@ -47,6 +47,14 @@ bool load(const char *dictionary)
     fseek(infile, 0, SEEK_END);
     long filesize = ftell(infile);
     fseek(infile, 0, SEEK_SET);
+
+    char *buffer = malloc(sizeof(filesize + 1));
+    if (buffer == NULL)
+    {
+        printf("Not enough memory to read filesize\n");
+    }
+
+    
     return true;
 }
 
