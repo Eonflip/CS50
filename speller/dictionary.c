@@ -43,6 +43,10 @@ bool load(const char *dictionary)
         printf("Cannot Open File\n");
         return false
     }
+
+    fseek(infile, 0, SEEK_END);
+    long filesize = ftell(infile);
+    fseek(infile, 0, SEEK_SET);
     return true;
 }
 
