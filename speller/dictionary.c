@@ -41,7 +41,8 @@ bool load(const char *dictionary)
     if (infile == NULL)
     {
         printf("Cannot Open File\n");
-        return false
+        return 0;
+        return false;
     }
 
     fseek(infile, 0, SEEK_END);
@@ -52,12 +53,16 @@ bool load(const char *dictionary)
     if (buffer == NULL)
     {
         printf("Not enough memory to read filesize\n");
+        return 1;
+        return false;
     }
 
     size_t bytesRead = fread(buffer, 1, fileSize, infile)
     if (bytesRead < fileSize)
     {
-        printf(")
+        printf("Failed to read file\n");
+        return 2;
+        return false;
     }
     return true;
 }
