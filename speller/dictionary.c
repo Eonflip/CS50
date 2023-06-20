@@ -65,7 +65,9 @@ bool load(const char *dictionary)
         return false;
     }
 
-    buffer[bytesRead]
+    buffer[bytesRead] = "\0";
+
+    fclose()
     return true;
 }
 
