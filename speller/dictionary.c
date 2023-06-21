@@ -44,28 +44,20 @@ bool load(const char *dictionary)
         return false;
     }
 
-    fseek(infile, 0, SEEK_END);
-    long fileSize = ftell(infile);
-    fseek(infile, 0, SEEK_SET);
-
-    char *buffer = malloc(sizeof(fileSize + 1));
-    if (buffer == NULL)
+    char word[LENGTH + 1];
+    while (fscanf(infile, "%s", word) != EOF)
     {
-        printf("Not enough memory to read filesize\n");
-        return 1;
-        return false;
+        node *newNode = malloc(sizeof(node));
+        if (newNode == NULL)
+        {
+            fclose(infile);
+            printf("Not enough memory to load dictionary.\n");
+            return false;
+        }
+
+        strcpy(newNode -> word, word)
+
     }
-
-    size_t bytesRead = fread(buffer, 1, fileSize, infile)
-    if (bytesRead < fileSize)
-    {
-        printf("Failed to read file\n");
-        return 2;
-        return false;
-    }
-
-    buffer[bytesRead] = "\0";
-
     fclose(infile);
     return true;
 }
