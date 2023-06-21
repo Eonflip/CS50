@@ -41,7 +41,6 @@ bool load(const char *dictionary)
     if (infile == NULL)
     {
         printf("Cannot Open File\n");
-        return 0;
         return false;
     }
 
