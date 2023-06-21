@@ -78,7 +78,11 @@ unsigned int size(const char *dictionary)
     char words[45];
     FILE *infile = fopen("dictionary", "r");
     int counter = 0;
-    if(loaded)
+    if (infile == NULL)
+    {
+        return 0;
+    }
+    else if(loaded)
     {
         while (fscanf(infile, "%s", words) == 1)
         {
