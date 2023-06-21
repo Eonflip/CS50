@@ -71,25 +71,18 @@ bool load(const char *dictionary)
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
-unsigned int size(const char *dictionary)
+unsigned int size(void)
 {
     // TODO
-    char words[45];
-    FILE *infile = fopen("dictionary", "r");
-    int counter = 0;
-    if (infile == NULL)
+    int count = 0
+    for (int i = 0; i < N; i++)
     {
-        return 0;
-    }
-    else if(loaded)
-    {
-        while (fscanf(infile, "%s", words) == 1)
+        node *cursor = table[i];
+        while (cursor != NULL)
         {
-            count++;
+            count++
+            cursor = cursor -> next;
         }
-
-        return count;
-
     }
 }
 
