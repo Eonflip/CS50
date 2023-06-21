@@ -92,7 +92,6 @@ unsigned int size(const char *dictionary)
         return count;
 
     }
-    return 0;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
