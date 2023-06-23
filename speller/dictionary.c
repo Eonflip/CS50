@@ -42,7 +42,7 @@ unsigned int hash(const char *word)
 
     if (len >= 1)
     {
-        hash_value += 677 * (tolower)
+        hash_value += 677 * (tolower(word[0]) - 'a');
     }
     return toupper(word[0]) - 'A';
 }
