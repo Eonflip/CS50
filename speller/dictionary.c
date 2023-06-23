@@ -44,7 +44,16 @@ unsigned int hash(const char *word)
     {
         hash_value += 677 * (tolower(word[0]) - 'a');
     }
-    return toupper(word[0]) - 'A';
+    if (len >= 2)
+    {
+        hash_value += 27 * (tolower(word[1]) - 'a');
+    }
+    if (len >= 3)
+    {
+        hash_value += tolower(word[2]) - 'a';
+    }
+    
+    return hash_value + 1;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
