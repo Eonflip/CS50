@@ -52,8 +52,8 @@ unsigned int hash(const char *word)
     {
         hash_value += tolower(word[2]) - 'a';
     }
-    
-    return hash_value + 1;
+
+    return hash_value;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
