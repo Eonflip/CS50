@@ -40,7 +40,7 @@ unsigned int hash(const char *word)
 
     int len = strlen(word);
 
-    if (len >= 1 && isalpha(word[0]))
+    if (len <= 1 && isalpha(word[0]))
     {
         hash_value += 677 * (tolower(word[0]) - 'a');
     }
