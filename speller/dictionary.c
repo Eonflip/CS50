@@ -91,7 +91,7 @@ bool load(const char *dictionary)
         table[i] = NULL;
     }
 
-    
+    char dict_word[LENGTH + 1]
 
 
 }
