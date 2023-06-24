@@ -91,6 +91,8 @@ bool load(const char *dictionary)
         table[i] = NULL;
     }
 
+    
+
 
 }
 
