@@ -108,9 +108,22 @@ bool load(const char *dictionary)
         strcpy(n->word, dict_word);
 
         int index = hash(n->word);
+
+        if (table[index] == NULL)
+            {
+                head = table[index] = n;
+                n->next = NULL;
+            }
+            // otherwise set next node as table[index], table[index] as current node n
+            else
+            {
+                n->next = head;
+                table[index] = n;
+            }
+
     }
 
-
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
