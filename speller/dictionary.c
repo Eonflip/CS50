@@ -96,7 +96,7 @@ bool load(const char *dictionary)
 
     node *root;
 
-    
+    while (fscanf(infile, %s, dict_word))
 
 
 }
