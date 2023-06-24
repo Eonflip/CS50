@@ -105,7 +105,9 @@ bool load(const char *dictionary)
             return false;
         }
 
-        strcpy(n->word, dict_word)
+        strcpy(n->word, dict_word);
+
+        int index = hash(n->word);
     }
 
 
