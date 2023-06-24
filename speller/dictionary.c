@@ -96,7 +96,10 @@ bool load(const char *dictionary)
 
     node *root;
 
-    while (fscanf(infile, %s, dict_word))
+    while (fscanf(infile, %s, dict_word) != EOF)
+    {
+        node *n = malloc(sizeof(node));
+    }
 
 
 }
