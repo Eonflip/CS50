@@ -83,8 +83,10 @@ bool load(const char *dictionary)
     FILE *infile = fopen(dictionary, 'r');
     if (infile == NULL)
     {
-        
+        return 1;
     }
+
+    
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
