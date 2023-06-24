@@ -99,6 +99,13 @@ bool load(const char *dictionary)
     while (fscanf(infile, %s, dict_word) != EOF)
     {
         node *n = malloc(sizeof(node));
+
+        if (n == NULL)
+        {
+            return false;
+        }
+
+        strcpy(n->word, dict_word)
     }
 
 
