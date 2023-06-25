@@ -23,6 +23,9 @@ const unsigned int N = 17602;
 // Hash table
 node *table[N];
 
+//dictionary counter
+int dict_size = 0;
+
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
@@ -120,6 +123,7 @@ bool load(const char *dictionary)
                 n->next = head;
                 table[index] = n;
             }
+        dict_size++;
 
     }
 
@@ -130,9 +134,13 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
-    if (load)
+    if (dict_size != 0)
     {
-        for (int i = 0; )
+        return dict_size;
+    }
+    else
+    {
+        return 0;
     }
 
 }
