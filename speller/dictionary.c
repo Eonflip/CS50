@@ -126,13 +126,13 @@ bool load(const char *dictionary)
 
         if (table[index] == NULL)
             {
-                root = table[index] = n;
+                table[index] = n;
                 n->next = NULL;
             }
             // otherwise set next node as table[index], table[index] as current node n
             else
             {
-                n->next = root;
+                n->next = table[index];
                 table[index] = n;
             }
         dict_size++;
