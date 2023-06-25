@@ -106,12 +106,12 @@ bool load(const char *dictionary)
         table[i] = NULL;
     }
 
-    char dict_word[LENGTH + 1]
+    char dict_word[LENGTH + 1];
 
 
     node *root;
 
-    while (fscanf(infile, %s, dict_word) != EOF)
+    while (fscanf(infile, "%s", dict_word) != EOF)
     {
         node *n = malloc(sizeof(node));
 
