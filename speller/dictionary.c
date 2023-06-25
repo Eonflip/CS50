@@ -30,9 +30,9 @@ int dict_size = 0;
 bool check(const char *word)
 {
     // TODO
-    int hash_value = hash(word)
+    int hash_value = hash(word);
 
-    node *n = table[hash_value]
+    node *n = table[hash_value];
 
     while (n != NULL)
     {
@@ -126,13 +126,13 @@ bool load(const char *dictionary)
 
         if (table[index] == NULL)
             {
-                head = table[index] = n;
+                root = table[index] = n;
                 n->next = NULL;
             }
             // otherwise set next node as table[index], table[index] as current node n
             else
             {
-                n->next = head;
+                n->next = root;
                 table[index] = n;
             }
         dict_size++;
