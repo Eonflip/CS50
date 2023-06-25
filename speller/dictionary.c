@@ -149,5 +149,6 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
+    int hash_value = hash(word)
 
 }
