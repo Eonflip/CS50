@@ -88,14 +88,14 @@ unsigned int hash(const char *word)
             return hash_value;
         }
     }
-    return hash_value
+    return hash_value;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
     // TODO
-    FILE *infile = fopen(dictionary, 'r');
+    FILE *infile = fopen(dictionary, "r");
     if (infile == NULL)
     {
         return false;
