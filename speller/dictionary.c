@@ -139,6 +139,8 @@ bool load(const char *dictionary)
 
     }
 
+    fclose(infile);
+
     return true;
 }
 
