@@ -32,7 +32,16 @@ bool check(const char *word)
     // TODO
     int hash_value = hash(word)
 
-    node *pointer
+    node *n = table[hash_value]
+
+    while (n != NULL)
+    {
+        if (strcasecmp(word, n->word) == 0)
+        {
+            return true;
+        }
+        n = n->next;
+    }
 
     return false;
 
