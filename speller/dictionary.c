@@ -125,16 +125,16 @@ bool load(const char *dictionary)
         int index = hash(n->word);
 
         if (table[index] == NULL)
-            {
-                table[index] = n;
-                n->next = NULL;
-            }
-            // otherwise set next node as table[index], table[index] as current node n
-            else
-            {
-                n->next = table[index];
-                table[index] = n;
-            }
+        {
+            table[index] = n;
+            n->next = NULL;
+        }
+        // otherwise set next node as table[index], table[index] as current node n
+        else
+        {
+            n->next = table[index];
+            table[index] = n;
+        }
         dict_size++;
 
     }
