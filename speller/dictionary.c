@@ -165,7 +165,8 @@ bool unload(void)
     for (int i = 0; i < N; i++)
     {
         // Assign cursor
-        node *n = table[i];        
+        node *n = table[i];
+
         while (n != NULL)
         {
             // Make temp equal cursor;
@@ -175,10 +176,14 @@ bool unload(void)
             // free temp
             free(tmp);
         }
+
         if (n == NULL && i == N - 1)
         {
             return true;
-        }    }return false;
+        }
+    }
+
+    return false;
 
 
 }
