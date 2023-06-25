@@ -30,6 +30,9 @@ int dict_size = 0;
 bool check(const char *word)
 {
     // TODO
+    int hash_value = hash(word)
+
+    node *pointer
 
     return false;
 
@@ -149,6 +152,6 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    int hash_value = hash(word)
+
 
 }
