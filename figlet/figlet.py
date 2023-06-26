@@ -11,18 +11,17 @@ fontList = figlet.getFonts();
 #for i in range(len(argv)):
 #    print(argv[i])
 
+if argv[1] not in ["-f", "--font"]:
+    print("Invalid Usage")
+    exit(1)
 
-if len(argv) == 3:
+elif argv[2] not in fontList:
+    print("Invalid Usage")
+    exit(1)
+
+
+elif len(argv) == 3:
     userInput = get_string("Input: ")
-
-    if argv[2] not in fontList:
-        print("Invalid Usage")
-        exit(1)
-
-    if argv[1] not in ["-f", "--font"]:
-        print("Invalid Usage")
-        exit(1)
-
 
     figlet.setFont(font = argv[2])
     print("Output:")
