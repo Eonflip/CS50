@@ -36,5 +36,10 @@ elif len(argv) == 1:
     exit(0)
 
 
+else
+    print("Invalid Usage")
+    exit(1)
+
+
 
 
