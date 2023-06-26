@@ -21,9 +21,9 @@ if len(argv) == 3:
                 print("Output:")
                 print(figlet.renderText(userInput))
 
-        else:
-            print("Invalid Usage")
-            exit(1)
+            else:
+                print("Invalid Usage")
+                exit(1)
 
 #elif len(argv) == 1:
 
