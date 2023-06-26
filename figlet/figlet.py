@@ -9,13 +9,14 @@ for i in range(len(argv)):
     print(argv[i])
 
 if len(argv) == 3:
-    input = get_string("Input: ")
+    userInput = get_string("Input: ")
 
     for i in range(len(fontList)):
         if (argv[2] == i):
             if (argv[1] == "-f" or argv[1] == "--font"):
-                figlet.setFont(font = argv[2])
-                print(figlet.renderText(input))
+                user_input = figlet.setFont(font = argv[2])
+                user_input = figlet.renderText(userInput)
+                print(user_input)
 
 #elif len(argv) == 1
 
