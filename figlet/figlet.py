@@ -5,8 +5,9 @@ from cs50 import get_string
 figlet = Figlet()
 fontList = figlet.getFonts();
 
-for i in range(len(argv)):
-    print(argv[i])
+# Test code to ensure # of argv
+#for i in range(len(argv)):
+#    print(argv[i])
 
 if len(argv) == 3:
     userInput = get_string("Input: ")
@@ -17,5 +18,6 @@ if len(argv) == 3:
                 figlet.setFont(font = argv[2])
                 print(figlet.renderText(userInput))
 
-#elif len(argv) == 1
+elif len(argv) == 1
+    
 
