@@ -2,6 +2,8 @@ from pyfiglet import Figlet
 from sys import argv
 from cs50 import get_string
 
+figlet = Figlet()
+
 for i in range(len(argv)):
     print(argv[i])
 
