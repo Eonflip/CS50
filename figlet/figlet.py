@@ -22,9 +22,6 @@ if len(argv) == 3:
                 print("Output:")
                 print(figlet.renderText(userInput))
                 exit(0)
-        else:
-            print("Invalid Usage")
-            exit(1)
 
     print("Invalid Usage")
     exit(1)
