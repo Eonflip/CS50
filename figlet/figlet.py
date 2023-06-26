@@ -9,6 +9,10 @@ fontList = figlet.getFonts();
 #for i in range(len(argv)):
 #    print(argv[i])
 
+if len(argv) == 1:
+    print("Invalid Usage")
+    sys.exit(1)
+
 if len(argv) == 3:
     userInput = get_string("Input: ")
 
@@ -18,6 +22,4 @@ if len(argv) == 3:
                 figlet.setFont(font = argv[2])
                 print(figlet.renderText(userInput))
 
-elif len(argv) == 1
-    
 
