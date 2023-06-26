@@ -7,9 +7,9 @@ figlet = Figlet()
 for i in range(len(argv)):
     print(argv[i])
 
-if len(argv) == 3
+if len(argv) == 3:
     input = get_string("Input: ")
     f = Figlet(font = argv[1])
     print(f.renderText(f))
-elif len(argv) == 1
+#elif len(argv) == 1
 
