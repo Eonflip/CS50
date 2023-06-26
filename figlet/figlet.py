@@ -2,6 +2,7 @@ from pyfiglet import Figlet
 from sys import argv
 from sys import exit
 from cs50 import get_string
+import random
 
 figlet = Figlet()
 fontList = figlet.getFonts();
@@ -26,7 +27,14 @@ if len(argv) == 3:
     exit(1)
 
 elif len(argv) == 1:
-    
+    randomFont = random.randint(0, len(fontList))
+    userInput = get_string("Input: ")
+
+    figlet.setFont(font = fontList[randomFont])
+    print("Output: ")
+    print(figlet.renderText(userInput))
+    exit(0)
+
 
 
 
