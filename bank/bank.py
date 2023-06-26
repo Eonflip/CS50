@@ -2,9 +2,11 @@ from cs50 import get_string
 
 greeting = get_string("Greeting:")
 
-if (greeting[0] == "h")
+
+
+if greeting[0] == "h":
     print("$20")
-else if (greeting.find("hello") == TRUE)
+elif greeting.find("hello") != -1:
     print("$0")
-else
+else:
     print("$100")
