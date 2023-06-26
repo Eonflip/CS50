@@ -13,9 +13,9 @@ if len(argv) == 3:
 
     for i in range(len(fontList)):
         if (argv[2] == i):
-            if (argv[1] == "-f" || argv[1] == "--font"):
+            if (argv[1] == "-f" or argv[1] == "--font"):
                 figlet.setFont(font = argv[2])
                 print(figlet.renderText(input))
 
-elif len(argv) == 1
+#elif len(argv) == 1
 
