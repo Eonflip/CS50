@@ -15,16 +15,20 @@ fontList = figlet.getFonts();
 if len(argv) == 3:
     userInput = get_string("Input: ")
 
-    for font in fontList:
-        if (argv[2] == font):
-            if (argv[1] == "-f" or argv[1] == "--font"):
-                figlet.setFont(font = argv[2])
-                print("Output:")
-                print(figlet.renderText(userInput))
-                exit(0)
+    if argv[2] not in fontList:
+        print("Invalid Usage")
+        exit(1)
 
-    print("Invalid Usage")
-    exit(1)
+    if argv[1] not in ["-f", "--font"]:
+        print("Invalid Usage")
+        exit(1)
+
+
+    figlet.setFont(font = argv[2])
+    print("Output:")
+    print(figlet.renderText(userInput))
+    exit(0)
+
 
 elif len(argv) == 1:
     randomFont = random.randint(0, len(fontList) - 1)
