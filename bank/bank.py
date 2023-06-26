@@ -4,4 +4,7 @@ greeting = get_string("Greeting:")
 
 if (greeting[0] == "h")
     print("$20")
-else if (greeting == "Hello")
+else if (greeting.find("hello") == TRUE)
+    print("$0")
+else
+    print("$100")
