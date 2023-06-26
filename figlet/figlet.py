@@ -8,12 +8,12 @@ fontList = figlet.getFonts();
 for i in range(len(argv)):
     print(argv[i])
 
-for i in range(len(fontList)):
-    print(fontList[i])
+if len(argv) == 3:
+    input = get_string("Input: ")
+    f = Figlet(font = argv[1])
+    print(f.renderText(f))
 
-#if len(argv) == 3:
-#    input = get_string("Input: ")
-#    f = Figlet(font = argv[1])
-#    print(f.renderText(f))
-#elif len(argv) == 1
+    for i in range(len(fontList)):
+        if (argv[3] == i)
+elif len(argv) == 1
 
