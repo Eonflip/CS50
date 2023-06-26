@@ -3,8 +3,8 @@ from sys import argv
 from cs50 import get_string
 
 if len(argv) == 2
-    figlet.setFont(font = argv[2])
     input = get_string("Input: ")
-    print(figlet.renderText(input))
+    f = Figlet(font = argv[2])
+    print(f.renderText(f))
 
 
