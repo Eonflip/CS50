@@ -27,7 +27,7 @@ if len(argv) == 3:
     exit(1)
 
 elif len(argv) == 1:
-    randomFont = random.randint(0, len(fontList))
+    randomFont = random.randint(0, len(fontList) - 1)
     userInput = get_string("Input: ")
 
     figlet.setFont(font = fontList[randomFont])
