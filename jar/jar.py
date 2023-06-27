@@ -38,7 +38,7 @@ class Jar:
 def main():
     jar = Jar(5)
     print(str(jar.capacity))
-    print(str(jar.size))
+    print(str(jar))
 
 
 
