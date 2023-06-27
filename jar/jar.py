@@ -28,8 +28,16 @@ class Jar:
     def size(self):
         return self._size
 
+    @setter
+    def 
 
 
- def main():
-        Jar.__init__
-        Jar.
+
+
+def main():
+    jar = Jar()
+    print(str(jar.capacity))
+
+
+
+main()
