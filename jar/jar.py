@@ -16,12 +16,14 @@ class Jar:
             raise ValueError("Too much")
 
     def withdraw(self, n):
-        ...
+        self.size -= n
+        if self.size < 0:
+            raise ValueError("Too little")
 
     @property
     def capacity(self):
-        ...
+        return self._capacity
 
     @property
     def size(self):
-        ...
+        return self._size
