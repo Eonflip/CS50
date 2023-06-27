@@ -11,7 +11,9 @@ class Jar:
         return "🍪" * self.size
 
     def deposit(self, n):
-        ...
+        self.size += n
+        if self.size > 12:
+            raise ValueError("Too much")
 
     def withdraw(self, n):
         ...
