@@ -28,14 +28,15 @@ class Jar:
     def size(self):
         return self._size
 
-    @setter
-    def 
+    @size.setter
+    def size(self, n):
+        self._size = n
 
 
 
 
 def main():
-    jar = Jar()
+    jar = Jar(5)
     print(str(jar.capacity))
 
 
