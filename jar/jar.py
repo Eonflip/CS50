@@ -31,4 +31,5 @@ class Jar:
 
 
  def main():
-    
+        Jar.__init__
+        Jar.
