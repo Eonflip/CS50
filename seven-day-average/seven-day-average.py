@@ -42,8 +42,7 @@ def calculate(reader):
        cases = int(row['cases'])
 
        if state not in state_cases:
-           state_cases.append(state)
-           state_cases.append(cases)
+           state_cases.update({state:cases})
 
        if state in state_cases:
            state_cases[state].append(cases)
