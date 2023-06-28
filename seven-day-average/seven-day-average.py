@@ -38,9 +38,17 @@ def calculate(reader):
    new_cases = {}
 
    for row in reader:
-       
+       state = row['state']
+       cases = int(row['cases'])
 
+       if state in new_cases:
+           new_cases[state].append(cases)
+           if len(new_cases[state]) > 14:
+               new_cases[state] = new_cases[state][-14:]
+        else:
+           new_cases[state] = [cases]
 
+    return new_cases
 
 
 
