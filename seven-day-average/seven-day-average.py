@@ -41,6 +41,11 @@ def calculate(reader):
        state = row['state']
        cases = int(row['cases'])
 
+       if state not in state_cases:
+           state_cases[state].append(state)
+           if len(state_cases[cases]) > 14:
+               state_cases = 
+
        if state in state_cases:
            state_cases[state].append(cases)
            if len(state_cases[state]) > 14:
