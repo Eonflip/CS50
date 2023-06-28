@@ -39,13 +39,13 @@ def calculate(reader):
 
     for row in reader:
        state = row['state']
-       cases = row['cases']
+       cases = int(row['cases'])
 
        if state not in state_cases:
-           state_cases.update({state:cases})
+           state_cases[state] = cases
 
        elif state in state_cases:
-           state_cases[state].update(cases)
+           state_cases[state].append(cases)
            if len(state_cases[cases]) > 14:
                 state_cases[state] = state_cases[state][-14:]
 
