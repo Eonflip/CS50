@@ -46,7 +46,7 @@ def calculate(reader):
            if len(state_cases[state]) > 14:
                new_cases[state] = new_cases[state][-14:]
         else:
-           new_cases[state] = [cases]
+           state_cases[state] = [cases]
 
     return state_cases
 
