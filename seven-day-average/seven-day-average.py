@@ -35,24 +35,21 @@ def main():
 
 # TODO: Create a dictionary to store 14 most recent days of new cases by state
 def calculate(reader):
-   state_cases = {}
+    state_cases = {}
 
-   for row in reader:
+    for row in reader:
        state = row['state']
        cases = int(row['cases'])
 
        if state not in state_cases:
            state_cases.update({state:cases})
 
-       if state in state_cases:
+       elif state in state_cases:
            state_cases[state].append(cases)
-           if len(state_cases[state]) > 14:
-               new_cases[state] = new_cases[state][-14:]
-        else:
-           state_cases[state] = [cases]
-
+           if len(state_cases[cases]) > 14:
+                state_cases[state] = state_cases[state][-14:]
+                
     return state_cases
-
 
 
 # TODO: Calculate and print out seven day average for given state
