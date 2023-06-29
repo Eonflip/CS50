@@ -14,13 +14,13 @@ def get_cc():
             if card_number > 0 and card_number < 50000000000000000:
                 if len(card_number) == 13 or len(card_number) == 15 or len(card_number) == 16:
                     return card_number
-                else:
-                    return -1
-            else:
-                return -1
         except ValueError:
-            return -1
+            break
 
 
-def validate():
+def validate(n):
+    number = n
     
+
+
+
