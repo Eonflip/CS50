@@ -8,4 +8,4 @@ def main():
             break
 
     for num in range(0:user_input)
-        print(" ")
+        print(" " * n - 1)
