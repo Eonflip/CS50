@@ -20,7 +20,7 @@ def get_cc():
             card_number = int(input("Please enter a valid credit card number: "))
         except ValueError:
             print("That is not a valid credit card number\n")
+            return 0
 
 
 def validate():
-    
