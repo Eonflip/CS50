@@ -55,8 +55,9 @@ def calculate(reader):
 # TODO: Calculate and print out seven day average for given state
 def comparative_averages(new_cases, states):
     for state in states:
-        moving_average = new_cases[state]['cases'][6:13] / 7
+        cases = new_cases[state]
+        moving_average = sum(cases[-7:]) / 7
+        print(f"{state}: {moving_average}")
 
-    print(moving_average)
 
 main()
