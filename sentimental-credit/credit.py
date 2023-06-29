@@ -45,7 +45,7 @@ def main():
         54: "MASTERCARD",
         55: "MASTERCARD",
     }
-
+    #if card_types.get returns a value that matches a key in the dict, it prints the value from that key, if not, print "INVALID"
     print(card_types.get(validate(get_cc()), "INVALID"))
 
 
