@@ -57,7 +57,9 @@ def comparative_averages(new_cases, states):
     for state in states:
         cases = new_cases[state]
         moving_average = sum(cases[-7:]) / 7
-        print(f"{state}: {moving_average:.2f}")
+        previous_average = sum(cases[0:6]) / 7
+        moving_percentage = moving_average / previous_average
+        print(f"{state} has a 7 day average of {moving_average:.2f} and an increase of {moving_percentage:.2f}%")
 
 
 main()
