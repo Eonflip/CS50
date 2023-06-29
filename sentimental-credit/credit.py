@@ -19,8 +19,35 @@ def get_cc():
 
 
 def validate(n):
+
     number = n
-    
+    sum = 0
+
+    sum = number % 10
+    number = number / 10
+
+    while number:
+        temp = (number % 10) * 2
+        if temp > 9:
+            temp = temp - 9
+
+        sum += temp
+        number /= 10
+        temp = number % 10
+        sum += temp
+        number /= 10
+
+
+    while n > 100:
+        n = n / 10
+
+
+    if sum % 10:
+        break
+
+
+    return n
+
 
 
 
