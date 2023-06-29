@@ -1,5 +1,6 @@
 import math
 
+# create function to get credit card number
 def get_cc():
     n = int(input("Enter a credit card number: "))
     if 0 <= n <= 50000000000000000:
@@ -8,6 +9,7 @@ def get_cc():
             return n
     return -1
 
+# create function to validate the card number
 def validate(n):
     sum_digits, number = n % 10, n // 10
 
@@ -21,6 +23,7 @@ def validate(n):
         n //= 10
 
     return -1 if sum_digits % 10 else n
+
 
 def main():
     card_types = {
@@ -45,22 +48,6 @@ def main():
 
     print(card_types.get(validate(get_cc()), "INVALID"))
 
+
 if __name__ == "__main__":
     main()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
