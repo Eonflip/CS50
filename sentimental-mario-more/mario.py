@@ -8,7 +8,7 @@ def main():
             break
 
     for num in range(1, user_input + 1):
-        print((" " * (user_input - num)) + ("#" * num))
+        print((" " * (user_input - num)) + ("#" * num) + (" " * 2) + ("#" * num) + (" " * (user_input - num)))
 
 
 
