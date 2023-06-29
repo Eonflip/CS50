@@ -1,6 +1,8 @@
 import math
 
 # create function to get credit card number
+
+
 def get_cc():
     n = int(input("Enter a credit card number: "))
     if 0 <= n <= 50000000000000000:
@@ -10,6 +12,8 @@ def get_cc():
     return -1
 
 # create function to validate the card number
+
+
 def validate(n):
     sum_digits, number = n % 10, n // 10
 
@@ -45,9 +49,8 @@ def main():
         54: "MASTERCARD",
         55: "MASTERCARD",
     }
-    #if card_types.get returns a value that matches a key in the dict, it prints the value from that key, if not, print "INVALID"
+    # if card_types.get returns a value that matches a key in the dict, it prints the value from that key, if not, print "INVALID"
     print(card_types.get(validate(get_cc()), "INVALID"))
 
 
-if __name__ == "__main__":
-    main()
+main()
