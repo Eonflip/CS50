@@ -7,5 +7,5 @@ def main():
         if user_input > 0  and user_input <= 8:
             break
 
-    for num in range(0:user_input)
-        print(" " * n - 1)
+    for num in range(0, user_input)
+        print((" " * (user_input - num)) + ("#" * num))
