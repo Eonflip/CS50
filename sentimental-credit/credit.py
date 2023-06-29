@@ -2,7 +2,14 @@
 import cs50
 
 def switch(validate(get_cc())):
-
+    if 34 or 37:
+        return "AMEX\n"
+    elif num in range(40, 50):
+        return "VISA\n"
+    elif num in range(51, 56):
+        return "MASTERCARD\n"
+    else:
+        return "INVALID\n"
 
 
 
