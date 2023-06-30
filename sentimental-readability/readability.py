@@ -1,21 +1,17 @@
 # TODO
-import math
 
 def main():
     excerpt = str(input("Text: "))
-
     print(excerpt)
 
-    totalWords = 1 # changed to 1
-    totalSentences = 0
-    totalChar = 0
+    totalWords, totalSentences, totalChar = 1, 0, 0
 
     for letter in excerpt:
         if letter == " ":
             totalWords += 1
-        if letter == "!" or letter == "?" or letter == ".":
+        elif letter == "!" or letter == "?" or letter == ".":
             totalSentences += 1
-        if letter.isalnum():
+        elif letter.isalnum():
             totalChar += 1
 
     l = (totalChar / totalWords) * 100
@@ -30,7 +26,5 @@ def main():
         print("Grade 16+")
     else:
         print("Before Grade 1")
-
-
 
 main()
