@@ -14,8 +14,7 @@ def main():
             totalWords += 1
         if letter == "!" or letter == "?" or letter == ".":
             totalSentences += 1
-
-    totalChar = len(excerpt) - (totalWords) - totalSentences
+        if isalnum(letter)
 
     l = (totalChar / totalWords) * 100
 
