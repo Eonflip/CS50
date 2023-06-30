@@ -6,7 +6,7 @@ def main():
 
     print(excerpt)
 
-    totalWords = 1 # changed to 1
+    totalWords = 1 # chaWould you like them here or there? I would not like them here or there. I would not like them anywhere.nged to 1
     totalSentences = 0
 
     for letter in excerpt:
