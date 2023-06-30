@@ -1,11 +1,13 @@
 # TODO
 
 def main():
+    # Ask user for input and print it out
     excerpt = str(input("Text: "))
     print(excerpt)
-
+    # Define values for words, sentences, and characters
     totalWords, totalSentences, totalChar = 1, 0, 0
 
+    # Loop through the excerpt input and increment values
     for letter in excerpt:
         if letter == " ":
             totalWords += 1
@@ -14,6 +16,7 @@ def main():
         elif letter.isalnum():
             totalChar += 1
 
+    #calculations for 
     l = (totalChar / totalWords) * 100
 
     s = (totalSentences / totalWords) * 100
