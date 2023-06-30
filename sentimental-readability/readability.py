@@ -2,7 +2,8 @@
 import math
 
 def main():
-    sentence = input("Text: ")
+    sentence = str(input("Text: "))
+
     print(sentence)
 
     totalWords = 0
@@ -14,9 +15,9 @@ def main():
         if letter == "!" or letter == "?" or letter == ".":
             totalSentences += 1
 
-    l = float(len(sentence) / totalWords) * 100
+    l = len(sentence) / totalWords * 100
 
-    s = float(totalSentences / totalWords) * 100
+    s = totalSentences / totalWords * 100
 
     grade_level = round(0.0588 * l - 0.296 * s - 15.8)
 
