@@ -15,7 +15,7 @@ def main():
             totalWords += 1
         if letter == "!" or letter == "?" or letter == ".":
             totalSentences += 1
-        if isalnum(letter):
+        if letter.isalnum():
             totalChar += 1
 
     l = (totalChar / totalWords) * 100
