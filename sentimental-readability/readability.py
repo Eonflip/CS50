@@ -15,9 +15,11 @@ def main():
         if letter == "!" or letter == "?" or letter == ".":
             totalSentences += 1
 
-    l = len(excerpt) / totalWords * 100
+    totalChar = len(excerpt) - totalWords - totalSentences
 
-    s = totalSentences / totalWords * 100
+    l = (totalChar / totalWords) * 100
+
+    s = (totalSentences / totalWords) * 100
 
     grade_level = round(0.0588 * l - 0.296 * s - 15.8)
 
