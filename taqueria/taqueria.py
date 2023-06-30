@@ -12,6 +12,6 @@ def main():
     }
 
     try:
-        item = input("Please enter an item:")
+        item = input("Item:")
 
     except EOFError:
