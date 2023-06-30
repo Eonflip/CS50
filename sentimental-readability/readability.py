@@ -6,7 +6,7 @@ def main():
 
     print(excerpt)
 
-    totalWords = 1 # chaWould you like them here or there? I would not like them here or there. I would not like them anywhere.nged to 1
+    totalWords = 1 # changed to 1
     totalSentences = 0
 
     for letter in excerpt:
@@ -15,7 +15,7 @@ def main():
         if letter == "!" or letter == "?" or letter == ".":
             totalSentences += 1
 
-    totalChar = len(excerpt) - totalWords - totalSentences
+    totalChar = len(excerpt) - (totalWords - 1) - totalSentences
 
     l = (totalChar / totalWords) * 100
 
