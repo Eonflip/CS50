@@ -9,9 +9,9 @@ def main():
     totalSentences = 0
 
     for letter in sentence:
-        if letter = " ":
+        if letter == " ":
             totalWords += 1
-        if letter = "!" or letter = "?" or letter = ".":
+        if letter == "!" or letter == "?" or letter == ".":
             totalSentences += 1
 
     l = float(len(sentence) / totalWords) * 100
@@ -25,5 +25,8 @@ def main():
     elif grade_level >= 16:
         print("Grade 16+")
     else:
-        print(Before Grade 1)
+        print("Before Grade 1")
 
+
+
+main()
