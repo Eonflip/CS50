@@ -8,13 +8,15 @@ def main():
 
     totalWords = 1 # changed to 1
     totalSentences = 0
+    totalChar = 0
 
     for letter in excerpt:
         if letter == " ":
             totalWords += 1
         if letter == "!" or letter == "?" or letter == ".":
             totalSentences += 1
-        if isalnum(letter)
+        if isalnum(letter):
+            totalChar += 1
 
     l = (totalChar / totalWords) * 100
 
