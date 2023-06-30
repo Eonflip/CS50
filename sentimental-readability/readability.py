@@ -2,20 +2,20 @@
 import math
 
 def main():
-    sentence = str(input("Text: "))
+    excerpt = str(input("Text: "))
 
-    print(sentence)
+    print(excerpt)
 
     totalWords = 0
     totalSentences = 0
 
-    for letter in sentence:
+    for letter in excerpt:
         if letter == " ":
             totalWords += 1
         if letter == "!" or letter == "?" or letter == ".":
             totalSentences += 1
 
-    l = len(sentence) / totalWords * 100
+    l = len(excerpt) / totalWords * 100
 
     s = totalSentences / totalWords * 100
 
