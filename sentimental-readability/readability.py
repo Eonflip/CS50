@@ -16,11 +16,13 @@ def main():
         elif letter.isalnum():
             totalChar += 1
 
-    #calculations for 
+    # Average number of letters per 100 words in text
     l = (totalChar / totalWords) * 100
 
+    # Average sentences per 100 words in text
     s = (totalSentences / totalWords) * 100
 
+    # Coleman-Lieu Index Calculation
     grade_level = round(0.0588 * l - 0.296 * s - 15.8)
 
     if grade_level >= 1 and grade_level < 16:
@@ -29,5 +31,6 @@ def main():
         print("Grade 16+")
     else:
         print("Before Grade 1")
+
 
 main()
