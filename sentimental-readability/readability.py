@@ -16,7 +16,7 @@ def main():
             totalSentences += 1
 
     totalChar = len(excerpt) - (totalWords - 1) - totalSentences
-    print(totalChar)
+    print(len(excerpt))
 
     l = (totalChar / totalWords) * 100
 
