@@ -6,7 +6,7 @@ def main():
 
     print(excerpt)
 
-    totalWords = 0
+    totalWords = 1 # changed to 1
     totalSentences = 0
 
     for letter in excerpt:
