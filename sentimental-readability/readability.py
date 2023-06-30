@@ -21,7 +21,7 @@ def main():
 
     s = (totalSentences / totalWords) * 100
 
-    grade_level = round(0.0588 * l - 0.296 * s - 15.8)
+    grade_level = math.round(0.0588 * l - 0.296 * s - 15.8)
 
     if grade_level >= 1 and grade_level < 16:
         print(f"Grade {grade_level}")
