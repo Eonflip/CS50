@@ -1,5 +1,5 @@
 def main():
-    {
+    menu = {
     "Baja Taco": 4.00,
     "Burrito": 7.50,
     "Bowl": 8.50,
@@ -12,6 +12,6 @@ def main():
     }
 
     try:
-        item = input()
+        item = input("Please enter an item:")
 
     except EOFError:
