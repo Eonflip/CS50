@@ -7,6 +7,7 @@ import random
 # Number of simluations to run
 N = 1000
 
+
 def main():
 
     # Ensure correct usage
@@ -22,8 +23,6 @@ def main():
         row['rating'] = int(row['rating'])
         teams.append(row)
 
-    print(teams)
-
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
     counter = 0
@@ -35,7 +34,6 @@ def main():
         else:
             counts[winning_team] = 1
             counter += 1
-
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
@@ -73,6 +71,7 @@ def simulate_tournament(teams):
     winning_team = teams[0]
 
     return winning_team['team']
+
 
 if __name__ == "__main__":
     main()
