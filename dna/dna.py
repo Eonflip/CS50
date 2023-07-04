@@ -19,6 +19,7 @@ def main():
     if len(sys.argv) == 3:
         with open(sys.argv[2]) as f:
             sequence = f.read()
+            print(sequence)
 
     # TODO: Find longest match of each STR in DNA sequence
     matches = {}
@@ -39,7 +40,7 @@ def main():
             break
         else:
             suspect_counter = 1
-            
+
     print(suspect)
 
     return
