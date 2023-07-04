@@ -7,6 +7,7 @@ def main():
     # TODO: Check for command-line usage
     if len(sys.argv) != 3:
         print("Usage: dna.py CSV Textfile")
+        exit()
 
     # TODO: Read database file into a variable
     if len(sys.argv) == 3:
@@ -19,7 +20,7 @@ def main():
         dnaDictFile = csv.reader(dnaFile)
 
     # TODO: Find longest match of each STR in DNA sequence
-    
+
 
     # TODO: Check database for matching profiles
 
