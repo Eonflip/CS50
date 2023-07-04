@@ -16,7 +16,8 @@ def main():
     # TODO: Read DNA sequence file into a variable
     if len(sys.argv) == 3:
         dnaFile = open(sys.argv[2], "r")
-        dnaDictFile = csv.DictReader(dnaFile)
+        dnaDictFile = csv.reader(dnaFile)
+        print(dnaDictFile)
 
     # TODO: Find longest match of each STR in DNA sequence
 
