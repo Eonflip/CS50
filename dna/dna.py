@@ -15,6 +15,7 @@ def main():
             reader = csv.DictReader(e)
             database = list(reader)
             print(database)
+            print(reader)
 
     # TODO: Read DNA sequence file into a variable
     if len(sys.argv) == 3:
