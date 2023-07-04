@@ -14,12 +14,12 @@ def main():
         with open(sys.argv[1]) as e:
             reader = csv.DictReader(e)
             database = list(reader)
+            print(database)
 
     # TODO: Read DNA sequence file into a variable
     if len(sys.argv) == 3:
         with open(sys.argv[2]) as f:
             sequence = f.read()
-            print(sequence)
 
     # TODO: Find longest match of each STR in DNA sequence
     matches = {}
