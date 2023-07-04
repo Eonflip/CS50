@@ -25,8 +25,6 @@ def main():
 
     for i in database[0]:
         matches[i] = (longest_match(sequence, i))
-        print(i)
-        print(matches[i])
 
     # TODO: Check database for matching profiles
     suspect = 'No Match'
