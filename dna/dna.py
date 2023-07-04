@@ -11,8 +11,10 @@ def main():
 
     # TODO: Read database file into a variable
     if len(sys.argv) == 3:
-        infile = open(sys.argv[1], "r")
-        dictFile = csv.DictReader(infile)
+        with open(sys.argv[1]) as e:
+            reader = csv.DictReader(e)
+            database = list(reader)
+            print(database)
 
     # TODO: Read DNA sequence file into a variable
     if len(sys.argv) == 3:
