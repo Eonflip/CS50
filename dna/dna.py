@@ -28,6 +28,7 @@ def main():
         print(i)
         print(matches[i])
 
+    print(database)
     print(matches)
 
     # TODO: Check database for matching profiles
