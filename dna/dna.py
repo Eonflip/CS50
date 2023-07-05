@@ -28,6 +28,8 @@ def main():
         print(i)
         print(matches[i])
 
+    print(matches)
+
     # TODO: Check database for matching profiles
     suspect = 'No Match'
     suspect_counter = 1
