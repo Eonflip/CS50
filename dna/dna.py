@@ -34,6 +34,8 @@ def main():
 
     for i in range(len(database)):
         for j in matches:
+            print(matches[j])
+            print(database[i][j])
             if str(matches[j]) == database[i][j]:
                 suspect_counter += 1
         if suspect_counter == len(matches):
