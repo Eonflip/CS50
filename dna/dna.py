@@ -14,6 +14,7 @@ def main():
         with open(sys.argv[1]) as e:
             reader = csv.DictReader(e)
             database = list(reader)
+            print(reader)
 
     # TODO: Read DNA sequence file into a variable
     if len(sys.argv) == 3:
@@ -25,11 +26,7 @@ def main():
 
     for i in database[0]:
         matches[i] = (longest_match(sequence, i))
-        print(i)
-        print(matches[i])
 
-    print(database)
-    print(matches)
 
     # TODO: Check database for matching profiles
     suspect = 'No Match'
