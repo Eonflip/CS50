@@ -13,6 +13,8 @@ def main():
     if len(sys.argv) == 3:
         with open(sys.argv[1]) as e:
             reader = csv.DictReader(e)
+            for row in reader:
+                print(row)
             database = list(reader)
             print(reader)
 
