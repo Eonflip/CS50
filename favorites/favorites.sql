@@ -6,3 +6,4 @@ UPDATE shows SET title = 'Community' WHERE title LIKE '%unity';
 UPDATE shows SET title = 'Family Guy' WHERE title LIKE '%guy';
 UPDATE shows SET title = 'Friends' WHERE title LIKE '%ends';
 UPDATE shows SET title = 'Game of Thrones' WHERE title LIKE 'g%' AND title like '%t';
+UPDATE shows SET title = 'Friends' WHERE title LIKE 'gil%';
