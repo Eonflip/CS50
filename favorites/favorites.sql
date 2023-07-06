@@ -9,3 +9,5 @@ UPDATE shows SET title = 'Game of Thrones' WHERE title LIKE 'g%' AND title like 
 UPDATE shows SET title = 'Gilmore Girls' WHERE title LIKE 'gil%';
 UPDATE shows SET title = "Grey's Anatomy" WHERE title LIKE '%anatomy';
 UPDATE shows SET title = "How I Met Your Mother" WHERE title LIKE '%mother';
+UPDATE shows SET title = "It's Always Sunny in Philadelphia" WHERE title LIKE '%delphia';
+UPDATE shows SET title = "Parks and Recreation" WHERE title LIKE 'Parks%';
