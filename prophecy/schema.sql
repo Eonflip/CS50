@@ -15,6 +15,8 @@ CREATE TABLE houses (
 
 
 CREATE TABLE house_assignment (
-    FOREIGN KEY(id),
-    FOREIGN KEY(house)
+    student_id INTEGER,
+    house_name TEXT,
+    FOREIGN KEY(student_id) REFERENCES students(id),
+    FOREIGN KEY(house_name) REFERENCES students(house)
 );
