@@ -2,13 +2,13 @@ import sys
 import csv
 from cs50 import SQL
 
-def main()
+def main():
     # Connect to the SQLite database
-    db = SQL.("sqlite:///roster.db)
+    db = SQL.("sqlite:///roster.db")
 
     #Ensure correct usage
     if sys.argv != 2:
-        print("Usage: python prophecy.py file.csv)
+        print("Usage: python prophecy.py file.csv")
         return
 
     with open(sys.argv[1], "r") as f:
