@@ -4,7 +4,7 @@ from cs50 import SQL
 
 def main():
     # Connect to the SQLite database
-    db = SQL.("sqlite:///roster.db")
+    db = SQL("sqlite:///roster.db")
 
     #Ensure correct usage
     if sys.argv != 2:
