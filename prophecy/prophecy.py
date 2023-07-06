@@ -7,7 +7,7 @@ def main():
     db = SQL("sqlite:///roster.db")
 
     #Ensure correct usage
-    if sys.argv != 2:
+    if sys.argv != 3:
         print("Usage: python prophecy.py file.csv")
         return
 
