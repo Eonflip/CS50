@@ -17,7 +17,7 @@ def main():
 
         for row in reader:
             # Insert student into database
-            db.execute("INSERT INTO students(id, student_name, house, head) VALUES (?, ?, ?, ?)",
+            db.execute("INSERT OR IGNORE INTO students(id, student_name, house, head) VALUES (?, ?, ?, ?)",
                        row["id"], row["student_name"], row["house"], row["head"])
 
 
