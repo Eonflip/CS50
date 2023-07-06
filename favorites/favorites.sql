@@ -4,3 +4,4 @@ UPDATE shows SET title = "Avatar: The Last Airbender" WHERE title LIKE "avatar%"
 UPDATE shows SET title = "Brooklyn Nine-Nine" WHERE title LIKE "b%9";
 UPDATE shows SET title = "Community" WHERE title LIKE "%unity";
 UPDATE shows SET title = "Family Guy" WHERE title LIKE "%guy";
+UPDATE shows SET title = "Family Guy" WHERE title LIKE "%guy";
