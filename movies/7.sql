@@ -1,5 +1,5 @@
-SELECT title, AVG(ratings.rating) AS avg_rating
+SELECT movies.title, ratings.rating
 FROM movies
 JOIN ratings ON movies.id = ratings.movie_id
-WHERE ratings.rating IS NOT NULL
-ORDER BY ratings.rating DESC
+WHERE movies.year = 2010 AND ratings.rating IS NOT NULL
+ORDER BY ratings.rating DESC, movies.title ASC;
