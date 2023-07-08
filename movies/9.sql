@@ -1,4 +1,4 @@
-SELECT people.name, people.birth
+SELECT people.name, people.birth, movies.year
 FROM people
 JOIN stars ON people.id = stars.person_id
 JOIN movies ON stars.movie_id = movies.id
