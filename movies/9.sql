@@ -1,2 +1,2 @@
 SELECT people.name
-FROM 
+FROM people
