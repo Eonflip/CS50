@@ -1,3 +1,3 @@
 SELECT TOP 5 movies.title
 FROM movies
-JOIN 
+JOIN stars ON movie
