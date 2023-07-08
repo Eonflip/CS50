@@ -1,6 +1,7 @@
-SELECT TOP 5 movies.title
+SELECT movies.title
 FROM movies
-JOIN stars ON movies.id = stars.movies_id
+JOIN stars ON movies.id = stars.movie_id
 JOIN people ON people.id = stars.person_id
 WHERE people.name = 'Chadwick Boseman'
-ORDER BY movies.title DESC;
+ORDER BY movies.title DESC
+LIMIT 5;
