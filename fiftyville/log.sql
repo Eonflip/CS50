@@ -13,7 +13,9 @@ SELECT *
 FROM atm_transactions
 WHERE year = 2021 AND day = 28 AND month = 7 AND atm_location = 'Leggett Street';
 
-
+-- Let's find out about some security logs
 SELECT *
 FROM bakery_security_logs
 WHERE year = 2021 AND day = 28 AND month = 7;
+
+-- Let's find out what the earliest flight out of Fiftyville is 
