@@ -8,5 +8,7 @@ SELECT *
 FROM interviews
 WHERE year = 2021 AND day = 28 AND month = 7;
 
--- Chasing the first lead I want to find out what ATM transactions happened 
-SELECT * FROM
+-- Chasing the first lead I want to find out what ATM transactions happened on Leggett Street on the day of the robbery
+SELECT *
+FROM atm_transactions
+WHERE 
