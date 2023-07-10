@@ -12,3 +12,8 @@ WHERE year = 2021 AND day = 28 AND month = 7;
 SELECT *
 FROM atm_transactions
 WHERE year = 2021 AND day = 28 AND month = 7 AND atm_location = 'Leggett Street';
+
+
+SELECT *
+FROM bakery_security_logs
+WHERE year = 2021 AND day = 28 AND month = 7;
