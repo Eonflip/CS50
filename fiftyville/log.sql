@@ -21,4 +21,9 @@ WHERE year = 2021 AND day = 28 AND month = 7;
 -- Let's find out what the earliest flight out of Fiftyville is
 SELECT *
 FROM flights
-WHERE year = 2021 AND day = 28 AND month = 7;
+WHERE year = 2021 AND day = 28 AND month = 7 AND origin_airport_id = 8;
+
+-- Just kidding let's find which airport is in fiftyville
+SELECT *
+FROM airports
+WHERE city = 'Fiftyville';
