@@ -18,4 +18,7 @@ SELECT *
 FROM bakery_security_logs
 WHERE year = 2021 AND day = 28 AND month = 7;
 
--- Let's find out what the earliest flight out of Fiftyville is 
+-- Let's find out what the earliest flight out of Fiftyville is
+SELECT *
+FROM flights
+WHERE year = 2021 AND day = 28 AND month = 7;
