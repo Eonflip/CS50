@@ -38,3 +38,6 @@ FROM airports
 WHERE id = 9;
 
 
+SELECT *
+FROM people
+WHERE phone_number IN (SELECT);
