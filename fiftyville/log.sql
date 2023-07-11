@@ -31,4 +31,4 @@ WHERE city = 'Fiftyville';
 -- Lets find out what kind of phone calls took place for less than a minute
 SELECT *
 FROM phone_calls
-WHERE year = 2021 AND day = 28 AND month = 7 AND 
+WHERE year = 2021 AND day = 28 AND month = 7 AND duration < 1;
