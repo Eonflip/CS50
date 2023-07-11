@@ -63,3 +63,5 @@ WHERE license_plate IN (
         WHERE year = 2021 AND day = 28 AND month = 7 AND duration < 60
     )
 ;
+
+
