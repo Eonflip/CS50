@@ -67,4 +67,5 @@ WHERE license_plate IN (
 SELECT *
 FROM passengers
 JOIN flights ON passengers.flight_id = flights.id
-JOIN airports ON airports.id = flights.origin_airport_id;
+JOIN airports ON airports.id = flights.origin_airport_id
+WHERE passport_number = 1695452385 OR passport_number = 3592750733 OR passport_number = 8294398571 OR passport_number = 5773159633;
