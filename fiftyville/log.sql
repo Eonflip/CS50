@@ -40,4 +40,6 @@ WHERE id = 9;
 
 SELECT *
 FROM people
-WHERE phone_number IN (SELECT);
+WHERE phone_number IN (SELECT caller
+FROM phone_calls
+WHERE year = 2021 AND day = 28 AND month = 7 AND duration < 60);
