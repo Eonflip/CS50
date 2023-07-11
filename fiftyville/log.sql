@@ -64,4 +64,6 @@ WHERE license_plate IN (
     )
 ;
 
-
+SELECT name
+FROM people
+JOIN 
