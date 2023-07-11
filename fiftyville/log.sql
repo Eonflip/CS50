@@ -79,3 +79,4 @@ WHERE name = "Sofia" OR name = "Bruce" OR name = "Kelsey";
 SELECT *
 FROM bank_accounts
 JOIN people ON bank_accounts.person_id = people.id
+WHERE name = "Sofia" OR name = "Bruce" OR name = "Kelsey";
