@@ -67,4 +67,4 @@ WHERE license_plate IN (
 SELECT *
 FROM passengers
 JOIN flights ON passengers.flight_id = flights.id
-JOIN airports ON airports.id = flights.
+JOIN airports ON airports.id = flights.origin_airport_id;
