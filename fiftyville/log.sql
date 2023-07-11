@@ -33,3 +33,8 @@ SELECT *
 FROM phone_calls
 WHERE year = 2021 AND day = 28 AND month = 7 AND duration < 60;
 
+SELECT *
+FROM airports
+WHERE id = 9;
+
+
