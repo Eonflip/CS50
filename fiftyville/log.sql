@@ -65,11 +65,6 @@ WHERE license_plate IN (
 ;
 
 SELECT *
-FROM people
-WHERE passport_number IN (
-        SELECT *
-        FROM flights
-        WHERE year = 2021 AND day = 29 AND month = 7 AND origin_airport_id = 8 and destination_airport_id = 4
-    )
-    AND
-;
+FROM passengers
+JOIN flights ON passengers.flight_id = flights.id
+JOIN airports ON airports.id = flights.
