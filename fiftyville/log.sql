@@ -28,4 +28,6 @@ SELECT *
 FROM airports
 WHERE city = 'Fiftyville';
 
--- Lets find out what kind of phone calls 
+-- Lets find out what kind of phone calls took place for less than a minute
+SELECT *
+FROM phone_calls
