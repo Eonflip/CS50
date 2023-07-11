@@ -49,3 +49,9 @@ FROM people
 WHERE phone_number IN (SELECT receiver
 FROM phone_calls
 WHERE year = 2021 AND day = 28 AND month = 7 AND duration < 60);
+
+SELECT name
+FROM people
+WHERE license_plate IN (SELECT license_plate
+FROM bakery_security_logs
+WHERE year = 2021 AND day = 28 AND month = 7 AND hour = 10 AND minute BETWEEN 5 AND 25);
