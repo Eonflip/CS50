@@ -27,3 +27,5 @@ WHERE year = 2021 AND day = 28 AND month = 7 AND origin_airport_id = 8;
 SELECT *
 FROM airports
 WHERE city = 'Fiftyville';
+
+-- Lets find out what kind of phone calls 
