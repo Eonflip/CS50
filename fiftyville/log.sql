@@ -50,7 +50,7 @@ WHERE phone_number IN (SELECT receiver
 FROM phone_calls
 WHERE year = 2021 AND day = 28 AND month = 7 AND duration < 60);
 
-SELECT name
+SELECT *
 FROM people
 WHERE license_plate IN (
         SELECT license_plate
