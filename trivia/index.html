@@ -16,7 +16,7 @@
 
 
                 buttonOne.addEventListener('click', () => {
-                    buttonOne.style.backgroundColor = 'Green';
+                    buttonOne.style.backgroundColor = 'Lightgreen';
                     answerElement.innerHTML = "Correct!";
                 });
 
@@ -38,7 +38,7 @@
                 document.querySelector('#checkAnswer').addEventListener('click', () => {
                     let answerText = document.getElementById('answerGrok').value;
                     if (answerText == 'Stranger in a Strange Land'){
-                        document.querySelector('#answerGrok').style.backgroundColor='Green';
+                        document.querySelector('#answerGrok').style.backgroundColor='Lightgreen';
                     } else {
                         document.querySelector('#answerGrok').style.backgroundColor='Red';
                     }
