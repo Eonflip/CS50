@@ -35,7 +35,10 @@
                     answerElement.innerHTML = "Incorrect!";
                 });
 
-                document.querySelector(')
+                document.querySelector('#checkAnswer').addEventListener('click', () => {
+                    
+                    document.querySelector('answerGrok').style.backgroundcolor='green';
+                });
 
             });
 
@@ -75,7 +78,7 @@
                 <!-- TODO: Add free response question here -->
                 <tr>
                     <input type="text" id="answerGrok">
-                    <button type="submit">Check Answer</button>
+                    <button type="submit" id="checkAnswer">Check Answer</button>
                 </tr>
             </div>
         </div>
