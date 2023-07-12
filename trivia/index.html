@@ -7,11 +7,13 @@
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', () => {
             let buttonOne = document.querySelector('#buttonOne');
             let buttonTwo = document.querySelector('#buttonTwo');
             let buttonThree = document.querySelector('#buttonThree');
 
             buttonOne.addEventListener('click', () => buttonOne.style.backgroundColor = 'Lightgreen');
+            });
         </script>
     </head>
     <body>
@@ -51,5 +53,6 @@
                 </tr>
             </div>
         </div>
+
     </body>
 </html>
