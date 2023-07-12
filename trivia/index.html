@@ -13,6 +13,7 @@
                 let buttonThree = document.querySelector('#buttonThree');
                 let buttonFour = document.querySelector('#buttonFour');
                 let answerElement = document.getElementById('answer');
+                let answerText = document.getElementById('answerGrok').value;
 
 
                 buttonOne.addEventListener('click', () => {
@@ -36,8 +37,12 @@
                 });
 
                 document.querySelector('#checkAnswer').addEventListener('click', () => {
-                    
-                    document.querySelector('answerGrok').style.backgroundcolor='green';
+                    if (answerText == 'Stranger in a Strange Land'){
+                        document.querySelector('answerGrok').style.backgroundcolor='Green';
+                    } else {
+                        document.querySelector('answerGrok').style.backgroundcolor='Red';
+                    }
+
                 });
 
             });
