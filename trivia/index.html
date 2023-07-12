@@ -11,10 +11,12 @@
             let buttonOne = document.querySelector('#buttonOne');
             let buttonTwo = document.querySelector('#buttonTwo');
             let buttonThree = document.querySelector('#buttonThree');
+            let buttonFour = document.querySelector('#buttonFour');
 
-            buttonOne.addEventListener('click', () => buttonOne.style.backgroundColor = 'Lightgreen');
-            buttonTwo.addEventListener('click', () => buttonTwo.style.backgroundColor = 'Lightred');
-            buttonThree.addEventListener('click', () => buttonThree.style.backgroundColor = 'Lightred');
+            buttonOne.addEventListener('click', () => buttonOne.style.backgroundColor = 'Green');
+            buttonTwo.addEventListener('click', () => buttonTwo.style.backgroundColor = 'Red');
+            buttonThree.addEventListener('click', () => buttonThree.style.backgroundColor = 'Red');
+            buttonFour.addEventListener('click', () => buttonFour.style.backgroundColor = 'Red');
             });
         </script>
     </head>
@@ -40,7 +42,7 @@
                     <button type="submit" id="buttonThree">John Smith</button>
                 </tr>
                 <tr>
-                    <button type="submit">Benjamin Franklin</button>
+                    <button type="submit" id="buttonFour">Benjamin Franklin</button>
                 </tr>
             </div>
 
@@ -50,7 +52,7 @@
                 <h3><strong>Which book popularized the word "Grok"</strong></h3>
                 <!-- TODO: Add free response question here -->
                 <tr>
-                    <input type="text">
+                    <input type="text" id="answerGrok">
                     <button type="submit">Check Answer</button>
                 </tr>
             </div>
