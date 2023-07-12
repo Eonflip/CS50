@@ -12,7 +12,7 @@
                 let buttonTwo = document.querySelector('#buttonTwo');
                 let buttonThree = document.querySelector('#buttonThree');
                 let buttonFour = document.querySelector('#buttonFour');
-                let answerElement = document.getElementById('#answer');
+                let answerElement = document.getElementById('answer');
 
                 buttonOne.addEventListener('click', () => {
                     buttonOne.style.backgroundColor = 'Green';
@@ -21,14 +21,17 @@
 
                 buttonTwo.addEventListener('click', () => {
                     buttonTwo.style.backgroundColor = 'Red';
+                    answerElement.innerHTML = "Incorrect!";
                 });
 
                 buttonThree.addEventListener('click', () => {
-                    buttonThree.style.backgroundColor = 'Red'
+                    buttonThree.style.backgroundColor = 'Red';
+                    answerElement.innerHTML = "Incorrect!";
                 });
 
                 buttonFour.addEventListener('click', () => {
-                    buttonFour.style.backgroundColor = 'Red'
+                    buttonFour.style.backgroundColor = 'Red';
+                    answerElement.innerHTML = "Incorrect!";
                 });
 
             });
