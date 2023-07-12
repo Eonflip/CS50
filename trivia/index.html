@@ -12,11 +12,18 @@
             let buttonTwo = document.querySelector('#buttonTwo');
             let buttonThree = document.querySelector('#buttonThree');
             let buttonFour = document.querySelector('#buttonFour');
+            let answerElement = document.getElementByID('answer');
 
-            buttonOne.addEventListener('click', () => buttonOne.style.backgroundColor = 'Green'; document.getElementById("answer").innerHTML = "Correct!");
+            buttonOne.addEventListener('click', () => buttonOne.style.backgroundColor = 'Green';
+            answerElement.innerHTML = "Correct!";
+            );
+
             buttonTwo.addEventListener('click', () => buttonTwo.style.backgroundColor = 'Red');
+
             buttonThree.addEventListener('click', () => buttonThree.style.backgroundColor = 'Red');
+
             buttonFour.addEventListener('click', () => buttonFour.style.backgroundColor = 'Red');
+
             });
         </script>
     </head>
