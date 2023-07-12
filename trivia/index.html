@@ -7,7 +7,11 @@
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
+            let buttonOne = document.querySelector('#buttonOne');
+            let buttonTwo = document.querySelector('#buttonTwo');
+            let buttonThree = document.querySelector('#buttonThree');
 
+            buttonOne.addEventListener('click', () => buttonOne.style.backgroundColor = 'Lightgreen')
         </script>
     </head>
     <body>
@@ -23,7 +27,7 @@
                 </hr>
                 <!-- TODO: Add multiple choice question here -->
                 <tr>
-                    <button type="submit">John Locke</button>
+                    <button type="submit" id="buttonOne">John Locke</button>
                 </tr>
                 <tr>
                     <button type="submit">Albert Camus</button>
