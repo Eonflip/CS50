@@ -13,6 +13,7 @@
                 let buttonThree = document.querySelector('#buttonThree');
                 let buttonFour = document.querySelector('#buttonFour');
                 let answerElement = document.getElementById('answer');
+                let answerElementTwo = document.getElementById('answerTwo');
 
 
                 buttonOne.addEventListener('click', () => {
@@ -41,6 +42,7 @@
                         document.querySelector('#answerGrok').style.backgroundColor='Lightgreen';
                     } else {
                         document.querySelector('#answerGrok').style.backgroundColor='Red';
+                        answerElementTwo.innerHTML = "Incorrect!";
                     }
 
                 });
@@ -84,6 +86,7 @@
                 <tr>
                     <input type="text" id="answerGrok">
                     <button type="submit" id="checkAnswer">Check Answer</button>
+                    <p id="answerTwo"></p>
                 </tr>
             </div>
         </div>
