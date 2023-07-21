@@ -41,7 +41,7 @@
 /* hero background image */
 .bgimage {
     height:100vh;
-    background: url('images/ian-headshot.png');
+    background: url('images/Tetons.JPG');
     background-size:cover;
     position:relative;
 }
@@ -59,4 +59,5 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+    margin-top: 30vh
 }
