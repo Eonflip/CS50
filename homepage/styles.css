@@ -48,17 +48,16 @@
 /* text css above hero image*/
 .hero_title {
     font-size: 4.5rem;
-    margin-top: 20rem;
 }
 .hero_desc {
     font-size: 2rem;
 }
 .hero-text {
-    text-align: center;
+    text-align: left;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    width: 100vh;
+    
 }
