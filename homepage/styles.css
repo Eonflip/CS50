@@ -41,7 +41,7 @@
 /* hero background image */
 .bgimage {
     height:100vh;
-    background: url('images/ian-picjpg');
+    background: url('images/ian-headshot.JPG');
     background-size:cover;
     position:relative;
 }
