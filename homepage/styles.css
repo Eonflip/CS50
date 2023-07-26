@@ -32,7 +32,7 @@
     bottom: 0;
     border-width: 10px;
     border-style: solid;
-    border-color: black transparent transparent transparent;
+    border-color: royalblue transparent transparent transparent;
     transform: translateX(-50%);
 }
 .timeline-item:last-child::after {
