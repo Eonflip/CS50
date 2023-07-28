@@ -9,14 +9,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/eb1b0c178a.js" crossorigin="anonymous"></script>
         <link href="styles.css" rel="stylesheet">
-        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-        <title>Ian's Homepage</title>
+        <title>Contact Ian</title>
     </head>
     <body>
       <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #e3f2fd;">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">ijTech</a>
+          <a class="navbar-brand" href="./index.html">ijTech</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -26,16 +26,16 @@
                 <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./programming.html">Programming</a>
+                <a class="nav-link" href="./about.html">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./reading.html">Reading</a>
+                <a class="nav-link" href="./blog.html">Blog</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./videogames.html">Video Games</a>
+                <a class="nav-link" href="./portfolio.html">Portfolio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./cooking.html">Cooking</a>
+                <a class="nav-link" href="./contact.html">Contact</a>
               </li>
             </ul>
             <form class="d-flex" role="search">
@@ -46,69 +46,54 @@
           </div>
         </div>
       </nav>
-        <title> Ian's Homepage </title>
-        <div class="containter">
-          <div class="row border border-primary-subtle rounded border-5">
 
-            <div class="col p-0 border border-primary-subtle rounded border-5c">
-              <img src="https://media.wired.com/photos/62feb60bcea7c0581e825cb0/master/w_2560%2Cc_limit/Fate-of-Game-Preservation-Games-GettyImages-1170073827.jpg" alt ="video game pic" class="img-fluid">
-            </div>
+      <section id="contact">
+        <div class="container mt-3 contactContent">
+            <h1 class="text-center">Contact Me</h1>
 
-            <div class="col text-center">
-              <div class="row border-bottom border-primary-subtle rounded border-5">
-              <h1>Video Games</h1><br>
-              </div>
-              <h3>Welcome to the video games section!</h3><br>
-              <p>Here I'll give reviews for the latest video games I've been playing</p>
-              <p>As well as a quick synopsis</p>
-              <br><br>
+            <div class="row mt-4">
+                <div class="col-lg-6">
+                    <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
+                    <div style="max-width:100%;overflow:hidden;color:red;width:500px;height:500px;">
+                        <div id="embedmap-canvas" style="height:100%; width:100%;max-width:100%;">
+                            <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=new+york&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
+                            </iframe>
+                        </div>
+                        <a class="googlemaps-html" href="https://www.embed-map.com" id="get-data-forembedmap">https://www.embed-map.com</a>
+                        <style>#embedmap-canvas img{max-width:none!important;background:none!important;font-size: inherit;font-weight:inherit;}
+                        </style>
+                    </div>
+                </div>
 
-              <ul class="list-center">
-                <li>The Legend Of Zelda: Tears Of The Kingdom</li><br>
-                <li>Diablo 4</li><br>
-                <li>Stardew Valley</li><br>
-              </ul>
+                <div class="col-lg-6">
+                    <!-- form fields -->
+                    <form>
+                        <input type="text" class="form-control form-control-lg" placeholder="Name">
+                        <input type="email" class="form-control mt-3" placeholder="Email">
+                        <input type="text" class="form-control mt-3" placeholder="Subject">
+                        <div class="mb-3 mt-3">
+                            <textarea class="form-control" rows="5" id="comment" name="text" placeholder="Project Details"></textarea>
+                        </div>
+                    </form>
+                    <button type="button" class="btn btn-success mt-3">Contact Me</button>
+
+                </div>
+
             </div>
         </div>
+    </section>
 
-        <div class = "container">
-          <div class="row">
-            <div class="col">
-              <div class="card mw-100" style="width: 18rem;">
-                <img src="https://imageio.forbes.com/specials-images/imageserve/6322129e876c6dd61a451586/zelda-tears-of-the-kingdom-715x400/960x0.png?format=png&width=960" class="card-img-top" alt="Tears of the Kingdom Image">
-                <div class="card-body">
-                  <h5 class="card-title">Tears of the Kingdom Review</h5>
-                  <p class="card-text">This game receives a 10/10 from me, for more please visit the link</p>
-                  <a href="#" class="btn btn-primary">Review</a>
-                </div>
+      <footer id="footer">
+          <div class="container-fluid">
+              <!-- social media icons -->
+              <div class="social-icons mt-4">
+                  <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                  <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  <a href="https://www.twitch.tv/" target="_blank"><i class="fab fa-twitch"></i></a>
               </div>
-            </div>
-            <div class="col">
-              <div class="card mw-100" style="width: 200%;">
-                <img src="https://imageio.forbes.com/specials-images/imageserve/6322129e876c6dd61a451586/zelda-tears-of-the-kingdom-715x400/960x0.png?format=png&width=960" class="card-img-top" alt="Tears of the Kingdom Image">
-                <div class="card-body">
-                  <h5 class="card-title">Tears of the Kingdom Review</h5>
-                  <p class="card-text">This game receives a 10/10 from me, for more please visit the link</p>
-                  <a href="#" class="btn btn-primary">Review</a>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card mw-100" style="width: 18rem;">
-                <img src="https://imageio.forbes.com/specials-images/imageserve/6322129e876c6dd61a451586/zelda-tears-of-the-kingdom-715x400/960x0.png?format=png&width=960" class="card-img-top" alt="Tears of the Kingdom Image">
-                <div class="card-body">
-                  <h5 class="card-title">Tears of the Kingdom Review</h5>
-                  <p class="card-text">This game receives a 10/10 from me, for more please visit the link</p>
-                  <a href="#" class="btn btn-primary">Review</a>
-                </div>
-              </div>
-            </div>
           </div>
-        </div>
-
-        <footer>
-          <p>Author: Ian James Jones</p>
-          <p><a href="mailto:ianj1993@gmail.com">Email Me</a></p>
-        </footer>
+      </footer>
     </body>
 </html>
