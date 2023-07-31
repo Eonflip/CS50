@@ -1,5 +1,7 @@
 .center {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 @media (min-width: 768px) {
