@@ -91,7 +91,7 @@
 /* hero background image */
 .bgimage {
     height:100vh;
-    background: url('images/Tetons.JPG');
+    background: url('./images/Tetons.JPG');
     background-size:cover;
     position:relative;
 }
