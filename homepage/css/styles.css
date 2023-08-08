@@ -24,6 +24,10 @@
     border: 5px solid royalblue;
 }
 
+.card-row {
+    margin-left: 55px;
+}
+
 .logo-circle {
     border-radius: 50%;
     object-fit: cover; /* this line is optional but helps preserve aspect ratio */
