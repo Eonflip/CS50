@@ -19,6 +19,11 @@
     }
 }
 
+
+.blog-banner {
+    
+}
+
 .logo-circle {
     border-radius: 50%;
     object-fit: cover; /* this line is optional but helps preserve aspect ratio */
