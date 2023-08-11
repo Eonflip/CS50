@@ -17,12 +17,8 @@
                 <!-- TODO: Create a form for users to submit a name, a month, and a day -->
                 <form action="/" method="get">
                     <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
-                    <select name="month">
-                        <option disabled selected>Month</option>
-                        {% for month in MONTHS %}
-                            <option value="{{ month }}">{{ month }}</option>
-                        {% endfor %}
-                    </select>
+                    <input autocomplete="off" autofocus name="month" placeholder="Month" type="text">
+                    <input autocomplete="off" autofocus name="day" placeholder="Day" type="text">
                 </form>
             </div>
 
