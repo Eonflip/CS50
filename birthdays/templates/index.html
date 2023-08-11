@@ -19,7 +19,7 @@
                     <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
                     <select name="month">
                         <option disabled selected>Month</option>
-                        {% for month in months %}
+                        {% for month in MONTHS %}
                             <option value="{{ month }}">{{ month }}</option>
                         {% endfor %}
                     </select>
