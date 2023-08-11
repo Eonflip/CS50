@@ -6,6 +6,21 @@ from flask import Flask, flash, jsonify, redirect, render_template, request, ses
 # Configure application
 app = Flask(__name__)
 
+MONTHS = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+]
+
 # Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 

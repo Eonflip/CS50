@@ -18,7 +18,10 @@
                 <form action="/" method="get">
                     <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
                     <select name="month">
-                        <option
+                        <option disabled selected>Month</option>
+                        {% for month in months %}
+                            <option value="{{ month }}">{{ month }}</option>
+                        {% endfor %}
                     </select>
                 </form>
             </div>
