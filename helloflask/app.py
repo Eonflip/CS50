@@ -4,5 +4,10 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    if request.method == "GET":
+        return render_template("index.html")
+    else:
+        print("Form submitted!")
+        color = request.form.get("color")
+        return render_template("color.html", color=color)
 
