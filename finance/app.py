@@ -110,12 +110,14 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
-    if request.form.get("username"):
-        if request.form.get("password"):
-            db.execute("INSERT INTO users (username, password) VALUES (?, ?)", username, password)
+    if request.method == "POST":
+        if request.form.get("username"):
+            if request.form.get("password"):
+                db.execute("INSERT INTO users (username, password) VALUES (?, ?)", username, password)
+            else
+                return apology("must provide password", 403)
         else
-            return apology("You must enter a password")
-    return apology("TODO")
+            return apology("must provide username and password", 403)
 
 
 @app.route("/sell", methods=["GET", "POST"])
