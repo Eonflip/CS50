@@ -114,9 +114,9 @@ def register():
         if request.form.get("username"):
             if request.form.get("password"):
                 db.execute("INSERT INTO users (username, password) VALUES (?, ?)", username, password)
-            else
+            else:
                 return apology("must provide password", 403)
-        else
+        else:
             return apology("must provide username and password", 403)
 
 
