@@ -112,7 +112,7 @@ def register():
     """Register user"""
     if request.form.get("username"):
         if request.form.get("password"):
-            
+            db.execute(INSERT INTO users)
     return apology("TODO")
 
 
