@@ -111,8 +111,6 @@ def quote():
 def register():
     """Register user"""
 
-    if request.method == "GET":
-        
     if request.method == "POST":
         if request.form.get("username"):
             if request.form.get("password"):
