@@ -111,7 +111,8 @@ def quote():
 def register():
     """Register user"""
     if request.form.get("username"):
-        db.execute(INSERT INTO )
+        if request.form.get("password"):
+            
     return apology("TODO")
 
 
