@@ -110,7 +110,8 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
-    
+    if request.form.get("username"):
+        db.execute(INSERT INTO )
     return apology("TODO")
 
 
