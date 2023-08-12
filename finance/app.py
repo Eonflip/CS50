@@ -112,7 +112,9 @@ def register():
     """Register user"""
     if request.form.get("username"):
         if request.form.get("password"):
-            db.execute(INSERT INTO users)
+            db.execute("INSERT INTO users (username, password) VALUES (?, ?)", username, password)
+        else
+            
     return apology("TODO")
 
 
