@@ -127,6 +127,7 @@ def register():
         existing_user = db.execute("SELECT * FROM users WHERE username = ?", username)
         if existing_user:
             return apology("username already exists", 403)
+        
 
 
 @app.route("/sell", methods=["GET", "POST"])
