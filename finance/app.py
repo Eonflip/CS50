@@ -114,14 +114,10 @@ def register():
         username = request.form.get("username"):
         password = request.form.get("password"):
 
-    if request.method == "POST":
-        if request.form.get("username"):
-            if request.form.get("password"):
-                db.execute("INSERT INTO users (username, password) VALUES (?, ?)", username, password)
-            else:
-                return apology("must provide password", 403)
-        else:
-            return apology("must provide username and password", 403)
+        if not username:
+            return apology("must provide username", 403)
+        if not password:
+            return apology("must provide username", 403)
 
 
 @app.route("/sell", methods=["GET", "POST"])
