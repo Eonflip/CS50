@@ -112,13 +112,9 @@ def quote():
             return apology("Missing Symbol", 403)
         result = lookup(symbol)
         if (result):
-            return render_template:("/quoted.html", symbol=symbol, lookup=result["price"])
+            return render_template("/quoted.html", symbol=symbol, lookup=result["price"])
         else:
             return apology("Invalid Symbol", 403)
-
-
-
-    return apology("TODO")
 
 
 @app.route("/register", methods=["GET", "POST"])
