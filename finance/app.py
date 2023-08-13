@@ -128,7 +128,12 @@ def register():
         if existing_user:
             return apology("username already exists", 403)
 
-        hashed_password = 
+        hashed_password = generate_password_hash(password)
+        db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hashed_password)
+
+        return redirect("/login")
+    else:
+        return render_template("/layout.html")
 
 
 @app.route("/sell", methods=["GET", "POST"])
