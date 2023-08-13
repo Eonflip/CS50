@@ -124,7 +124,7 @@ def register():
         if pass_confirm != password:
             return apology("passwords must match", 403)
 
-        existing_user = db.execute(SELECT * FROM users WHERE username = ?)
+        existing_user = db.execute("SELECT * FROM users WHERE username = ?", username)
 
 
 @app.route("/sell", methods=["GET", "POST"])
