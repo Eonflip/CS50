@@ -1,9 +1,9 @@
-{% extends layout.html %}
+{% extends "layout.html" %}
 
 {% block title %}
     Quoted
 {% endblock %}
 
 {% block main %}
-    <p>A share of {{ symbol }} costs {{ lookup }}.</p>
+    <p>A share of {{ symbol }} costs {{ lookup|usd }}.</p>
 {% endblock %}
