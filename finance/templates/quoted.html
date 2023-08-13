@@ -1,3 +1,9 @@
 {% extends quote.html %}
 
-{}
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block body %}
+    <p>A share of {$ symbol} costs {% lookup}.</p>
+{% endblock %}
