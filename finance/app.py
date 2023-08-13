@@ -112,6 +112,7 @@ def quote():
             return apology("Missing Symbol", 403)
         result = lookup(symbol)
         if (result):
+            return redirect("/quoted")
             return render_template("/quoted.html", symbol=symbol, lookup=result["price"])
         else:
             return apology("Invalid Symbol", 403)
