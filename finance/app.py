@@ -56,7 +56,7 @@ def buy():
             return apology("Missing Shares", 403)
         if (result):
             price = result["price"]
-            return render_template("/index.html")
+            return render_template("index.html")
         else:
             return apology("Invalid Symbol", 403)
 
