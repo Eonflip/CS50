@@ -46,6 +46,9 @@ def buy():
     if request.method == "GET":
         return render_template("buy.html")
 
+    if request.method == "POST":
+        if not request.form.get("symbol"):
+
     return apology("TODO")
 
 
