@@ -49,11 +49,13 @@ def buy():
         return render_template("buy.html")
 
     if request.method == "POST":
-        result = lookup(symbol)
+
         if not request.form.get("symbol"):
             return apology("Missing Symbol", 403)
         if not request.form.get("shares"):
             return apology("Missing Shares", 403)
+        symbol = request.form.get("symbol")
+        result = lookup(symbol)
         if (result):
             price = result["price"]
             return render_template("index.html")
