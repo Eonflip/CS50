@@ -53,7 +53,8 @@ def buy():
             return apology("Missing Shares", 403)
         result = lookup(symbol)
         if (result):
-            
+            price = result["price"]
+            db.execute()
         else:
             return apology("Invalid Symbol", 403)
 
