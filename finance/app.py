@@ -62,7 +62,7 @@ def buy():
 
         if result:
             total_price = result["price"] * shares
-            current_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"][0]["cash"])
+            current_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
 
             if total_price > current_cash:
                 return apology("Not enough cash", 403)
