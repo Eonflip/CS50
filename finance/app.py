@@ -68,7 +68,12 @@ def buy():
                 return apology("Not enough cash", 403)
 
             db.execute("UPDATE users SET cash = cash - ? WHERE id  ?", total_price, session["user_id"])
-    return apology("TODO")
+
+            db.execute("INSERT INTO transactions (user_id, symbol, price, transaction_type) VALUES (?, ?, ?, ?, 'BUY')", session["user_id"], symbol, shares, result["price"])
+
+            return render_template("index.html")
+    else:
+        return apology("Invalid Symbol", 403)
 
 
 @app.route("/history")
