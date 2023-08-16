@@ -59,7 +59,7 @@ def buy():
         if (result):
             price = result["price"] * request.form.get("shares")
             shares = request.form.get("shares")
-
+            
             return render_template("index.html", price=price, symbol=symbol)
         else:
             return apology("Invalid Symbol", 403)
