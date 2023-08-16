@@ -43,6 +43,11 @@ def index():
                             GROUP BY symbol
                             HAVING total_shares > 0""",
                             session["user_id"])
+        for stock in stocks:
+            stock_data = lookup(stock["symbol"])
+            stock["name"] = stock_data["name"]
+            stock["price"] = stock_data["price"]
+            
         return render_template("index.html", stocks=stocks)
 
 
