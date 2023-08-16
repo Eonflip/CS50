@@ -4,5 +4,6 @@ CREATE TABLE transactions (
     symbol TEXT NOT NULL,
     shares INTEGER NOT NULL,
     price_per_share NUMERIC NOT NULL,
+    transaction_date_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     
 )
