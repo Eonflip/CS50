@@ -66,6 +66,8 @@ def buy():
 
             if total_price > current_cash:
                 return apology("Not enough cash", 403)
+
+            db.execute("UPDATE users SET cash = cash - ? WHERE id  ?", total_price, session["user_id"])
     return apology("TODO")
 
 
