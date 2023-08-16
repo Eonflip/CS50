@@ -58,6 +58,7 @@ def buy():
         result = lookup(symbol)
         if (result):
             price = result["price"]
+            
             return render_template("index.html")
         else:
             return apology("Invalid Symbol", 403)
