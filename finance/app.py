@@ -57,8 +57,9 @@ def buy():
         symbol = request.form.get("symbol")
         result = lookup(symbol)
         if (result):
-            price = result["price"]
+            price = result["price"] * request.form.get("shares")
             
+
             return render_template("index.html")
         else:
             return apology("Invalid Symbol", 403)
