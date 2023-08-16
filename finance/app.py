@@ -37,8 +37,13 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
     if request.method == "GET":
-        return render_template("index.html")
-    return apology("TODO")
+        stocks = db.execute("""SELECT symbol, SUM(shares) as total_shares
+                            FROM transactions
+                            WHERE user_id = ?
+                            GROUP BY symbol
+                            HAVING total_shares > 0""",
+                            session["user_id"])
+        return render_template("index.html", stocks=stocks)
 
 
 @app.route("/buy", methods=["GET", "POST"])
