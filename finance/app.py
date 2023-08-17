@@ -102,7 +102,7 @@ def history():
     stocks = db.execute("""SELECT symbol, shares, price_per_share, transaction_date_time
                         FROM transactions
                         """)
-    render_template("/history", stocks=stocks)
+    render_template("/history.html", stocks=stocks)
 
 
 @app.route("/login", methods=["GET", "POST"])
