@@ -209,9 +209,15 @@ def sell():
         return render_template("/sell.html", stocks=stocks)
 
     if request.method == "POST":
-        total_shares = db.execute("""SELECT SUM(shares) as total_shares
+        symbol = request.form.get("symbol")
+        shares_to_sell = int(request.form.get("shares"))
+
+        owned_shares_data = db.execute("""SELECT SUM(shares)
                                   FROM transactions
                                   WHERE user_id = ?
-                                  GROUP BY symbol
-                                  HAVING total_shares > 0""",
-                                  session["user_id"])
+                                  AND symbol = ?""",
+                                  session["user_id"], symbol)
+        owned_shares = owned_shares_data[0]["total_shares"]
+
+        if shares_to_sell > owned_shares:
+            return apology("You don't have enough shares", 403)
