@@ -99,6 +99,7 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
+    render_template()
     return apology("TODO")
 
 
