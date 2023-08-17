@@ -208,4 +208,5 @@ def sell():
 
         return render_template("/sell.html", stocks=stocks)
 
-    return apology("TODO")
+    if request.method == "POST":
+        
