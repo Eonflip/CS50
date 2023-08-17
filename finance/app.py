@@ -209,4 +209,4 @@ def sell():
         return render_template("/sell.html", stocks=stocks)
 
     if request.method == "POST":
-        
+        db.execute("UPDATE transactions)
