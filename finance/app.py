@@ -225,4 +225,13 @@ def sell():
         stock_data = lookup(symbol)
         sell_value = shares_to_sell * stock_data["price"]
 
-        db.execute("""INSERT INTO transactions (user_id, symbol, shares))
+        db.execute("""INSERT INTO transactions (user_id, symbol, shares, price_per_share, transaction_type)
+                   VALUES (?, ?, ?, ?, 'SELL')""",
+                   session[user_id], symbol, -shares_to_sell, stock_data["price"])
+
+        db.execute("""UPDATE users
+                   SET cash = cash + ?
+                   WHERE id = ?""",
+                   sell_value, session[user_id])
+
+        return redirect("/")
