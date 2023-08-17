@@ -205,6 +205,8 @@ def sell():
                             GROUP BY symbol
                             HAVING total_shares > 0""",
                             session["user_id"])
+        for stock in stocks:
+
         return render_template("/sell.html")
 
     if request.method == "POST":
