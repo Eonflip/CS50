@@ -234,4 +234,4 @@ def sell():
                    WHERE id = ?""",
                    sell_value, session[user_id])
 
-        return redirect("/")
+        return render_template("/index.html")
