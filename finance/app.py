@@ -48,7 +48,7 @@ def index():
             stock_data = lookup(stock["symbol"])
             stock["name"] = stock_data["name"]
             stock["price"] = stock_data["price"]
-            stock_total += stock["price"]
+            stock_total += stock_data["price"]
 
         current_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
         cash_amount = current_cash[0]["cash"]
