@@ -233,6 +233,7 @@ def sell():
                    SET cash = cash + ?
                    WHERE id = ?""",
                    sell_value, session["user_id"])
-        flash("Sold shares su)
 
-        return render_template("/index.html")
+        flash("Sold shares successfully!")
+
+        return redirect("/index.html")
