@@ -232,6 +232,7 @@ def sell():
         db.execute("""UPDATE users
                    SET cash = cash + ?
                    WHERE id = ?""",
-                   sell_value, session[user_id])
+                   sell_value, session["user_id"])
+        flash("Sold shares su)
 
         return render_template("/index.html")
