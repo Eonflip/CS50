@@ -48,7 +48,10 @@ def index():
             stock["name"] = stock_data["name"]
             stock["price"] = stock_data["price"]
 
-        return render_template("index.html", stocks=stocks)
+        current_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+        cash_amount = usd(current_cash[0]["cash"])
+
+        return render_template("index.html", stocks=stocks, cash_amount=cash_amount)
 
 
 @app.route("/buy", methods=["GET", "POST"])
