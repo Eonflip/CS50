@@ -210,4 +210,8 @@ def sell():
 
     if request.method == "POST":
         total_shares = db.execute("""SELECT SUM(shares) as total_shares
-                                  FROM Tran)
+                                  FROM transactions
+                                  WHERE user_id = ?
+                                  GROUP BY symbol
+                                  HAVING total_shares > 0""",
+                                  session["user_id"])
