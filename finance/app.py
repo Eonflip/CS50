@@ -71,9 +71,9 @@ def buy():
         shares = int(request.form.get("shares"))
 
         if not symbol:
-            return apology("Missing Symbol", 403)
+            return apology("Missing Symbol", 400)
         if not shares:
-            return apology("Missing Shares", 403)
+            return apology("Missing Shares", 400)
 
         result = lookup(symbol)
 
@@ -83,7 +83,7 @@ def buy():
             cash_amount = current_cash[0]["cash"]
 
             if total_price > cash_amount:
-                return apology("Not enough cash", 403)
+                return apology("Not enough cash", 400)
 
             db.execute("UPDATE users SET cash = cash - ? WHERE id = ?", total_price, session["user_id"])
 
@@ -92,7 +92,7 @@ def buy():
             flash("Purchased shares successfully!")
             return redirect("/")
     else:
-        return apology("Invalid Symbol", 403)
+        return apology("Invalid Symbol", 400)
 
 
 @app.route("/history")
@@ -118,18 +118,18 @@ def login():
 
         # Ensure username was submitted
         if not request.form.get("username"):
-            return apology("must provide username", 403)
+            return apology("must provide username", 400)
 
         # Ensure password was submitted
         elif not request.form.get("password"):
-            return apology("must provide password", 403)
+            return apology("must provide password", 400)
 
         # Query database for username
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
         # Ensure username exists and password is correct
         if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
-            return apology("invalid username and/or password", 403)
+            return apology("invalid username and/or password", 400)
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
@@ -162,12 +162,12 @@ def quote():
     if request.method == "POST":
         symbol = request.form.get("symbol")
         if not symbol:
-            return apology("Missing Symbol", 403)
+            return apology("Missing Symbol", 400)
         result = lookup(symbol)
         if (result):
             return render_template("/quoted.html", symbol=symbol, lookup=result["price"])
         else:
-            return apology("Invalid Symbol", 403)
+            return apology("Invalid Symbol", 400)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -179,17 +179,17 @@ def register():
         pass_confirm = request.form.get("confirmation")
 
         if not username:
-            return apology("must provide username", 403)
+            return apology("must provide username", 400)
         if not password:
-            return apology("must provide password", 403)
+            return apology("must provide password", 400)
         if not pass_confirm:
-            return apology("must confirm password", 403)
+            return apology("must confirm password", 400)
         if pass_confirm != password:
-            return apology("passwords must match", 403)
+            return apology("passwords must match", 400)
 
         existing_user = db.execute("SELECT * FROM users WHERE username = ?", username)
         if existing_user:
-            return apology("username already exists", 403)
+            return apology("username already exists", 400)
 
         hashed_password = generate_password_hash(password)
         db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hashed_password)
@@ -225,7 +225,7 @@ def sell():
         owned_shares = owned_shares_data[0]["SUM(shares)"]
 
         if shares_to_sell > owned_shares:
-            return apology("You don't have enough shares", 403)
+            return apology("You don't have enough shares", 400)
 
         stock_data = lookup(symbol)
         sell_value = shares_to_sell * stock_data["price"]
