@@ -43,16 +43,19 @@ def index():
                             GROUP BY symbol
                             HAVING total_shares > 0""",
                             session["user_id"])
+        stock_total = 0
         for stock in stocks:
             stock_data = lookup(stock["symbol"])
             stock["name"] = stock_data["name"]
             stock["price"] = stock_data["price"]
+            stock_total += stock["price"]
 
         current_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
-        cash_amount = usd(current_cash[0]["cash"])
-        total_cash = db.execute("SELECT )
+        cash_amount = current_cash[0]["cash"]
+        total_cash = cash_amount + stock_total
 
-        return render_template("index.html", stocks=stocks, cash_amount=cash_amount)
+
+        return render_template("index.html", stocks=stocks, cash_amount=cash_amount, total_cash=total_cash)
 
 
 @app.route("/buy", methods=["GET", "POST"])
