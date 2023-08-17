@@ -82,7 +82,7 @@ def buy():
 
             db.execute("INSERT INTO transactions (user_id, symbol, shares, price_per_share, transaction_type) VALUES (?, ?, ?, ?, 'BUY')", session["user_id"], symbol, shares, result["price"])
 
-            return render_template("index.html")
+            return render_template("index.html", stocks=stocks, cash_amount=cash_amount)
     else:
         return apology("Invalid Symbol", 403)
 
