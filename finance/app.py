@@ -101,8 +101,9 @@ def history():
     """Show history of transactions"""
     stocks = db.execute("""SELECT symbol, shares, price_per_share, transaction_date_time
                         FROM transactions
-                        """)
-    render_template("/history.html", stocks=stocks)
+                        WHERE user_id = ?""",
+                        session["user_id"])
+    return render_template("/history.html", stocks=stocks)
 
 
 @app.route("/login", methods=["GET", "POST"])
