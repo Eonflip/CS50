@@ -50,6 +50,7 @@ def index():
 
         current_cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
         cash_amount = usd(current_cash[0]["cash"])
+        total_cash = db.execute("SELECT )
 
         return render_template("index.html", stocks=stocks, cash_amount=cash_amount)
 
@@ -85,7 +86,7 @@ def buy():
 
             db.execute("INSERT INTO transactions (user_id, symbol, shares, price_per_share, transaction_type) VALUES (?, ?, ?, ?, 'BUY')", session["user_id"], symbol, shares, result["price"])
 
-            return render_template("index.html", stocks=stocks, cash_amount=cash_amount)
+            return redirect("/")
     else:
         return apology("Invalid Symbol", 403)
 
