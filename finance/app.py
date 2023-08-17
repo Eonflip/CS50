@@ -199,15 +199,16 @@ def register():
 def sell():
     """Sell shares of stock"""
     if request.method == "GET":
-        stocks = db.execute("""SELECT symbol, SUM(shares) as total_shares
+        stocks = db.execute("""SELECT DISTINCT symbol, SUM(shares) as total_shares
                             FROM transactions
                             WHERE user_id = ?
                             GROUP BY symbol
                             HAVING total_shares > 0""",
                             session["user_id"])
         for stock in stocks:
+            sell_symbol = stocks.symbol
 
-        return render_template("/sell.html")
+        return render_template("/sell.html", sell_symbol=sell_symbol)
 
     if request.method == "POST":
     return apology("TODO")
