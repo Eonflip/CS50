@@ -99,6 +99,9 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
+    stocks = db.execute("""SELECT symbol, shares, 
+                        FROM transactions
+                        WHERE )
     render_template()
     return apology("TODO")
 
