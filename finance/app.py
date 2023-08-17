@@ -80,8 +80,7 @@ def buy():
         if not result:
             return apology("Invalid Symbol", 400)
 
-        if shares not int:
-            return apology("Must enter positive whole number", 400)
+        
 
         if result:
             total_price = result["price"] * shares
