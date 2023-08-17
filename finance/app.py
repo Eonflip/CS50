@@ -217,7 +217,7 @@ def sell():
                                   WHERE user_id = ?
                                   AND symbol = ?""",
                                   session["user_id"], symbol)
-        owned_shares = owned_shares_data[0]["total_shares"]
+        owned_shares = owned_shares_data[0]["owned_shares_data"]
 
         if shares_to_sell > owned_shares:
             return apology("You don't have enough shares", 403)
@@ -227,7 +227,7 @@ def sell():
 
         db.execute("""INSERT INTO transactions (user_id, symbol, shares, price_per_share, transaction_type)
                    VALUES (?, ?, ?, ?, 'SELL')""",
-                   session[user_id], symbol, -shares_to_sell, stock_data["price"])
+                   session["user_id"], symbol, -shares_to_sell, stock_data["price"])
 
         db.execute("""UPDATE users
                    SET cash = cash + ?
@@ -236,4 +236,4 @@ def sell():
 
         flash("Sold shares successfully!")
 
-        return redirect("/index.html")
+        return redirect("/")
