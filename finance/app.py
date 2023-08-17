@@ -209,4 +209,5 @@ def sell():
         return render_template("/sell.html", stocks=stocks)
 
     if request.method == "POST":
-        db.execute("UPDATE transactions)
+        total_shares = db.execute("""SELECT SUM(shares) as total_shares
+                                  FROM Tran)
