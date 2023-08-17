@@ -217,7 +217,7 @@ def sell():
                                   WHERE user_id = ?
                                   AND symbol = ?""",
                                   session["user_id"], symbol)
-        owned_shares = owned_shares_data[0]["owned_shares_data"]
+        owned_shares = owned_shares_data[0]["SUM(shares)"]
 
         if shares_to_sell > owned_shares:
             return apology("You don't have enough shares", 403)
