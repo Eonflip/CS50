@@ -176,7 +176,7 @@ def register():
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
-        pass_confirm = request.form.get("pass_confirm")
+        pass_confirm = request.form.get("confirmation")
 
         if not username:
             return apology("must provide username", 403)
