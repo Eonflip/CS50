@@ -68,7 +68,16 @@ def buy():
     if request.method == "POST":
 
         symbol = request.form.get("symbol")
-        shares = int(request.form.get("shares"))
+
+        try:
+            shares_float = float(request.form.get("shares"))
+        except ValueError:
+            return apology("Shares must be a number", 400)
+
+        if shares_float <= 0 or shares_float != int(shares_float):
+            return apology("Shares must be a number", 400)
+
+        shares = int(shares_float)
 
         if not symbol:
             return apology("Missing Symbol", 400)
