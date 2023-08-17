@@ -221,3 +221,8 @@ def sell():
 
         if shares_to_sell > owned_shares:
             return apology("You don't have enough shares", 403)
+
+        stock_data = lookup(symbol)
+        sell_value = shares_to_sell * stock_data["price"]
+
+        db.execute("""INSERT INTO transactions (user_id, symbol, shares))
