@@ -47,7 +47,7 @@ def index():
             stock_data = lookup(stock["symbol"])
             stock["name"] = stock_data["name"]
             stock["price"] = stock_data["price"]
-            
+
         return render_template("index.html", stocks=stocks)
 
 
