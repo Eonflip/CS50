@@ -206,9 +206,8 @@ def sell():
                             HAVING total_shares > 0""",
                             session["user_id"])
         for stock in stocks:
-            sell_symbol = stocks.symbol
+            sell_symbol = stock.symbol
 
         return render_template("/sell.html", sell_symbol=sell_symbol)
 
-    if request.method == "POST":
     return apology("TODO")
