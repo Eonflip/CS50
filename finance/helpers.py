@@ -41,11 +41,13 @@ def login_required(f):
 
     http://flask.pocoo.org/docs/0.12/patterns/viewdecorators/
     """
+
     @wraps(f)
     def decorated_function(*args, **kwargs):
         if session.get("user_id") is None:
             return redirect("/login")
         return f(*args, **kwargs)
+
     return decorated_function
 
 
@@ -67,7 +69,8 @@ def lookup(symbol):
 
     # Query API
     try:
-        response = requests.get(url, cookies={"session": str(uuid.uuid4())}, headers={"User-Agent": "python-requests", "Accept": "*/*"})
+        response = requests.get(
+            url, cookies={"session": str(uuid.uuid4())}, headers={"User-Agent": "python-requests", "Accept": "*/*"})
         response.raise_for_status()
 
         # CSV header: Date,Open,High,Low,Close,Adj Close,Volume
