@@ -16,8 +16,7 @@ typedef struct
 {
     int winner;
     int loser;
-}
-pair;
+} pair;
 
 // Array of candidates
 string candidates[MAX];
@@ -101,11 +100,11 @@ int main(int argc, string argv[])
 // Update ranks given a new vote
 bool vote(int rank, string name, int ranks[])
 {
-    for(int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if (strcasecmp(name, candidates[i]) == 0)
         {
-            ranks[i] = rank;
+            ranks[rank] = i;
             return true;
         }
     }
@@ -158,12 +157,13 @@ void sort_pairs(void)
         for (int j = 0; j < pair_count - i - 1; j++)
         {
             int strength_j = preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].loser][pairs[j].winner];
-            int strength_j1 = preferences[pairs[j+1].winner][pairs[j+1].loser] - preferences[pairs[j+1].loser][pairs[j+1].winner];
-            if (strength_j > strength_j1)
+            int strength_j1 =
+                preferences[pairs[j + 1].winner][pairs[j + 1].loser] - preferences[pairs[j + 1].loser][pairs[j + 1].winner];
+            if (strength_j < strength_j1)
             {
                 pair temp = pairs[j];
-                pairs[j] = pairs[j+1];
-                pairs[j+1] = temp;
+                pairs[j] = pairs[j + 1];
+                pairs[j + 1] = temp;
             }
         }
     }
@@ -185,40 +185,39 @@ void lock_pairs(void)
 // Helper function to check if locking in a pair creates a cycle
 bool creates_cycle(int winner, int loser)
 {
-    // Check if locking in the pair creates a cycle
+    if (winner == loser)
+    {
+        return true;
+    }
     for (int i = 0; i < candidate_count; i++)
     {
-        // If i is locked in over winner and winner is locked in over loser, then locking in the current pair creates a cycle
-        if (locked[i][winner] && locked[winner][loser])
+        if (locked[loser][i] && creates_cycle(winner, i))
         {
             return true;
         }
     }
-    // If no cycle is created, return false
     return false;
 }
 
 // Print the winner of the election
 void print_winner(void)
 {
-    bool is_source[MAX];
-
     for (int i = 0; i < candidate_count; i++)
     {
-        is_source[i] = true;
-    }
+        bool has_incoming_edge = false;
 
-    for (int i = 0; i < pair_count; i++)
-    {
-        is_source[pairs[i].loser] = false;
-    }
+        for (int j = 0; j < candidate_count; j++)
+        {
+            if (locked[j][i])
+            {
+                has_incoming_edge = true;
+                break;
+            }
+        }
 
-    for (int i = 0; i < candidate_count; i++)
-    {
-        if (is_source[i])
+        if (!has_incoming_edge)
         {
             printf("%s\n", candidates[i]);
-            return;
         }
     }
 }
